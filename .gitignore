@@ -1,0 +1,33 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+
+# Datasets and model checkpoints
+data/*
+!data/README.md
+models/**/*.pt
+models/**/*.pth
+models/**/*.pkl
+models/**/*.joblib
+models/**/*.onnx
+
+# Generated FPGA files
+.Xil/
+*.jou
+*.log
+*.str
+*.cache/
+*.runs/
+*.gen/
+*.sim/
+*.hw/
+*.ip_user_files/
+*.Xil/
+
+# Generated experimental outputs
+results/**/*.csv
+results/**/*.parquet
+results/**/*.npy
+results/**/*.npz
