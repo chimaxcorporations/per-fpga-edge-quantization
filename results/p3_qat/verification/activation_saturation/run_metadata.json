@@ -1,0 +1,23 @@
+{
+  "models": [
+    "mlp",
+    "cnn"
+  ],
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "bits": 8,
+  "calibration": "max",
+  "scope": "QAT fake-quantizer inputs on frozen held-out reference vectors",
+  "clipping_rule": "abs(prequant_activation/scale)>127",
+  "rail_rule": "abs(round_even(prequant_activation/scale) clipped to [-127,127])==127",
+  "checkpoint_changes": false
+}

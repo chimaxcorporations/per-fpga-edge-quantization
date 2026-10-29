@@ -1,0 +1,9 @@
+Experiment: T1_50MHz
+Clock period (ns): 20.000
+Target frequency (MHz): 50.0
+Worst setup path slack (ns): -0.001
+Worst hold path slack (ns): -0.432
+Interface input delay max (ns): 2.0
+Interface output delay max (ns): 2.0
+Interface input/output delay min (ns): 0.0
+Inference cycles (RTL): 25415

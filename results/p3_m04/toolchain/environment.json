@@ -1,0 +1,73 @@
+{
+  "project": "Hardware-Aware Quantization of Packet Error Rate Prediction Models for FPGA-Based Edge Computing",
+  "milestone": "P3-M04-01R",
+  "timestamp_utc": "2026-10-28T08:25:04.944253+00:00",
+  "host": {
+    "platform": "Linux-5.14.0-503.35.1.el9_5.x86_64-x86_64-with-glibc2.34",
+    "python": "3.13.12"
+  },
+  "fpga": {
+    "part": "xc7a100tcsg324-1",
+    "target_clock_mhz": 100
+  },
+  "git": {
+    "commit": {
+      "returncode": 0,
+      "output": "22e9ea48954fa0d2b63aea7510b251adcedb921f",
+      "stderr": ""
+    },
+    "status": {
+      "returncode": 0,
+      "output": "?? Makefile\n?? REPRODUCIBILITY.md\n?? artifacts/p3_m01/reference_vectors/\n?? artifacts/p3_m01/verification/\n?? artifacts/p3_m02/\n?? docker/\n?? hardware/\n?? results/p3_m04/\n?? results/p3_qat/analysis/\n?? results/p3_qat/evaluation/\n?? results/p3_qat/training/\n?? results/p3_qat/verification/\n?? results/p3_quantization/\n?? scripts/analyze_accumulator_safety.py\n?? scripts/analyze_activation_saturation.py\n?? scripts/analyze_integer_accumulators.py\n?? scripts/analyze_qat_results.py\n?? scripts/analyze_quantization_ranges.py\n?? scripts/audit_first_divergence.py\n?? scripts/audit_first_divergence.py.bak\n?? scripts/build_calibration_dataset.py\n?? scripts/calibrate_activation_percentiles.py\n?? scripts/calibrate_activations.py\n?? scripts/diagnose_qat_layers.py\n?? scripts/evaluate_qat_integer.py\n?? scripts/generate_reference_vectors.py\n?? scripts/plot_parameter_ranges.py\n?? scripts/record_p3_m04_environment.py\n?? scripts/run_ptq_neural.py\n?? scripts/test_integer_ptq.py\n?? scripts/train_qat_int8.py\n?? scripts/validate_integer_ptq_arithmetic.py\n?? scripts/validate_integer_ptq_data.py\n?? scripts/verify_fp32_equivalence.py\n?? scripts/verify_histgb_traversal.py\n?? scripts/verify_qat_calibration.py\n?? scripts/verify_qat_export.py\n?? scripts/verify_qat_int8.py\n?? scripts/verify_qat_integer_compatibility.py\n?? scripts/verify_same_weights_fp32.py\n?? scripts/verify_trained_qat.py\n?? src/__init__.py\n?? src/integer_ptq.py.pre_final_guard\n?? src/integer_ptq.py.pre_v6_fix\n?? src/qat_export.py\n?? src/qat_int8.py\n?? src/quantization.py",
+      "stderr": ""
+    }
+  },
+  "host_tools": {
+    "vivado": {
+      "returncode": 0,
+      "output": "vivado v2025.2 (64-bit)\nTool Version Limit: 2025.11\nSW Build 6299465 on Fri Nov 14 12:34:56 MST 2025\nIP Build 6300035 on Fri Nov 14 10:48:45 MST 2025\nSharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025\nCopyright 1986-2022 Xilinx, Inc. All Rights Reserved.\nCopyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.",
+      "stderr": ""
+    },
+    "docker": {
+      "returncode": 0,
+      "output": "Docker version 28.0.4, build b8034c0",
+      "stderr": ""
+    }
+  },
+  "docker": {
+    "image": "per-fpga-rtl:ubuntu24.04",
+    "image_id": {
+      "returncode": 0,
+      "output": "sha256:8569de1f99d74e397ffb9ee84129f2ca1c4f669a78685444ce1994c6be9d662a",
+      "stderr": ""
+    },
+    "tools": {
+      "verilator": {
+        "returncode": 0,
+        "output": "Verilator 5.020 2024-01-01 rev (Debian 5.020-1)",
+        "stderr": ""
+      },
+      "yosys": {
+        "returncode": 0,
+        "output": "Yosys 0.33 (git sha1 2584903a060)",
+        "stderr": ""
+      },
+      "iverilog": {
+        "returncode": 0,
+        "output": "Icarus Verilog version 12.0 (stable) ()\n\nCopyright (c) 2000-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\nIcarus Verilog Preprocessor version 12.0 (stable) ()\n\nCopyright (c) 1999-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\nIcarus Verilog Parser/Elaborator version 12.0 (stable) ()\n\nCopyright (c) 1998-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.\n\n FLAGS DLL vvp.tgt\nvvp.tgt: Icarus Verilog VVP Code Generator 12.0 (stable) ()\n\nCopyright (c) 2001-2021 Stephen Williams (steve@icarus.com)\n\n  This program is free software; you can redistribute it and/or modify\n  it under the terms of the GNU General Public License as published by\n  the Free Software Foundation; either version 2 of the License, or\n  (at your option) any later version.\n\n  This program is distributed in the hope that it will be useful,\n  but WITHOUT ANY WARRANTY; without even the implied warranty of\n  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n  GNU General Public License for more details.\n\n  You should have received a copy of the GNU General Public License along\n  with this program; if not, write to the Free Software Foundation, Inc.,\n  51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.",
+        "stderr": ""
+      }
+    }
+  },
+  "files_sha256": {
+    "hardware/rtl/common/p3_toolchain_test.v": "c0be88a29274a3f8d5a6c0839d87d868ba14b62171a5614f7908fdb721e134e2",
+    "hardware/tb/tb_p3_toolchain_test.v": "e31124b909e81bf1b4a30c2abf6ac8e4c6cb949915118bf9b2a706ee81015341",
+    "hardware/scripts/p3_toolchain_test.tcl": "cfd98e0835f2ee0deae33b22cbbc87deabbcd212c2e348d932aa0d0724dbfb55",
+    "hardware/constraints/clock_100mhz.xdc": "6b59724f598ff07c22ec767bd0dca0622d481cdcc1b4ae46001926e8af8e913e",
+    "docker/Dockerfile.rtl": "4c2e9488ad91074a3f68f66d910deb40553e45df989bf5739cd07e0941808768",
+    "docker/compose.yaml": "8ff0a45da329471868ca67b9caf73d696e5189360c5faa271ca6ea993806c5fd",
+    "Makefile": "adf7344de2b4121329e2336e6f18e74b77e0cb7bdfd95adbbef0e9c82565557f",
+    "REPRODUCIBILITY.md": "1e199d29d2c9a823224f00982d188aa489d946b5c9901820db5e773a5647f44a",
+    "scripts/record_p3_m04_environment.py": "940bd2a439b055243975a83539d75fc04ec97d0258fa8fc73e0b18869341e449"
+  }
+}

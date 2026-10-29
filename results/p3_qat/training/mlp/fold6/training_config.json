@@ -1,0 +1,21 @@
+{
+  "model": "mlp",
+  "fold": 6,
+  "bits": 8,
+  "calibration": "max",
+  "epochs": 10,
+  "batch_size": 2048,
+  "learning_rate": 0.0001,
+  "seed": 42,
+  "device": "cpu",
+  "training_samples": 720000,
+  "activation_scales": {
+    "standardized_input": 0.01933823420306829,
+    "fc1_relu": 0.03545423943226732,
+    "fc2_relu": 0.019150848463764344,
+    "output_linear": 0.009496798665504756
+  },
+  "checkpoint": "results/p3_qat/training/mlp/fold6/mlp_fold6_qat_int8.pt",
+  "checkpoint_selection": "final_epoch",
+  "heldout_data_used": false
+}

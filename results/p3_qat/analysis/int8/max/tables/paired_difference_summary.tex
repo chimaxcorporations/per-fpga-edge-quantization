@@ -1,0 +1,18 @@
+\begin{tabular}{lllrrrrrrrrr}
+\toprule
+model & metric & comparison & folds & mean\_delta & sd\_delta & descriptive\_t95\_low & descriptive\_t95\_high & negative\_delta\_folds & positive\_delta\_folds & zero\_delta\_folds & descriptive\_sign\_p\_two\_sided \\
+\midrule
+mlp & rmse & QAT - INT8 PTQ & 9 & -0.000827 & 0.001360 & -0.001872 & 0.000218 & 7 & 2 & 0 & 0.179688 \\
+mlp & rmse & QAT - FP32 & 9 & -0.000908 & 0.001393 & -0.001978 & 0.000163 & 7 & 2 & 0 & 0.179688 \\
+mlp & mae & QAT - INT8 PTQ & 9 & -0.002670 & 0.002236 & -0.004388 & -0.000951 & 8 & 1 & 0 & 0.039062 \\
+mlp & mae & QAT - FP32 & 9 & -0.001812 & 0.001577 & -0.003024 & -0.000600 & 8 & 1 & 0 & 0.039062 \\
+mlp & bias & QAT - INT8 PTQ & 9 & -0.000944 & 0.003154 & -0.003368 & 0.001481 & 5 & 4 & 0 & 1.000000 \\
+mlp & bias & QAT - FP32 & 9 & -0.000556 & 0.002912 & -0.002795 & 0.001683 & 6 & 3 & 0 & 0.507812 \\
+cnn & rmse & QAT - INT8 PTQ & 9 & -0.000691 & 0.000612 & -0.001161 & -0.000221 & 8 & 1 & 0 & 0.039062 \\
+cnn & rmse & QAT - FP32 & 9 & -0.000471 & 0.000533 & -0.000880 & -0.000061 & 8 & 1 & 0 & 0.039062 \\
+cnn & mae & QAT - INT8 PTQ & 9 & -0.001833 & 0.002098 & -0.003445 & -0.000220 & 7 & 2 & 0 & 0.179688 \\
+cnn & mae & QAT - FP32 & 9 & -0.002066 & 0.002303 & -0.003836 & -0.000296 & 7 & 2 & 0 & 0.179688 \\
+cnn & bias & QAT - INT8 PTQ & 9 & 0.000438 & 0.005832 & -0.004045 & 0.004921 & 3 & 6 & 0 & 0.507812 \\
+cnn & bias & QAT - FP32 & 9 & 0.000715 & 0.004950 & -0.003090 & 0.004521 & 3 & 6 & 0 & 0.507812 \\
+\bottomrule
+\end{tabular}

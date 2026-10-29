@@ -1,0 +1,21 @@
+{
+  "fold": 1,
+  "model": "mlp",
+  "layer": "layers.2 / fc2_relu",
+  "bits": 8,
+  "method": "max",
+  "cases": 1024,
+  "features": 64,
+  "checkpoint_sha256": "ff1465cdf1985238ed0323f80484a6cb06be2dc021ef93db7558beadea454188",
+  "reference_vectors_sha256": "cf81c79820aca17fb42c852995c1240b4765ae0226f9fce59e42e96fc8632ea8",
+  "calibration_sha256": "6bc57c686ae700f25a7fd01b2f9430d981e05199587d736e229204a09838f9a8",
+  "golden_vectors_sha256": "0bfc7d25b70270e6d579d53f723b96595e281907505574852ca28888b650d889",
+  "first_layer_input_scale": 0.01930413283701018,
+  "first_layer_output_scale": 0.024057763767993352,
+  "second_layer_input_scale": 0.024057763767993352,
+  "second_layer_output_scale": 0.018096107197558785,
+  "accumulator_overflow_cases": 0,
+  "zero_shift_cases": 0,
+  "backend_comparison": "PASS",
+  "first_layer_activations": "integer dense() outputs"
+}

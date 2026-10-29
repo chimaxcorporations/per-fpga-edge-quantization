@@ -1,0 +1,117 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Thu Oct 29 08:04:26 2026
+| Host         : localhost.localdomain running 64-bit Rocky Linux 9.5 (Blue Onyx)
+| Command      : report_ram_utilization -file /hdd/c.eguzo/per-fpga-edge-quantization/results/p3_m06/synthesis/cnn_v3_artix7_ooc/reports/ram_utilization.rpt
+| Design       : cnn_int8_pipelined_v3
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+RAM Usage Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Memory Description
+3. Memory Utilization - Inferred
+4. Memory Performance - Inferred
+5. Block Ram / URAM Memory Power - Inferred
+
+1. Summary
+----------
+
++--------------------------+------------+-----------+-------+-----------+
+| Memory Type              | Total Used | Available | Util% | Inferred% |
++--------------------------+------------+-----------+-------+-----------+
+| BlockRAM                 |          4 |       135 |  2.96 |    100.00 |
+|  RAMB36E1                |          2 |           |       |    100.00 |
+|  RAMB18E1                |          4 |           |       |    100.00 |
+| LUTMs as Distributed RAM |          0 |     19000 |  0.00 |      0.00 |
++--------------------------+------------+-----------+-------+-----------+
+*  Each RAMB18 is calculated as 0.5 BlockRAM
+**  Tables 2, 3, 4 and 5 cover RAMs inferred by Vivado Synthesis using XPMs or RTL inference
+***  XRAMs are not reported for detailed tables
+
+
+2. Memory Description
+---------------------
+
++--------------------------+------------+-----------+-------------+------------------------+------------------------+
+| Memory Name              | Array Size | RAM_STYLE | Memory Type | Port 1 Dimension / Map | Port 2 Dimension / Map |
++--------------------------+------------+-----------+-------------+------------------------+------------------------+
+| weights3_rom/data        |      65536 |           | RAM_SP      |                        | 8192x8                 |
+|  weights3_rom/data_reg_0 |      32768 |      NONE |             |                        |  A:A:8192x4            |
+|  weights3_rom/data_reg_1 |      32768 |      NONE |             |                        |  A:A:8192x4            |
+| weights2_rom/data        |       8192 |           | RAM_SP      |                        | 1024x8                 |
+|  weights2_rom/data_reg   |       8192 |      NONE |             |                        |  A:A:1024x8            |
+| weights_rom/data         |       2048 |           | RAM_SP      |                        | 1024x8                 |
+|  weights_rom/data_reg    |       8192 |      NONE |             |                        |  A:A:256x8             |
+| conv1_bank/mem           |       1280 |           | RAM_SDP     | 1024x8                 | 1024x8                 |
+|  conv1_bank/mem_reg      |       8192 |      AUTO |             |  A:A:256x8             |  B:B:256x8             |
+| input_bank/mem           |       1280 |           | RAM_SDP     | 1024x8                 | 1024x8                 |
+|  input_bank/mem_reg      |       8192 |      AUTO |             |  A:A:256x8             |  B:B:256x8             |
++--------------------------+------------+-----------+-------------+------------------------+------------------------+
+
+
+3. Memory Utilization - Inferred
+--------------------------------
+
++--------------------------+-----------+-----------+----------------+-----------+-----------+---------+---------------+---------------+---------+---------------+---------------+---------+---------------+---------------+---------+---------------+---------------+
+| Memory Name              | Primitive | RAM STYLE | Available Bits | Used Bits | Bit Util% | A Depth | A Depth Avail | A Depth Util% | A Width | A Width Avail | A Width Util% | B Depth | B Depth Avail | B Depth Util% | B Width | B Width Avail | B Width Util% |
++--------------------------+-----------+-----------+----------------+-----------+-----------+---------+---------------+---------------+---------+---------------+---------------+---------+---------------+---------------+---------+---------------+---------------+
+| weights3_rom/data        |           |           |                |           |           |         |               |               |         |               |               |         |               |               |         |               |               |
+|  weights3_rom/data_reg_0 | RAMB36E1  |      NONE |          36864 |     32768 |     88.89 |    8192 |          8192 |        100.00 |       4 |             4 |        100.00 |         |               |               |         |               |               |
+|  weights3_rom/data_reg_1 | RAMB36E1  |      NONE |          36864 |     32768 |     88.89 |    8192 |          8192 |        100.00 |       4 |             4 |        100.00 |         |               |               |         |               |               |
+| weights2_rom/data        |           |           |                |           |           |         |               |               |         |               |               |         |               |               |         |               |               |
+|  weights2_rom/data_reg   | RAMB18E1  |      NONE |          18432 |      8192 |     44.44 |    1024 |          1024 |        100.00 |       8 |            18 |         44.44 |         |               |               |         |               |               |
+| weights_rom/data         |           |           |                |           |           |         |               |               |         |               |               |         |               |               |         |               |               |
+|  weights_rom/data_reg    | RAMB18E1  |      NONE |          18432 |      2048 |     11.11 |     256 |          1024 |         25.00 |       8 |            18 |         44.44 |         |               |               |         |               |               |
+| conv1_bank/mem           |           |           |                |           |           |         |               |               |         |               |               |         |               |               |         |               |               |
+|  conv1_bank/mem_reg      | RAMB18E1  |      AUTO |          18432 |      2048 |     11.11 |     256 |          1024 |         25.00 |       8 |            18 |         44.44 |     256 |          1024 |         25.00 |       8 |            18 |         44.44 |
+| input_bank/mem           |           |           |                |           |           |         |               |               |         |               |               |         |               |               |         |               |               |
+|  input_bank/mem_reg      | RAMB18E1  |      AUTO |          18432 |      2048 |     11.11 |     256 |          1024 |         25.00 |       8 |            18 |         44.44 |     256 |          1024 |         25.00 |       8 |            18 |         44.44 |
++--------------------------+-----------+-----------+----------------+-----------+-----------+---------+---------------+---------------+---------+---------------+---------------+---------+---------------+---------------+---------+---------------+---------------+
+
+
+4. Memory Performance - Inferred
+--------------------------------
+
++--------------------------+-----------+------------------------+------------------------+-------------+-------------------------+-------------+-------------------------+-----------+--------+--------+---------+-----------+--------+--------+---------+
+| Memory Name              | Primitive | Port 1 Dimension / Map | Port 2 Dimension / Map | Port A Type | Port A Requirement (ns) | Port B Type | Port B Requirement (ns) | A Cascade | IREG_A | OREG_A | DOA_REG | B Cascade | IREG_B | OREG_B | DOB_REG |
++--------------------------+-----------+------------------------+------------------------+-------------+-------------------------+-------------+-------------------------+-----------+--------+--------+---------+-----------+--------+--------+---------+
+| weights3_rom/data        |           |                        | 8192x8                 |             |                         |             |                         |           |        |        |         |           |        |        |         |
+|  weights3_rom/data_reg_0 | RAMB36E1  |                        |  A:A:8192x4            |        Read |                    10.0 |             |                         |           |        |        |       0 |           |        |        |         |
+|  weights3_rom/data_reg_1 | RAMB36E1  |                        |  A:A:8192x4            |        Read |                    10.0 |             |                         |           |        |        |       0 |           |        |        |         |
+| weights2_rom/data        |           |                        | 1024x8                 |             |                         |             |                         |           |        |        |         |           |        |        |         |
+|  weights2_rom/data_reg   | RAMB18E1  |                        |  A:A:1024x8            |        Read |                    10.0 |             |                         |           |        |        |       0 |           |        |        |         |
+| weights_rom/data         |           |                        | 1024x8                 |             |                         |             |                         |           |        |        |         |           |        |        |         |
+|  weights_rom/data_reg    | RAMB18E1  |                        |  A:A:256x8             |        Read |                    10.0 |             |                         |           |        |        |       0 |           |        |        |         |
+| conv1_bank/mem           |           | 1024x8                 | 1024x8                 |             |                         |             |                         |           |        |        |         |           |        |        |         |
+|  conv1_bank/mem_reg      | RAMB18E1  |  A:A:256x8             |  B:B:256x8             |       Write |                    10.0 |        Read |                    10.0 |           |        |        |       0 |           |        |        |       0 |
+| input_bank/mem           |           | 1024x8                 | 1024x8                 |             |                         |             |                         |           |        |        |         |           |        |        |         |
+|  input_bank/mem_reg      | RAMB18E1  |  A:A:256x8             |  B:B:256x8             |       Write |                    10.0 |        Read |                    10.0 |           |        |        |       0 |           |        |        |       0 |
++--------------------------+-----------+------------------------+------------------------+-------------+-------------------------+-------------+-------------------------+-----------+--------+--------+---------+-----------+--------+--------+---------+
+
+
+5. Block Ram / URAM Memory Power - Inferred
+-------------------------------------------
+
++--------------------------+-----------+------------------------+------------------------+--------------------+---------------+-------------------+-----------+--------------------+---------------+-------------------+-----------+
+| Memory Name              | Primitive | Port 1 Dimension / Map | Port 2 Dimension / Map | Port A Power Gated | Port A Enable | Port A WRITE_MODE | A Cascade | Port B Power Gated | Port B Enable | Port B WRITE_MODE | B Cascade |
++--------------------------+-----------+------------------------+------------------------+--------------------+---------------+-------------------+-----------+--------------------+---------------+-------------------+-----------+
+| weights3_rom/data        |           | 8192x8                 |                        |                    |               |                   |           |                    |               |                   |           |
+|  weights3_rom/data_reg_0 | RAMB36E1  |                        |  A:A:8192x4            |                    |        SIGNAL |       WRITE_FIRST |           |                    |               |                   |           |
+|  weights3_rom/data_reg_1 | RAMB36E1  |                        |  A:A:8192x4            |                    |        SIGNAL |       WRITE_FIRST |           |                    |               |                   |           |
+| weights2_rom/data        |           | 1024x8                 |                        |                    |               |                   |           |                    |               |                   |           |
+|  weights2_rom/data_reg   | RAMB18E1  |                        |  A:A:1024x8            |                    |        SIGNAL |       WRITE_FIRST |           |                    |               |                   |           |
+| weights_rom/data         |           | 1024x8                 |                        |                    |               |                   |           |                    |               |                   |           |
+|  weights_rom/data_reg    | RAMB18E1  |                        |  A:A:256x8             |                    |        SIGNAL |       WRITE_FIRST |           |                    |               |                   |           |
+| conv1_bank/mem           |           | 1024x8                 | 1024x8                 |                    |               |                   |           |                    |               |                   |           |
+|  conv1_bank/mem_reg      | RAMB18E1  |  A:A:256x8             |  B:B:256x8             |                    |        SIGNAL |        READ_FIRST |           |                    |        SIGNAL |       WRITE_FIRST |           |
+| input_bank/mem           |           | 1024x8                 | 1024x8                 |                    |               |                   |           |                    |               |                   |           |
+|  input_bank/mem_reg      | RAMB18E1  |  A:A:256x8             |  B:B:256x8             |                    |        SIGNAL |        READ_FIRST |           |                    |        SIGNAL |       WRITE_FIRST |           |
++--------------------------+-----------+------------------------+------------------------+--------------------+---------------+-------------------+-----------+--------------------+---------------+-------------------+-----------+
+
+

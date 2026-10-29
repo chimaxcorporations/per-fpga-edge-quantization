@@ -1,0 +1,294 @@
+{
+  "project": "P3",
+  "milestone": "P3-M01",
+  "title": "Reference Model Recovery and Baseline Verification",
+  "generated_utc": "2026-10-26T21:42:28.778954+00:00",
+  "source_project": "P2 PER Prediction Modeling",
+  "target": "target_per",
+  "prediction_horizon": "t+1",
+  "history_length": 10,
+  "feature_count": 40,
+  "feature_order": [
+    "per_t_lag0",
+    "dist_m_lag0",
+    "v_src_mps_lag0",
+    "v_dst_mps_lag0",
+    "per_t_lag1",
+    "dist_m_lag1",
+    "v_src_mps_lag1",
+    "v_dst_mps_lag1",
+    "per_t_lag2",
+    "dist_m_lag2",
+    "v_src_mps_lag2",
+    "v_dst_mps_lag2",
+    "per_t_lag3",
+    "dist_m_lag3",
+    "v_src_mps_lag3",
+    "v_dst_mps_lag3",
+    "per_t_lag4",
+    "dist_m_lag4",
+    "v_src_mps_lag4",
+    "v_dst_mps_lag4",
+    "per_t_lag5",
+    "dist_m_lag5",
+    "v_src_mps_lag5",
+    "v_dst_mps_lag5",
+    "per_t_lag6",
+    "dist_m_lag6",
+    "v_src_mps_lag6",
+    "v_dst_mps_lag6",
+    "per_t_lag7",
+    "dist_m_lag7",
+    "v_src_mps_lag7",
+    "v_dst_mps_lag7",
+    "per_t_lag8",
+    "dist_m_lag8",
+    "v_src_mps_lag8",
+    "v_dst_mps_lag8",
+    "per_t_lag9",
+    "dist_m_lag9",
+    "v_src_mps_lag9",
+    "v_dst_mps_lag9"
+  ],
+  "cross_validation": {
+    "type": "scenario-held-out",
+    "folds": 9,
+    "scenarios": 27,
+    "held_out_scenarios_per_fold": 3
+  },
+  "reference_dataset": {
+    "samples": 9000,
+    "predictions": 36000,
+    "sampling_seed": 42,
+    "samples_per_fold": 1000,
+    "sampling_method": "deterministic uniform within scenario",
+    "high_per_threshold": 0.9,
+    "high_per_samples": 2129
+  },
+  "models": {
+    "ridge": {
+      "checkpoint_count": 9,
+      "checkpoints": [
+        {
+          "file": "artifacts/p3_m01/reference_models/ridge/ridge_fold1.joblib",
+          "sha256": "29f245128b7ab403d8d8ca982bd59f9611faae39dac3cd4331fe66281c52f65b"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/ridge/ridge_fold2.joblib",
+          "sha256": "d7463014c1e1ed487d7875f3fb6e85207190446ce7b05f4dcb91f0a4f5f4cf26"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/ridge/ridge_fold3.joblib",
+          "sha256": "9c622ed30e0498ee8e1c846ccb50eb65435a07a52d0b24bcd17080f76bdebaed"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/ridge/ridge_fold4.joblib",
+          "sha256": "1c33f13d977cc8d8dba70d6bca085991b9cc732e052075e9b5412506c1e790ce"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/ridge/ridge_fold5.joblib",
+          "sha256": "34e1b66db8e6748d5482a0b8a835b08d70b44485fd1ca4e33de7afbe06eff5b0"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/ridge/ridge_fold6.joblib",
+          "sha256": "7862e70460dfff32bbeccc4dd01146cbd7f344951b5c7bce24c07c9fe48fc8ed"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/ridge/ridge_fold7.joblib",
+          "sha256": "b105d7fb2fa5c3ff36c275a26d40b0069b6145a639440c34ebda03afabd98925"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/ridge/ridge_fold8.joblib",
+          "sha256": "3c47a3f7c0b0716ee9a6a7cd34782976761602047f42436580a4f71046ddc1a2"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/ridge/ridge_fold9.joblib",
+          "sha256": "95234d6779ede1d6060919467c43286a45a4724d1cafc016ae3a192770053b44"
+        }
+      ]
+    },
+    "histgb": {
+      "checkpoint_count": 9,
+      "checkpoints": [
+        {
+          "file": "artifacts/p3_m01/reference_models/histgb/hist_gb_fold1.joblib",
+          "sha256": "c4c790c83698cbc761920143067a870e4cdfca396d019237782a017f67795c57"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/histgb/hist_gb_fold2.joblib",
+          "sha256": "cfe9e93b422f14fb0da47964d5e19798d658e6b34b733d45806c0090e798b30c"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/histgb/hist_gb_fold3.joblib",
+          "sha256": "abc7ef3e7d824c18cccf9f513ed14454afe9bc1df8ad887f652ac14b8f02faea"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/histgb/hist_gb_fold4.joblib",
+          "sha256": "c17c99114a2d7ec754c27075b394e691edea81e0d26ddcf0edde24b6c6029687"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/histgb/hist_gb_fold5.joblib",
+          "sha256": "2a888dc676530f96b26fd9f872c44c3ebc7b55fb2e29cb2b26c7da990023826b"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/histgb/hist_gb_fold6.joblib",
+          "sha256": "c89e0f1e9353e6212dfe3ed1157ccf8d388f4ccc4818c61748136c41f19e0036"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/histgb/hist_gb_fold7.joblib",
+          "sha256": "bfe92eb051592bf46462cfbe6240dec71c115510b67fd540dd5c39f2e62a0d5e"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/histgb/hist_gb_fold8.joblib",
+          "sha256": "0c62b257628469c27d96723f2e7662be0715aa12b53a1487b51197aed4cb8494"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/histgb/hist_gb_fold9.joblib",
+          "sha256": "755cbaf72aad5dafc60db5d0c29e500ee8691f1fa1aca6071e5ba745a5c61876"
+        }
+      ]
+    },
+    "mlp": {
+      "checkpoint_count": 9,
+      "checkpoints": [
+        {
+          "file": "artifacts/p3_m01/reference_models/mlp/mlp_fold1.pt",
+          "sha256": "ff1465cdf1985238ed0323f80484a6cb06be2dc021ef93db7558beadea454188"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/mlp/mlp_fold2.pt",
+          "sha256": "a95bd098bd605f664a173561ad11479e434484bfa5d99311b08dfefe4e8254c0"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/mlp/mlp_fold3.pt",
+          "sha256": "24f9a8fc07bb4b27ed71df844ce1a7769e6b261b7e3a845ac08a0db45829df99"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/mlp/mlp_fold4.pt",
+          "sha256": "192d41f2c93c29ceda0d380ec62e3c87552d2eb8741033d96a67718ea4126a24"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/mlp/mlp_fold5.pt",
+          "sha256": "c828398ea003ede49e157c069ca49d2426356a7d1aaeaf191af5e427cae41cd1"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/mlp/mlp_fold6.pt",
+          "sha256": "d92c6bbefd4333585a1f963f24e26b5d100fef0d93dde11db93b57a76e44a988"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/mlp/mlp_fold7.pt",
+          "sha256": "e36905aa07cd0991d11d9910e4a864169d9c44ed7c14359425489f3a0fbff3e7"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/mlp/mlp_fold8.pt",
+          "sha256": "6410b705494aaa8edee35ff9605578b9ec83c69750edb3059964968c392f7609"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/mlp/mlp_fold9.pt",
+          "sha256": "3f9ab9b0e851660d55daa53367b19ed5b4dfa6e53d4ac168b589b339c357d2e1"
+        }
+      ]
+    },
+    "cnn": {
+      "checkpoint_count": 9,
+      "checkpoints": [
+        {
+          "file": "artifacts/p3_m01/reference_models/cnn/cnn_fold1.pt",
+          "sha256": "d39027923fb9556f90d07d66b0693ad95b5325f34c0bbc61622d0b64fea2db3a"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/cnn/cnn_fold2.pt",
+          "sha256": "a70efb8e34e9516bb4e2a0213d7c662cee4354bf6806ccd5790a4109c6417475"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/cnn/cnn_fold3.pt",
+          "sha256": "48f4295fe1a6c701f54a9a029657976fd298e6f4764970dcf4bb5d99be96a667"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/cnn/cnn_fold4.pt",
+          "sha256": "d0f6986d35b6eb440c21e2bf3b8d54d418e4a7d389f33e9a301ed92191833013"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/cnn/cnn_fold5.pt",
+          "sha256": "7790a4277aa1a2df5791bd10dd9cb0c33eb6d694955f3d00eedd3507553c9acc"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/cnn/cnn_fold6.pt",
+          "sha256": "f2de866f2dfbbd46d9ae565b2910d15824f5fc4a2d2bd9e2c2da8a08665caca4"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/cnn/cnn_fold7.pt",
+          "sha256": "46d515d1a9bff4dfd9232db0de76413f3fb4efeabaf37929973139726509411f"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/cnn/cnn_fold8.pt",
+          "sha256": "4144883741161cb430b1101d014f1e9a73a5addcb0df4effd2b0289e0563c503"
+        },
+        {
+          "file": "artifacts/p3_m01/reference_models/cnn/cnn_fold9.pt",
+          "sha256": "117ff043dddcd17347619d716579fad8ed169e51731004b7bf428705407c60fa"
+        }
+      ]
+    }
+  },
+  "reference_vectors": [
+    {
+      "fold": 1,
+      "file": "artifacts/p3_m01/reference_vectors/fold1.parquet",
+      "sha256": "cf81c79820aca17fb42c852995c1240b4765ae0226f9fce59e42e96fc8632ea8",
+      "samples": 1000
+    },
+    {
+      "fold": 2,
+      "file": "artifacts/p3_m01/reference_vectors/fold2.parquet",
+      "sha256": "b912e12fb510836e40c604049f51597a9a0440451a926982664fec71e539fd04",
+      "samples": 1000
+    },
+    {
+      "fold": 3,
+      "file": "artifacts/p3_m01/reference_vectors/fold3.parquet",
+      "sha256": "c8beef0c89fb65ec7b208f3a6f77a53417ade8876b5ca79d5e47f01a8047cc67",
+      "samples": 1000
+    },
+    {
+      "fold": 4,
+      "file": "artifacts/p3_m01/reference_vectors/fold4.parquet",
+      "sha256": "86329cee689701e4e8108f16fdda998f9452c3e8668b56ac496318405cdd214c",
+      "samples": 1000
+    },
+    {
+      "fold": 5,
+      "file": "artifacts/p3_m01/reference_vectors/fold5.parquet",
+      "sha256": "ef9a4a8dcf68ac8de57900fe57b7a1fcbe0380d76f69052e14f31a6f1172c38e",
+      "samples": 1000
+    },
+    {
+      "fold": 6,
+      "file": "artifacts/p3_m01/reference_vectors/fold6.parquet",
+      "sha256": "9f1036e66b81bb09d49b20b64607e5bbeb0af620fd793cbfde2e06953a15af75",
+      "samples": 1000
+    },
+    {
+      "fold": 7,
+      "file": "artifacts/p3_m01/reference_vectors/fold7.parquet",
+      "sha256": "b63969d5061f0524f4f5deb61291ffd32091c938fcfb449cd23da4d60b0f1573",
+      "samples": 1000
+    },
+    {
+      "fold": 8,
+      "file": "artifacts/p3_m01/reference_vectors/fold8.parquet",
+      "sha256": "a2a452d4869e2e2dfec29a3b70c37ae67cf284e0f877b9d5b82dc8d37447b609",
+      "samples": 1000
+    },
+    {
+      "fold": 9,
+      "file": "artifacts/p3_m01/reference_vectors/fold9.parquet",
+      "sha256": "9ba7a8f7f5c62abf62a39ec2cfcbc6c3d490a91e26c283f1e8e97a5252c49734",
+      "samples": 1000
+    }
+  ],
+  "hardware_validation": {
+    "performed": false,
+    "status": "Not applicable to P3-M01"
+  }
+}

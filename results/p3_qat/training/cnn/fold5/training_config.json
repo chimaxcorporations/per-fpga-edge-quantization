@@ -1,0 +1,22 @@
+{
+  "model": "cnn",
+  "fold": 5,
+  "bits": 8,
+  "calibration": "max",
+  "epochs": 10,
+  "batch_size": 2048,
+  "learning_rate": 0.0001,
+  "seed": 42,
+  "device": "cpu",
+  "training_samples": 720000,
+  "activation_scales": {
+    "standardized_input": 0.019331183020524154,
+    "conv1_relu": 0.01840458892461822,
+    "conv2_relu": 0.010265673239400067,
+    "dense_relu": 0.007286621829656165,
+    "output_linear": 0.009270242818697231
+  },
+  "checkpoint": "results/p3_qat/training/cnn/fold5/cnn_fold5_qat_int8.pt",
+  "checkpoint_selection": "final_epoch",
+  "heldout_data_used": false
+}

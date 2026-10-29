@@ -1,0 +1,13 @@
+Wed Oct 28 10:44:58 AM UTC 2026
+vivado v2025.2 (64-bit)
+Tool Version Limit: 2025.11
+SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+40841c20105dfc67875ad06fbcb8d5f8fcefd16dd1fbdc44cb86cf83a43b3fa4  hardware/rtl/inference/mlp_int8_sequential.v
+8844dfe2ab913844b8d6269e5da312be23a09010581d82fd2dcb6af58f723de6  hardware/rtl/inference/neuron_int8_serial.v
+4faa9ebe382ffde7b8b6d043b0112dbe55b78f2585c762e6e067f03acade6dad  hardware/rtl/memory/activation_ram_sync.v
+b9fd9ce2a662aad124bb9a70649ea4df1b0d18285960fa09da43b43ba2f99e37  hardware/rtl/memory/parameter_rom_sync.v
+7f918c908d4e89e502620d52fcf8ad4859af687a12f46bca275af94be6d3a623  hardware/scripts/synth_mlp_int8.tcl

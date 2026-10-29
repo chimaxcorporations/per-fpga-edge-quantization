@@ -1,0 +1,14 @@
+{
+  "samples": 1000,
+  "mean_abs_difference": 5.863829081747379e-05,
+  "max_abs_difference": 0.016256749629974365,
+  "rmse_difference": 0.0008694432737755644,
+  "mean_difference_lsb": 0.0067356266022205475,
+  "max_difference_lsb": 1.8673701730860195,
+  "output_scale": 0.008705692028436135,
+  "model": "mlp",
+  "fold": 9,
+  "bits": 8,
+  "calibration": "max",
+  "checkpoint": "results/p3_qat/training/mlp/fold9/mlp_fold9_qat_int8.pt"
+}

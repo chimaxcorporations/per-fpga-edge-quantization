@@ -1,0 +1,2 @@
+f2c6b5c848e14c2a7f5c8fbcca25bb2483551ebe28e5143a20ee9dd4d6a6c568  cnn_int8_pipelined_v2.v
+1c2ebbacb43ba91d81462de2f9318de1f28bed3c00a6c2590379c71370763451  tb_cnn_conv12_first_sample.v

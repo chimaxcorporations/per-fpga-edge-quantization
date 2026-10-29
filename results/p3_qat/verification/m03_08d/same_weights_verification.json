@@ -1,0 +1,209 @@
+{
+  "milestone": "P3-M03-08D",
+  "models": [
+    "mlp",
+    "cnn"
+  ],
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "bits": 8,
+  "calibration": "max",
+  "original_fp32_source": "Previously evaluated P3-M03-07 FP32 predictions",
+  "original_fp32_preprocessing": "Inherited from prior evaluation; not independently reloaded here",
+  "qat_fp32_definition": "Exact QAT-trained weights, no activation or weight fake quantization",
+  "output_rule": "Clip all new predictions to [0,1]",
+  "integer_reproduction_tolerance": 2e-06,
+  "checkpoints_modified": false,
+  "integer_backend_modified": false,
+  "provenance": [
+    {
+      "model": "mlp",
+      "fold": 1,
+      "checkpoint": "results/p3_qat/training/mlp/fold1/mlp_fold1_qat_int8.pt",
+      "checkpoint_sha256": "8890329120fb1fa43dce22d412c7c302bc21c3ed6674ee2a28dff9933fff9e96",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold1.parquet",
+      "reference_vectors_sha256": "cf81c79820aca17fb42c852995c1240b4765ae0226f9fce59e42e96fc8632ea8",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/mlp/fold1_predictions.parquet",
+      "baseline_predictions_sha256": "680916456951d32b5e8777f43373bcc299a76e77e5dae965f97b0ddbb260fb01"
+    },
+    {
+      "model": "mlp",
+      "fold": 2,
+      "checkpoint": "results/p3_qat/training/mlp/fold2/mlp_fold2_qat_int8.pt",
+      "checkpoint_sha256": "491db8c332a9bf78a87faadbda1a9a403cf18c047150a7d9fede1e97e94fd29e",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold2.parquet",
+      "reference_vectors_sha256": "b912e12fb510836e40c604049f51597a9a0440451a926982664fec71e539fd04",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/mlp/fold2_predictions.parquet",
+      "baseline_predictions_sha256": "d0b16e3a15219412eda2976e723cd058a29c41762c998aea35555819ff7e5ac1"
+    },
+    {
+      "model": "mlp",
+      "fold": 3,
+      "checkpoint": "results/p3_qat/training/mlp/fold3/mlp_fold3_qat_int8.pt",
+      "checkpoint_sha256": "1570f026bc5bd93b41e5dd8e7b1420ccc9d8b4c35697df36556264da2b6ba2cf",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold3.parquet",
+      "reference_vectors_sha256": "c8beef0c89fb65ec7b208f3a6f77a53417ade8876b5ca79d5e47f01a8047cc67",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/mlp/fold3_predictions.parquet",
+      "baseline_predictions_sha256": "f1bf19b0c7abd837cd329b9b2c5e573427c4e4dc2e863b357f58c113d2d8ea7b"
+    },
+    {
+      "model": "mlp",
+      "fold": 4,
+      "checkpoint": "results/p3_qat/training/mlp/fold4/mlp_fold4_qat_int8.pt",
+      "checkpoint_sha256": "80ee2418d5717791e99fb10a14e750580a94e219027856332a6c1d4551c1f46d",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold4.parquet",
+      "reference_vectors_sha256": "86329cee689701e4e8108f16fdda998f9452c3e8668b56ac496318405cdd214c",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/mlp/fold4_predictions.parquet",
+      "baseline_predictions_sha256": "22d24b80e25eecdc3306bfa4e020755318f4a1b20541d5bfc500065e7bc4145b"
+    },
+    {
+      "model": "mlp",
+      "fold": 5,
+      "checkpoint": "results/p3_qat/training/mlp/fold5/mlp_fold5_qat_int8.pt",
+      "checkpoint_sha256": "dec8aa11740f817019332244589354081b7a1a90b228eca6e63e4c160dd3f390",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold5.parquet",
+      "reference_vectors_sha256": "ef9a4a8dcf68ac8de57900fe57b7a1fcbe0380d76f69052e14f31a6f1172c38e",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/mlp/fold5_predictions.parquet",
+      "baseline_predictions_sha256": "5de774c8c602c2edb7572cfdff7856498eedc5f88fc6cf584ae2f40f47b2d34c"
+    },
+    {
+      "model": "mlp",
+      "fold": 6,
+      "checkpoint": "results/p3_qat/training/mlp/fold6/mlp_fold6_qat_int8.pt",
+      "checkpoint_sha256": "a36d282b6d8d9ceffb0938106a699bb7261dcd29dbe3ee6374b430a89bb10b97",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold6.parquet",
+      "reference_vectors_sha256": "9f1036e66b81bb09d49b20b64607e5bbeb0af620fd793cbfde2e06953a15af75",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/mlp/fold6_predictions.parquet",
+      "baseline_predictions_sha256": "417cb1fea9bc12558573c07f46a73f8860e58c6f8a69a1836155c25b39af48d6"
+    },
+    {
+      "model": "mlp",
+      "fold": 7,
+      "checkpoint": "results/p3_qat/training/mlp/fold7/mlp_fold7_qat_int8.pt",
+      "checkpoint_sha256": "ab8fd54f818e4b727dea32f4043f6e1d1e280429eb303fb47439d0dc5374106b",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold7.parquet",
+      "reference_vectors_sha256": "b63969d5061f0524f4f5deb61291ffd32091c938fcfb449cd23da4d60b0f1573",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/mlp/fold7_predictions.parquet",
+      "baseline_predictions_sha256": "c33c68063dfba5f8f8cf7c0b9dfded3f91aab615e4824f7e51b179219de76c1b"
+    },
+    {
+      "model": "mlp",
+      "fold": 8,
+      "checkpoint": "results/p3_qat/training/mlp/fold8/mlp_fold8_qat_int8.pt",
+      "checkpoint_sha256": "c096fcd24df0886133dd82386e5808c54778fbed956c0c846d490ad7980149c4",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold8.parquet",
+      "reference_vectors_sha256": "a2a452d4869e2e2dfec29a3b70c37ae67cf284e0f877b9d5b82dc8d37447b609",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/mlp/fold8_predictions.parquet",
+      "baseline_predictions_sha256": "5ffc6eb1a3f9dbdc9f2e1d0b48673c3555e1c99854e3293d8ba271f6190d7e2e"
+    },
+    {
+      "model": "mlp",
+      "fold": 9,
+      "checkpoint": "results/p3_qat/training/mlp/fold9/mlp_fold9_qat_int8.pt",
+      "checkpoint_sha256": "a3f58ba791e4f0f9010a55d1768df275725b1295f1c3ddee863c344b519c9229",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold9.parquet",
+      "reference_vectors_sha256": "9ba7a8f7f5c62abf62a39ec2cfcbc6c3d490a91e26c283f1e8e97a5252c49734",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/mlp/fold9_predictions.parquet",
+      "baseline_predictions_sha256": "ea95ef5c78f499cf17460224a66e3358c517f58c83470cdd8c868eb045a11d4c"
+    },
+    {
+      "model": "cnn",
+      "fold": 1,
+      "checkpoint": "results/p3_qat/training/cnn/fold1/cnn_fold1_qat_int8.pt",
+      "checkpoint_sha256": "231c8284aca75d8b13adafe028dc85780a6635a1e58da209cdc45b3581bfec31",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold1.parquet",
+      "reference_vectors_sha256": "cf81c79820aca17fb42c852995c1240b4765ae0226f9fce59e42e96fc8632ea8",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/cnn/fold1_predictions.parquet",
+      "baseline_predictions_sha256": "64a67fef92e026c6e44e9e9d549dc98981e2395a64ec471c60a41719d068c075"
+    },
+    {
+      "model": "cnn",
+      "fold": 2,
+      "checkpoint": "results/p3_qat/training/cnn/fold2/cnn_fold2_qat_int8.pt",
+      "checkpoint_sha256": "21d9a0754f4113109aad0eb7a6127e8f5b597d8a3893ec8f23769e007b642f88",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold2.parquet",
+      "reference_vectors_sha256": "b912e12fb510836e40c604049f51597a9a0440451a926982664fec71e539fd04",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/cnn/fold2_predictions.parquet",
+      "baseline_predictions_sha256": "77232659dc7413e2dc99c996dbefb78dee60e20c78e19f5d598067cb1c885583"
+    },
+    {
+      "model": "cnn",
+      "fold": 3,
+      "checkpoint": "results/p3_qat/training/cnn/fold3/cnn_fold3_qat_int8.pt",
+      "checkpoint_sha256": "e84a13551873174223e36f87acaab381be36cc23f0532efc361bbc1569a2774c",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold3.parquet",
+      "reference_vectors_sha256": "c8beef0c89fb65ec7b208f3a6f77a53417ade8876b5ca79d5e47f01a8047cc67",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/cnn/fold3_predictions.parquet",
+      "baseline_predictions_sha256": "5befbdaddeb49069a348ebe894a077473ee211cb3c2f234e9f5d6c411804aa16"
+    },
+    {
+      "model": "cnn",
+      "fold": 4,
+      "checkpoint": "results/p3_qat/training/cnn/fold4/cnn_fold4_qat_int8.pt",
+      "checkpoint_sha256": "47c28248e81f4201158bb6dc4e97869971eb3c72b38708112b2f871ad75b3db5",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold4.parquet",
+      "reference_vectors_sha256": "86329cee689701e4e8108f16fdda998f9452c3e8668b56ac496318405cdd214c",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/cnn/fold4_predictions.parquet",
+      "baseline_predictions_sha256": "253b9649c24a3d5c1a71e77d6f8327437da58a205ebc2fc786b29ef0743b1834"
+    },
+    {
+      "model": "cnn",
+      "fold": 5,
+      "checkpoint": "results/p3_qat/training/cnn/fold5/cnn_fold5_qat_int8.pt",
+      "checkpoint_sha256": "0e2db67ca93ebe0d3621be989c460e267277333ff596d2dbcac58dc8b3180355",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold5.parquet",
+      "reference_vectors_sha256": "ef9a4a8dcf68ac8de57900fe57b7a1fcbe0380d76f69052e14f31a6f1172c38e",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/cnn/fold5_predictions.parquet",
+      "baseline_predictions_sha256": "9119b9e39b7975be580555982f0de72c87cc792fe7d822dbd9ff84af8067454d"
+    },
+    {
+      "model": "cnn",
+      "fold": 6,
+      "checkpoint": "results/p3_qat/training/cnn/fold6/cnn_fold6_qat_int8.pt",
+      "checkpoint_sha256": "1c15e5af3bdf70d706d9c188746fba74a7a05dd8498b9dcfd42f3cacb5248482",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold6.parquet",
+      "reference_vectors_sha256": "9f1036e66b81bb09d49b20b64607e5bbeb0af620fd793cbfde2e06953a15af75",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/cnn/fold6_predictions.parquet",
+      "baseline_predictions_sha256": "bf05fe8a0eb4a0da33db3e8bb7a1bd92244205f262fd6fe3a0f35903060bc2a6"
+    },
+    {
+      "model": "cnn",
+      "fold": 7,
+      "checkpoint": "results/p3_qat/training/cnn/fold7/cnn_fold7_qat_int8.pt",
+      "checkpoint_sha256": "9349478df15e2cedc2b457fc017e0f524a400d1c4714cb7b71f801eadea09ace",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold7.parquet",
+      "reference_vectors_sha256": "b63969d5061f0524f4f5deb61291ffd32091c938fcfb449cd23da4d60b0f1573",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/cnn/fold7_predictions.parquet",
+      "baseline_predictions_sha256": "37a4c26517f5be29ded72072bc886595a1aa4642d248493c32c63315a0fbc06c"
+    },
+    {
+      "model": "cnn",
+      "fold": 8,
+      "checkpoint": "results/p3_qat/training/cnn/fold8/cnn_fold8_qat_int8.pt",
+      "checkpoint_sha256": "9047574c8f0231f10b5a163304e24e9ea68d3fd58c81432a8c89c845db0d9bc7",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold8.parquet",
+      "reference_vectors_sha256": "a2a452d4869e2e2dfec29a3b70c37ae67cf284e0f877b9d5b82dc8d37447b609",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/cnn/fold8_predictions.parquet",
+      "baseline_predictions_sha256": "fa5c5a16ea9ec789ea8807bc1f288baa628f71291c71f4aba80e2dae2b8e0321"
+    },
+    {
+      "model": "cnn",
+      "fold": 9,
+      "checkpoint": "results/p3_qat/training/cnn/fold9/cnn_fold9_qat_int8.pt",
+      "checkpoint_sha256": "050ca95e05f27d886325e80013d070769d545300743b216073f81ef45f7c82ef",
+      "reference_vectors": "artifacts/p3_m01/reference_vectors/fold9.parquet",
+      "reference_vectors_sha256": "9ba7a8f7f5c62abf62a39ec2cfcbc6c3d490a91e26c283f1e8e97a5252c49734",
+      "baseline_predictions": "results/p3_qat/evaluation/int8/max/cnn/fold9_predictions.parquet",
+      "baseline_predictions_sha256": "3ee00a84e70a7d775af0109ffe4e73cbb830ee5f7f470712e0b743c130a1eab4"
+    }
+  ]
+}

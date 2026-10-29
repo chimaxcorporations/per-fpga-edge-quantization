@@ -1,0 +1,7 @@
+Experiment: T5_110MHz_physopt
+Clock period (ns): 9.091
+Target frequency (MHz): 109.9989000109999
+Worst setup path slack (ns): -0.055
+Worst hold path slack (ns): 0.115
+Interface timing: EXCLUDED
+Inference cycles (RTL): 25803

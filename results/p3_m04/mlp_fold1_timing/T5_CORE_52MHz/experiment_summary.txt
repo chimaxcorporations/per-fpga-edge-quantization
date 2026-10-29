@@ -1,0 +1,7 @@
+Experiment: T5_CORE_52MHz
+Clock period (ns): 19.231
+Target frequency (MHz): 51.9993760074879
+Worst setup path slack (ns): -0.601
+Worst hold path slack (ns): 0.074
+Interface timing: EXCLUDED
+Inference cycles (RTL): 25415

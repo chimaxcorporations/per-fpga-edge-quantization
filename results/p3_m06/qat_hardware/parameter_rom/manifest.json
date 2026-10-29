@@ -1,0 +1,248 @@
+{
+  "milestone": "P3-M06-02B",
+  "model": "cnn",
+  "fold": 1,
+  "bits": 8,
+  "method": "max",
+  "samples": 32,
+  "checkpoint_sha256": "231c8284aca75d8b13adafe028dc85780a6635a1e58da209cdc45b3581bfec31",
+  "original_checkpoint_sha256": "d39027923fb9556f90d07d66b0693ad95b5325f34c0bbc61622d0b64fea2db3a",
+  "calibration_sha256": "6bc57c686ae700f25a7fd01b2f9430d981e05199587d736e229204a09838f9a8",
+  "reference_vectors_sha256": "cf81c79820aca17fb42c852995c1240b4765ae0226f9fce59e42e96fc8632ea8",
+  "feature_order": [
+    "per_t_lag0",
+    "dist_m_lag0",
+    "v_src_mps_lag0",
+    "v_dst_mps_lag0",
+    "per_t_lag1",
+    "dist_m_lag1",
+    "v_src_mps_lag1",
+    "v_dst_mps_lag1",
+    "per_t_lag2",
+    "dist_m_lag2",
+    "v_src_mps_lag2",
+    "v_dst_mps_lag2",
+    "per_t_lag3",
+    "dist_m_lag3",
+    "v_src_mps_lag3",
+    "v_dst_mps_lag3",
+    "per_t_lag4",
+    "dist_m_lag4",
+    "v_src_mps_lag4",
+    "v_dst_mps_lag4",
+    "per_t_lag5",
+    "dist_m_lag5",
+    "v_src_mps_lag5",
+    "v_dst_mps_lag5",
+    "per_t_lag6",
+    "dist_m_lag6",
+    "v_src_mps_lag6",
+    "v_dst_mps_lag6",
+    "per_t_lag7",
+    "dist_m_lag7",
+    "v_src_mps_lag7",
+    "v_dst_mps_lag7",
+    "per_t_lag8",
+    "dist_m_lag8",
+    "v_src_mps_lag8",
+    "v_dst_mps_lag8",
+    "per_t_lag9",
+    "dist_m_lag9",
+    "v_src_mps_lag9",
+    "v_dst_mps_lag9"
+  ],
+  "input_tensor_order": "sample,channel,time; 4x10",
+  "golden_conv_order": "sample,output-channel,time",
+  "layer_parameters": [
+    {
+      "name": "conv1",
+      "state_key": "conv.0",
+      "weight_shape": [
+        16,
+        4,
+        3
+      ],
+      "weight_order": "output-channel,input-channel,kernel",
+      "relu": true,
+      "input_scale": 0.01930413283701018,
+      "output_scale": 0.021215637837807968,
+      "files": {
+        "weights": {
+          "file": "conv1_weights.memh",
+          "words": 192,
+          "width_bits": 8,
+          "sha256": "8902deea25a545157ac0290d2b7921441818a9d53d098215c8f38d02870972fe"
+        },
+        "bias": {
+          "file": "conv1_bias.memh",
+          "words": 16,
+          "width_bits": 32,
+          "sha256": "05d0ad0109ddd90d5a6ac09e22d5393fb41e742ed1fa3deba6245414ec78fccc"
+        },
+        "multiplier": {
+          "file": "conv1_multiplier.memh",
+          "words": 16,
+          "width_bits": 32,
+          "sha256": "35849e577690d5fb392af84c11be783e3539b32f64cc7432a6d2313696dfc0d0"
+        },
+        "shift": {
+          "file": "conv1_shift.memh",
+          "words": 16,
+          "width_bits": 8,
+          "sha256": "3dcba36b27c4051956efb4e638e9d21a3cf5f0f8cb50b1875c56d620832ed36e"
+        }
+      }
+    },
+    {
+      "name": "conv2",
+      "state_key": "conv.2",
+      "weight_shape": [
+        16,
+        16,
+        3
+      ],
+      "weight_order": "output-channel,input-channel,kernel",
+      "relu": true,
+      "input_scale": 0.021215637837807968,
+      "output_scale": 0.01854094933337114,
+      "files": {
+        "weights": {
+          "file": "conv2_weights.memh",
+          "words": 768,
+          "width_bits": 8,
+          "sha256": "495abf6d9b3850957df73ea353343ca5bc37ba075d3a79acbbd3e475e6a9ae2f"
+        },
+        "bias": {
+          "file": "conv2_bias.memh",
+          "words": 16,
+          "width_bits": 32,
+          "sha256": "b9c2d5caac05c7a2cc583e35536bd511e1266644f8d4be245a524234b3be4b67"
+        },
+        "multiplier": {
+          "file": "conv2_multiplier.memh",
+          "words": 16,
+          "width_bits": 32,
+          "sha256": "a095c9898f85e98ecf361ba6e4d9c4b6e9333553e33c6b959d3db4f9889c83bc"
+        },
+        "shift": {
+          "file": "conv2_shift.memh",
+          "words": 16,
+          "width_bits": 8,
+          "sha256": "3dcba36b27c4051956efb4e638e9d21a3cf5f0f8cb50b1875c56d620832ed36e"
+        }
+      }
+    },
+    {
+      "name": "fc1",
+      "state_key": "head.1",
+      "weight_shape": [
+        32,
+        160
+      ],
+      "weight_order": "output-neuron,input-feature",
+      "relu": true,
+      "input_scale": 0.01854094933337114,
+      "output_scale": 0.012075993958420642,
+      "files": {
+        "weights": {
+          "file": "fc1_weights.memh",
+          "words": 5120,
+          "width_bits": 8,
+          "sha256": "761c28940217ee410dcef0d1532c3ef3772e9f4c3c94df5e4bca18f1dd08052f"
+        },
+        "bias": {
+          "file": "fc1_bias.memh",
+          "words": 32,
+          "width_bits": 32,
+          "sha256": "726d755ed37b0d216e8a8b96251abf74394d26fb6f711da7ebb023655ba594fc"
+        },
+        "multiplier": {
+          "file": "fc1_multiplier.memh",
+          "words": 32,
+          "width_bits": 32,
+          "sha256": "80a95dc06ab532ed04eee689c6d66304ca2656111aeb385dd58c385815297144"
+        },
+        "shift": {
+          "file": "fc1_shift.memh",
+          "words": 32,
+          "width_bits": 8,
+          "sha256": "2874d27eff3912c64b97cc9e29a5ebdf8275ae2a714fb0dcd8c74b43c1c4bbca"
+        }
+      }
+    },
+    {
+      "name": "output",
+      "state_key": "head.3",
+      "weight_shape": [
+        1,
+        32
+      ],
+      "weight_order": "output-neuron,input-feature",
+      "relu": false,
+      "input_scale": 0.012075993958420642,
+      "output_scale": 0.011583333879005252,
+      "files": {
+        "weights": {
+          "file": "output_weights.memh",
+          "words": 32,
+          "width_bits": 8,
+          "sha256": "6a8c90f56a323704067ba3687f805b36058742345d3eea782392043fafdd60a6"
+        },
+        "bias": {
+          "file": "output_bias.memh",
+          "words": 1,
+          "width_bits": 32,
+          "sha256": "72cfe6919af1be175666d1f59e2e960428c42d198251e00ce8afd43e9ad1e778"
+        },
+        "multiplier": {
+          "file": "output_multiplier.memh",
+          "words": 1,
+          "width_bits": 32,
+          "sha256": "a9b24289dc1d10f70036606513a2ee6cffa20c6402f8191729f69e79bb78fbe2"
+        },
+        "shift": {
+          "file": "output_shift.memh",
+          "words": 1,
+          "width_bits": 8,
+          "sha256": "71063fefaab700366bc2f11a5da596c7f3e2f834459ad7acaac0c6f492bf7f49"
+        }
+      }
+    }
+  ],
+  "test_vectors": {
+    "inputs": {
+      "file": "inputs_int8.memh",
+      "words": 1280,
+      "width_bits": 8,
+      "sha256": "70443c955831a72d221d23d2e2c2dfdf92d9d5ee6855cbde53617b20e3658fef"
+    },
+    "conv1_golden": {
+      "file": "conv1_golden_int8.memh",
+      "words": 5120,
+      "width_bits": 8,
+      "sha256": "f8b5cfcf2fb59ed96bca5116b744e097b73e5b5b4d87cc5f89fe4878a745e8f1"
+    },
+    "conv2_golden": {
+      "file": "conv2_golden_int8.memh",
+      "words": 5120,
+      "width_bits": 8,
+      "sha256": "e14de94cf851116d1d60b186959fbe4795af9978b9781f0e912b303168d747ce"
+    },
+    "fc1_golden": {
+      "file": "fc1_golden_int8.memh",
+      "words": 1024,
+      "width_bits": 8,
+      "sha256": "1023b70b8326b446b268e6c4e9f585f58fa7ff30f2efb0e7140a3731fdfc4da2"
+    },
+    "output_golden": {
+      "file": "output_golden_int8.memh",
+      "words": 32,
+      "width_bits": 8,
+      "sha256": "bfb0a90451f56c590fc7130c3eb6f9b247753fe725b968f7ed041604c193b1d1"
+    }
+  },
+  "rom_readback": "PASS",
+  "layerwise_rom_backend_parity": "PASS",
+  "final_per_parity": "PASS",
+  "note": "Hardware output is INT8; dequantization and [0,1] clipping are external."
+}

@@ -1,0 +1,2281 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Wed Oct 28 14:00:54 2026
+| Host         : localhost.localdomain running 64-bit Rocky Linux 9.5 (Blue Onyx)
+| Command      : report_timing -delay_type max -max_paths 20 -file /hdd/c.eguzo/per-fpga-edge-quantization/results/p3_m04/mlp_fold1_pipelined_timing/T4_80MHz/critical_paths_setup.rpt
+| Design       : mlp_int8_pipelined
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.321ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[58]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        12.213ns  (logic 6.952ns (56.924%)  route 5.261ns (43.076%))
+  Logic Levels:           27  (CARRY4=21 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.126 r  core/rounded_reg_reg[27]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.126    core/rounded_reg_reg[27]_i_2_n_0
+    SLICE_X8Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.243 r  core/rounded_reg_reg[31]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.243    core/rounded_reg_reg[31]_i_2_n_0
+    SLICE_X8Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.360 r  core/rounded_reg_reg[35]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.360    core/rounded_reg_reg[35]_i_2_n_0
+    SLICE_X8Y71          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.477 r  core/rounded_reg_reg[39]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.477    core/rounded_reg_reg[39]_i_2_n_0
+    SLICE_X8Y72          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.594 r  core/rounded_reg_reg[43]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.594    core/rounded_reg_reg[43]_i_2_n_0
+    SLICE_X8Y73          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.909 f  core/rounded_reg_reg[47]_i_2/O[3]
+                         net (fo=2, routed)           0.660    10.568    core/rounded_mag__0[47]
+    SLICE_X9Y73          LUT1 (Prop_lut1_I0_O)        0.307    10.875 r  core/rounded_reg[48]_i_4/O
+                         net (fo=1, routed)           0.000    10.875    core/rounded_reg[48]_i_4_n_0
+    SLICE_X9Y73          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.273 r  core/rounded_reg_reg[48]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.273    core/rounded_reg_reg[48]_i_2_n_0
+    SLICE_X9Y74          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.387 r  core/rounded_reg_reg[52]_i_2/CO[3]
+                         net (fo=1, routed)           0.009    11.397    core/rounded_reg_reg[52]_i_2_n_0
+    SLICE_X9Y75          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.511 r  core/rounded_reg_reg[56]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.511    core/rounded_reg_reg[56]_i_2_n_0
+    SLICE_X9Y76          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    11.845 r  core/rounded_reg_reg[60]_i_2/O[1]
+                         net (fo=1, routed)           1.016    12.861    core/rounded0[58]
+    SLICE_X10Y76         LUT3 (Prop_lut3_I0_O)        0.325    13.186 r  core/rounded_reg[58]_i_1/O
+                         net (fo=1, routed)           0.000    13.186    core/rounded[58]
+    SLICE_X10Y76         FDRE                                         r  core/rounded_reg_reg[58]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X10Y76         FDRE                                         r  core/rounded_reg_reg[58]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X10Y76         FDRE (Setup_fdre_C_D)        0.118    13.507    core/rounded_reg_reg[58]
+  -------------------------------------------------------------------
+                         required time                         13.507    
+                         arrival time                         -13.186    
+  -------------------------------------------------------------------
+                         slack                                  0.321    
+
+Slack (MET) :             0.411ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[62]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        12.080ns  (logic 7.070ns (58.528%)  route 5.010ns (41.472%))
+  Logic Levels:           28  (CARRY4=22 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.126 r  core/rounded_reg_reg[27]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.126    core/rounded_reg_reg[27]_i_2_n_0
+    SLICE_X8Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.243 r  core/rounded_reg_reg[31]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.243    core/rounded_reg_reg[31]_i_2_n_0
+    SLICE_X8Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.360 r  core/rounded_reg_reg[35]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.360    core/rounded_reg_reg[35]_i_2_n_0
+    SLICE_X8Y71          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.477 r  core/rounded_reg_reg[39]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.477    core/rounded_reg_reg[39]_i_2_n_0
+    SLICE_X8Y72          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.594 r  core/rounded_reg_reg[43]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.594    core/rounded_reg_reg[43]_i_2_n_0
+    SLICE_X8Y73          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.909 f  core/rounded_reg_reg[47]_i_2/O[3]
+                         net (fo=2, routed)           0.660    10.568    core/rounded_mag__0[47]
+    SLICE_X9Y73          LUT1 (Prop_lut1_I0_O)        0.307    10.875 r  core/rounded_reg[48]_i_4/O
+                         net (fo=1, routed)           0.000    10.875    core/rounded_reg[48]_i_4_n_0
+    SLICE_X9Y73          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.273 r  core/rounded_reg_reg[48]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.273    core/rounded_reg_reg[48]_i_2_n_0
+    SLICE_X9Y74          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.387 r  core/rounded_reg_reg[52]_i_2/CO[3]
+                         net (fo=1, routed)           0.009    11.397    core/rounded_reg_reg[52]_i_2_n_0
+    SLICE_X9Y75          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.511 r  core/rounded_reg_reg[56]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.511    core/rounded_reg_reg[56]_i_2_n_0
+    SLICE_X9Y76          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.625 r  core/rounded_reg_reg[60]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.625    core/rounded_reg_reg[60]_i_2_n_0
+    SLICE_X9Y77          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    11.959 r  core/rounded_reg_reg[63]_i_3/O[1]
+                         net (fo=1, routed)           0.765    12.724    core/rounded0[62]
+    SLICE_X9Y78          LUT3 (Prop_lut3_I0_O)        0.329    13.053 r  core/rounded_reg[62]_i_1/O
+                         net (fo=1, routed)           0.000    13.053    core/rounded[62]
+    SLICE_X9Y78          FDRE                                         r  core/rounded_reg_reg[62]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X9Y78          FDRE                                         r  core/rounded_reg_reg[62]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X9Y78          FDRE (Setup_fdre_C_D)        0.075    13.464    core/rounded_reg_reg[62]
+  -------------------------------------------------------------------
+                         required time                         13.464    
+                         arrival time                         -13.053    
+  -------------------------------------------------------------------
+                         slack                                  0.411    
+
+Slack (MET) :             0.607ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[56]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        11.927ns  (logic 6.824ns (57.214%)  route 5.103ns (42.786%))
+  Logic Levels:           26  (CARRY4=20 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.126 r  core/rounded_reg_reg[27]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.126    core/rounded_reg_reg[27]_i_2_n_0
+    SLICE_X8Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.243 r  core/rounded_reg_reg[31]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.243    core/rounded_reg_reg[31]_i_2_n_0
+    SLICE_X8Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.360 r  core/rounded_reg_reg[35]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.360    core/rounded_reg_reg[35]_i_2_n_0
+    SLICE_X8Y71          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.477 r  core/rounded_reg_reg[39]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.477    core/rounded_reg_reg[39]_i_2_n_0
+    SLICE_X8Y72          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.594 r  core/rounded_reg_reg[43]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.594    core/rounded_reg_reg[43]_i_2_n_0
+    SLICE_X8Y73          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.909 f  core/rounded_reg_reg[47]_i_2/O[3]
+                         net (fo=2, routed)           0.660    10.568    core/rounded_mag__0[47]
+    SLICE_X9Y73          LUT1 (Prop_lut1_I0_O)        0.307    10.875 r  core/rounded_reg[48]_i_4/O
+                         net (fo=1, routed)           0.000    10.875    core/rounded_reg[48]_i_4_n_0
+    SLICE_X9Y73          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.273 r  core/rounded_reg_reg[48]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.273    core/rounded_reg_reg[48]_i_2_n_0
+    SLICE_X9Y74          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.387 r  core/rounded_reg_reg[52]_i_2/CO[3]
+                         net (fo=1, routed)           0.009    11.397    core/rounded_reg_reg[52]_i_2_n_0
+    SLICE_X9Y75          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    11.710 r  core/rounded_reg_reg[56]_i_2/O[3]
+                         net (fo=1, routed)           0.859    12.568    core/rounded0[56]
+    SLICE_X10Y75         LUT3 (Prop_lut3_I0_O)        0.332    12.900 r  core/rounded_reg[56]_i_1/O
+                         net (fo=1, routed)           0.000    12.900    core/rounded[56]
+    SLICE_X10Y75         FDRE                                         r  core/rounded_reg_reg[56]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X10Y75         FDRE                                         r  core/rounded_reg_reg[56]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X10Y75         FDRE (Setup_fdre_C_D)        0.118    13.507    core/rounded_reg_reg[56]
+  -------------------------------------------------------------------
+                         required time                         13.507    
+                         arrival time                         -12.900    
+  -------------------------------------------------------------------
+                         slack                                  0.607    
+
+Slack (MET) :             0.683ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[60]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        11.851ns  (logic 6.938ns (58.543%)  route 4.913ns (41.457%))
+  Logic Levels:           27  (CARRY4=21 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.126 r  core/rounded_reg_reg[27]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.126    core/rounded_reg_reg[27]_i_2_n_0
+    SLICE_X8Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.243 r  core/rounded_reg_reg[31]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.243    core/rounded_reg_reg[31]_i_2_n_0
+    SLICE_X8Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.360 r  core/rounded_reg_reg[35]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.360    core/rounded_reg_reg[35]_i_2_n_0
+    SLICE_X8Y71          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.477 r  core/rounded_reg_reg[39]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.477    core/rounded_reg_reg[39]_i_2_n_0
+    SLICE_X8Y72          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.594 r  core/rounded_reg_reg[43]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.594    core/rounded_reg_reg[43]_i_2_n_0
+    SLICE_X8Y73          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.909 f  core/rounded_reg_reg[47]_i_2/O[3]
+                         net (fo=2, routed)           0.660    10.568    core/rounded_mag__0[47]
+    SLICE_X9Y73          LUT1 (Prop_lut1_I0_O)        0.307    10.875 r  core/rounded_reg[48]_i_4/O
+                         net (fo=1, routed)           0.000    10.875    core/rounded_reg[48]_i_4_n_0
+    SLICE_X9Y73          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.273 r  core/rounded_reg_reg[48]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.273    core/rounded_reg_reg[48]_i_2_n_0
+    SLICE_X9Y74          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.387 r  core/rounded_reg_reg[52]_i_2/CO[3]
+                         net (fo=1, routed)           0.009    11.397    core/rounded_reg_reg[52]_i_2_n_0
+    SLICE_X9Y75          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.511 r  core/rounded_reg_reg[56]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.511    core/rounded_reg_reg[56]_i_2_n_0
+    SLICE_X9Y76          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    11.824 r  core/rounded_reg_reg[60]_i_2/O[3]
+                         net (fo=1, routed)           0.669    12.492    core/rounded0[60]
+    SLICE_X10Y76         LUT3 (Prop_lut3_I0_O)        0.332    12.824 r  core/rounded_reg[60]_i_1/O
+                         net (fo=1, routed)           0.000    12.824    core/rounded[60]
+    SLICE_X10Y76         FDRE                                         r  core/rounded_reg_reg[60]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X10Y76         FDRE                                         r  core/rounded_reg_reg[60]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X10Y76         FDRE (Setup_fdre_C_D)        0.118    13.507    core/rounded_reg_reg[60]
+  -------------------------------------------------------------------
+                         required time                         13.507    
+                         arrival time                         -12.824    
+  -------------------------------------------------------------------
+                         slack                                  0.683    
+
+Slack (MET) :             0.730ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[52]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        11.804ns  (logic 6.710ns (56.844%)  route 5.094ns (43.156%))
+  Logic Levels:           25  (CARRY4=19 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.126 r  core/rounded_reg_reg[27]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.126    core/rounded_reg_reg[27]_i_2_n_0
+    SLICE_X8Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.243 r  core/rounded_reg_reg[31]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.243    core/rounded_reg_reg[31]_i_2_n_0
+    SLICE_X8Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.360 r  core/rounded_reg_reg[35]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.360    core/rounded_reg_reg[35]_i_2_n_0
+    SLICE_X8Y71          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.477 r  core/rounded_reg_reg[39]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.477    core/rounded_reg_reg[39]_i_2_n_0
+    SLICE_X8Y72          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.594 r  core/rounded_reg_reg[43]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.594    core/rounded_reg_reg[43]_i_2_n_0
+    SLICE_X8Y73          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.909 f  core/rounded_reg_reg[47]_i_2/O[3]
+                         net (fo=2, routed)           0.660    10.568    core/rounded_mag__0[47]
+    SLICE_X9Y73          LUT1 (Prop_lut1_I0_O)        0.307    10.875 r  core/rounded_reg[48]_i_4/O
+                         net (fo=1, routed)           0.000    10.875    core/rounded_reg[48]_i_4_n_0
+    SLICE_X9Y73          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.273 r  core/rounded_reg_reg[48]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.273    core/rounded_reg_reg[48]_i_2_n_0
+    SLICE_X9Y74          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    11.586 r  core/rounded_reg_reg[52]_i_2/O[3]
+                         net (fo=1, routed)           0.859    12.445    core/rounded0[52]
+    SLICE_X10Y74         LUT3 (Prop_lut3_I0_O)        0.332    12.777 r  core/rounded_reg[52]_i_1/O
+                         net (fo=1, routed)           0.000    12.777    core/rounded[52]
+    SLICE_X10Y74         FDRE                                         r  core/rounded_reg_reg[52]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X10Y74         FDRE                                         r  core/rounded_reg_reg[52]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X10Y74         FDRE (Setup_fdre_C_D)        0.118    13.507    core/rounded_reg_reg[52]
+  -------------------------------------------------------------------
+                         required time                         13.507    
+                         arrival time                         -12.777    
+  -------------------------------------------------------------------
+                         slack                                  0.730    
+
+Slack (MET) :             0.758ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[50]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        11.776ns  (logic 6.726ns (57.116%)  route 5.050ns (42.885%))
+  Logic Levels:           25  (CARRY4=19 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.126 r  core/rounded_reg_reg[27]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.126    core/rounded_reg_reg[27]_i_2_n_0
+    SLICE_X8Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.243 r  core/rounded_reg_reg[31]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.243    core/rounded_reg_reg[31]_i_2_n_0
+    SLICE_X8Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.360 r  core/rounded_reg_reg[35]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.360    core/rounded_reg_reg[35]_i_2_n_0
+    SLICE_X8Y71          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.477 r  core/rounded_reg_reg[39]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.477    core/rounded_reg_reg[39]_i_2_n_0
+    SLICE_X8Y72          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.594 r  core/rounded_reg_reg[43]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.594    core/rounded_reg_reg[43]_i_2_n_0
+    SLICE_X8Y73          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.909 f  core/rounded_reg_reg[47]_i_2/O[3]
+                         net (fo=2, routed)           0.660    10.568    core/rounded_mag__0[47]
+    SLICE_X9Y73          LUT1 (Prop_lut1_I0_O)        0.307    10.875 r  core/rounded_reg[48]_i_4/O
+                         net (fo=1, routed)           0.000    10.875    core/rounded_reg[48]_i_4_n_0
+    SLICE_X9Y73          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.273 r  core/rounded_reg_reg[48]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.273    core/rounded_reg_reg[48]_i_2_n_0
+    SLICE_X9Y74          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    11.607 r  core/rounded_reg_reg[52]_i_2/O[1]
+                         net (fo=1, routed)           0.815    12.422    core/rounded0[50]
+    SLICE_X10Y74         LUT3 (Prop_lut3_I0_O)        0.327    12.749 r  core/rounded_reg[50]_i_1/O
+                         net (fo=1, routed)           0.000    12.749    core/rounded[50]
+    SLICE_X10Y74         FDRE                                         r  core/rounded_reg_reg[50]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X10Y74         FDRE                                         r  core/rounded_reg_reg[50]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X10Y74         FDRE (Setup_fdre_C_D)        0.118    13.507    core/rounded_reg_reg[50]
+  -------------------------------------------------------------------
+                         required time                         13.507    
+                         arrival time                         -12.749    
+  -------------------------------------------------------------------
+                         slack                                  0.758    
+
+Slack (MET) :             0.776ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[54]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        11.758ns  (logic 6.808ns (57.900%)  route 4.950ns (42.100%))
+  Logic Levels:           26  (CARRY4=20 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.126 r  core/rounded_reg_reg[27]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.126    core/rounded_reg_reg[27]_i_2_n_0
+    SLICE_X8Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.243 r  core/rounded_reg_reg[31]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.243    core/rounded_reg_reg[31]_i_2_n_0
+    SLICE_X8Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.360 r  core/rounded_reg_reg[35]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.360    core/rounded_reg_reg[35]_i_2_n_0
+    SLICE_X8Y71          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.477 r  core/rounded_reg_reg[39]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.477    core/rounded_reg_reg[39]_i_2_n_0
+    SLICE_X8Y72          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.594 r  core/rounded_reg_reg[43]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.594    core/rounded_reg_reg[43]_i_2_n_0
+    SLICE_X8Y73          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.909 f  core/rounded_reg_reg[47]_i_2/O[3]
+                         net (fo=2, routed)           0.660    10.568    core/rounded_mag__0[47]
+    SLICE_X9Y73          LUT1 (Prop_lut1_I0_O)        0.307    10.875 r  core/rounded_reg[48]_i_4/O
+                         net (fo=1, routed)           0.000    10.875    core/rounded_reg[48]_i_4_n_0
+    SLICE_X9Y73          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.273 r  core/rounded_reg_reg[48]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.273    core/rounded_reg_reg[48]_i_2_n_0
+    SLICE_X9Y74          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.387 r  core/rounded_reg_reg[52]_i_2/CO[3]
+                         net (fo=1, routed)           0.009    11.397    core/rounded_reg_reg[52]_i_2_n_0
+    SLICE_X9Y75          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    11.731 r  core/rounded_reg_reg[56]_i_2/O[1]
+                         net (fo=1, routed)           0.706    12.436    core/rounded0[54]
+    SLICE_X10Y75         LUT3 (Prop_lut3_I0_O)        0.295    12.731 r  core/rounded_reg[54]_i_1/O
+                         net (fo=1, routed)           0.000    12.731    core/rounded[54]
+    SLICE_X10Y75         FDRE                                         r  core/rounded_reg_reg[54]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X10Y75         FDRE                                         r  core/rounded_reg_reg[54]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X10Y75         FDRE (Setup_fdre_C_D)        0.118    13.507    core/rounded_reg_reg[54]
+  -------------------------------------------------------------------
+                         required time                         13.507    
+                         arrival time                         -12.731    
+  -------------------------------------------------------------------
+                         slack                                  0.776    
+
+Slack (MET) :             0.825ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[59]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        11.672ns  (logic 6.834ns (58.550%)  route 4.838ns (41.450%))
+  Logic Levels:           27  (CARRY4=21 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.126 r  core/rounded_reg_reg[27]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.126    core/rounded_reg_reg[27]_i_2_n_0
+    SLICE_X8Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.243 r  core/rounded_reg_reg[31]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.243    core/rounded_reg_reg[31]_i_2_n_0
+    SLICE_X8Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.360 r  core/rounded_reg_reg[35]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.360    core/rounded_reg_reg[35]_i_2_n_0
+    SLICE_X8Y71          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.477 r  core/rounded_reg_reg[39]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.477    core/rounded_reg_reg[39]_i_2_n_0
+    SLICE_X8Y72          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.594 r  core/rounded_reg_reg[43]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.594    core/rounded_reg_reg[43]_i_2_n_0
+    SLICE_X8Y73          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.909 f  core/rounded_reg_reg[47]_i_2/O[3]
+                         net (fo=2, routed)           0.660    10.568    core/rounded_mag__0[47]
+    SLICE_X9Y73          LUT1 (Prop_lut1_I0_O)        0.307    10.875 r  core/rounded_reg[48]_i_4/O
+                         net (fo=1, routed)           0.000    10.875    core/rounded_reg[48]_i_4_n_0
+    SLICE_X9Y73          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.273 r  core/rounded_reg_reg[48]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.273    core/rounded_reg_reg[48]_i_2_n_0
+    SLICE_X9Y74          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.387 r  core/rounded_reg_reg[52]_i_2/CO[3]
+                         net (fo=1, routed)           0.009    11.397    core/rounded_reg_reg[52]_i_2_n_0
+    SLICE_X9Y75          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.511 r  core/rounded_reg_reg[56]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.511    core/rounded_reg_reg[56]_i_2_n_0
+    SLICE_X9Y76          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    11.750 r  core/rounded_reg_reg[60]_i_2/O[2]
+                         net (fo=1, routed)           0.594    12.343    core/rounded0[59]
+    SLICE_X10Y76         LUT3 (Prop_lut3_I0_O)        0.302    12.645 r  core/rounded_reg[59]_i_1/O
+                         net (fo=1, routed)           0.000    12.645    core/rounded[59]
+    SLICE_X10Y76         FDRE                                         r  core/rounded_reg_reg[59]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X10Y76         FDRE                                         r  core/rounded_reg_reg[59]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X10Y76         FDRE (Setup_fdre_C_D)        0.081    13.470    core/rounded_reg_reg[59]
+  -------------------------------------------------------------------
+                         required time                         13.470    
+                         arrival time                         -12.645    
+  -------------------------------------------------------------------
+                         slack                                  0.825    
+
+Slack (MET) :             0.833ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[57]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        11.660ns  (logic 6.814ns (58.438%)  route 4.846ns (41.562%))
+  Logic Levels:           27  (CARRY4=21 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.126 r  core/rounded_reg_reg[27]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.126    core/rounded_reg_reg[27]_i_2_n_0
+    SLICE_X8Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.243 r  core/rounded_reg_reg[31]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.243    core/rounded_reg_reg[31]_i_2_n_0
+    SLICE_X8Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.360 r  core/rounded_reg_reg[35]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.360    core/rounded_reg_reg[35]_i_2_n_0
+    SLICE_X8Y71          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.477 r  core/rounded_reg_reg[39]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.477    core/rounded_reg_reg[39]_i_2_n_0
+    SLICE_X8Y72          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.594 r  core/rounded_reg_reg[43]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.594    core/rounded_reg_reg[43]_i_2_n_0
+    SLICE_X8Y73          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.909 f  core/rounded_reg_reg[47]_i_2/O[3]
+                         net (fo=2, routed)           0.660    10.568    core/rounded_mag__0[47]
+    SLICE_X9Y73          LUT1 (Prop_lut1_I0_O)        0.307    10.875 r  core/rounded_reg[48]_i_4/O
+                         net (fo=1, routed)           0.000    10.875    core/rounded_reg[48]_i_4_n_0
+    SLICE_X9Y73          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.273 r  core/rounded_reg_reg[48]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.273    core/rounded_reg_reg[48]_i_2_n_0
+    SLICE_X9Y74          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.387 r  core/rounded_reg_reg[52]_i_2/CO[3]
+                         net (fo=1, routed)           0.009    11.397    core/rounded_reg_reg[52]_i_2_n_0
+    SLICE_X9Y75          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.511 r  core/rounded_reg_reg[56]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.511    core/rounded_reg_reg[56]_i_2_n_0
+    SLICE_X9Y76          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    11.733 r  core/rounded_reg_reg[60]_i_2/O[0]
+                         net (fo=1, routed)           0.602    12.334    core/rounded0[57]
+    SLICE_X10Y76         LUT3 (Prop_lut3_I0_O)        0.299    12.633 r  core/rounded_reg[57]_i_1/O
+                         net (fo=1, routed)           0.000    12.633    core/rounded[57]
+    SLICE_X10Y76         FDRE                                         r  core/rounded_reg_reg[57]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X10Y76         FDRE                                         r  core/rounded_reg_reg[57]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X10Y76         FDRE (Setup_fdre_C_D)        0.077    13.466    core/rounded_reg_reg[57]
+  -------------------------------------------------------------------
+                         required time                         13.466    
+                         arrival time                         -12.633    
+  -------------------------------------------------------------------
+                         slack                                  0.833    
+
+Slack (MET) :             0.845ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[63]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        11.650ns  (logic 6.948ns (59.639%)  route 4.702ns (40.361%))
+  Logic Levels:           28  (CARRY4=22 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.126 r  core/rounded_reg_reg[27]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.126    core/rounded_reg_reg[27]_i_2_n_0
+    SLICE_X8Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.243 r  core/rounded_reg_reg[31]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.243    core/rounded_reg_reg[31]_i_2_n_0
+    SLICE_X8Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.360 r  core/rounded_reg_reg[35]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.360    core/rounded_reg_reg[35]_i_2_n_0
+    SLICE_X8Y71          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.477 r  core/rounded_reg_reg[39]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.477    core/rounded_reg_reg[39]_i_2_n_0
+    SLICE_X8Y72          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.594 r  core/rounded_reg_reg[43]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.594    core/rounded_reg_reg[43]_i_2_n_0
+    SLICE_X8Y73          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.909 f  core/rounded_reg_reg[47]_i_2/O[3]
+                         net (fo=2, routed)           0.660    10.568    core/rounded_mag__0[47]
+    SLICE_X9Y73          LUT1 (Prop_lut1_I0_O)        0.307    10.875 r  core/rounded_reg[48]_i_4/O
+                         net (fo=1, routed)           0.000    10.875    core/rounded_reg[48]_i_4_n_0
+    SLICE_X9Y73          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.273 r  core/rounded_reg_reg[48]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.273    core/rounded_reg_reg[48]_i_2_n_0
+    SLICE_X9Y74          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.387 r  core/rounded_reg_reg[52]_i_2/CO[3]
+                         net (fo=1, routed)           0.009    11.397    core/rounded_reg_reg[52]_i_2_n_0
+    SLICE_X9Y75          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.511 r  core/rounded_reg_reg[56]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.511    core/rounded_reg_reg[56]_i_2_n_0
+    SLICE_X9Y76          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.625 r  core/rounded_reg_reg[60]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.625    core/rounded_reg_reg[60]_i_2_n_0
+    SLICE_X9Y77          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    11.864 r  core/rounded_reg_reg[63]_i_3/O[2]
+                         net (fo=1, routed)           0.458    12.321    core/rounded0[63]
+    SLICE_X10Y75         LUT3 (Prop_lut3_I0_O)        0.302    12.623 r  core/rounded_reg[63]_i_2/O
+                         net (fo=1, routed)           0.000    12.623    core/rounded[63]
+    SLICE_X10Y75         FDRE                                         r  core/rounded_reg_reg[63]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X10Y75         FDRE                                         r  core/rounded_reg_reg[63]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X10Y75         FDRE (Setup_fdre_C_D)        0.079    13.468    core/rounded_reg_reg[63]
+  -------------------------------------------------------------------
+                         required time                         13.468    
+                         arrival time                         -12.623    
+  -------------------------------------------------------------------
+                         slack                                  0.845    
+
+Slack (MET) :             0.866ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[61]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        11.581ns  (logic 6.928ns (59.821%)  route 4.653ns (40.179%))
+  Logic Levels:           28  (CARRY4=22 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.126 r  core/rounded_reg_reg[27]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.126    core/rounded_reg_reg[27]_i_2_n_0
+    SLICE_X8Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.243 r  core/rounded_reg_reg[31]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.243    core/rounded_reg_reg[31]_i_2_n_0
+    SLICE_X8Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.360 r  core/rounded_reg_reg[35]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.360    core/rounded_reg_reg[35]_i_2_n_0
+    SLICE_X8Y71          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.477 r  core/rounded_reg_reg[39]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.477    core/rounded_reg_reg[39]_i_2_n_0
+    SLICE_X8Y72          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.594 r  core/rounded_reg_reg[43]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.594    core/rounded_reg_reg[43]_i_2_n_0
+    SLICE_X8Y73          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.909 f  core/rounded_reg_reg[47]_i_2/O[3]
+                         net (fo=2, routed)           0.660    10.568    core/rounded_mag__0[47]
+    SLICE_X9Y73          LUT1 (Prop_lut1_I0_O)        0.307    10.875 r  core/rounded_reg[48]_i_4/O
+                         net (fo=1, routed)           0.000    10.875    core/rounded_reg[48]_i_4_n_0
+    SLICE_X9Y73          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.273 r  core/rounded_reg_reg[48]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.273    core/rounded_reg_reg[48]_i_2_n_0
+    SLICE_X9Y74          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.387 r  core/rounded_reg_reg[52]_i_2/CO[3]
+                         net (fo=1, routed)           0.009    11.397    core/rounded_reg_reg[52]_i_2_n_0
+    SLICE_X9Y75          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.511 r  core/rounded_reg_reg[56]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.511    core/rounded_reg_reg[56]_i_2_n_0
+    SLICE_X9Y76          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.625 r  core/rounded_reg_reg[60]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.625    core/rounded_reg_reg[60]_i_2_n_0
+    SLICE_X9Y77          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    11.847 r  core/rounded_reg_reg[63]_i_3/O[0]
+                         net (fo=1, routed)           0.409    12.255    core/rounded0[61]
+    SLICE_X9Y78          LUT3 (Prop_lut3_I0_O)        0.299    12.554 r  core/rounded_reg[61]_i_1/O
+                         net (fo=1, routed)           0.000    12.554    core/rounded[61]
+    SLICE_X9Y78          FDRE                                         r  core/rounded_reg_reg[61]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X9Y78          FDRE                                         r  core/rounded_reg_reg[61]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X9Y78          FDRE (Setup_fdre_C_D)        0.031    13.420    core/rounded_reg_reg[61]
+  -------------------------------------------------------------------
+                         required time                         13.420    
+                         arrival time                         -12.554    
+  -------------------------------------------------------------------
+                         slack                                  0.866    
+
+Slack (MET) :             0.931ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[55]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        11.566ns  (logic 6.720ns (58.102%)  route 4.846ns (41.898%))
+  Logic Levels:           26  (CARRY4=20 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.126 r  core/rounded_reg_reg[27]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.126    core/rounded_reg_reg[27]_i_2_n_0
+    SLICE_X8Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.243 r  core/rounded_reg_reg[31]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.243    core/rounded_reg_reg[31]_i_2_n_0
+    SLICE_X8Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.360 r  core/rounded_reg_reg[35]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.360    core/rounded_reg_reg[35]_i_2_n_0
+    SLICE_X8Y71          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.477 r  core/rounded_reg_reg[39]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.477    core/rounded_reg_reg[39]_i_2_n_0
+    SLICE_X8Y72          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.594 r  core/rounded_reg_reg[43]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.594    core/rounded_reg_reg[43]_i_2_n_0
+    SLICE_X8Y73          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.909 f  core/rounded_reg_reg[47]_i_2/O[3]
+                         net (fo=2, routed)           0.660    10.568    core/rounded_mag__0[47]
+    SLICE_X9Y73          LUT1 (Prop_lut1_I0_O)        0.307    10.875 r  core/rounded_reg[48]_i_4/O
+                         net (fo=1, routed)           0.000    10.875    core/rounded_reg[48]_i_4_n_0
+    SLICE_X9Y73          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.273 r  core/rounded_reg_reg[48]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.273    core/rounded_reg_reg[48]_i_2_n_0
+    SLICE_X9Y74          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.387 r  core/rounded_reg_reg[52]_i_2/CO[3]
+                         net (fo=1, routed)           0.009    11.397    core/rounded_reg_reg[52]_i_2_n_0
+    SLICE_X9Y75          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    11.636 r  core/rounded_reg_reg[56]_i_2/O[2]
+                         net (fo=1, routed)           0.601    12.237    core/rounded0[55]
+    SLICE_X10Y75         LUT3 (Prop_lut3_I0_O)        0.302    12.539 r  core/rounded_reg[55]_i_1/O
+                         net (fo=1, routed)           0.000    12.539    core/rounded[55]
+    SLICE_X10Y75         FDRE                                         r  core/rounded_reg_reg[55]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X10Y75         FDRE                                         r  core/rounded_reg_reg[55]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X10Y75         FDRE (Setup_fdre_C_D)        0.081    13.470    core/rounded_reg_reg[55]
+  -------------------------------------------------------------------
+                         required time                         13.470    
+                         arrival time                         -12.539    
+  -------------------------------------------------------------------
+                         slack                                  0.931    
+
+Slack (MET) :             0.933ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[38]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        11.601ns  (logic 6.369ns (54.900%)  route 5.232ns (45.100%))
+  Logic Levels:           22  (CARRY4=16 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.324 f  core/rounded_reg_reg[27]_i_2/O[3]
+                         net (fo=2, routed)           0.660     9.983    core/rounded_mag__0[27]
+    SLICE_X9Y68          LUT1 (Prop_lut1_I0_O)        0.307    10.290 r  core/rounded_reg[28]_i_4/O
+                         net (fo=1, routed)           0.000    10.290    core/rounded_reg[28]_i_4_n_0
+    SLICE_X9Y68          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    10.688 r  core/rounded_reg_reg[28]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.688    core/rounded_reg_reg[28]_i_2_n_0
+    SLICE_X9Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.802 r  core/rounded_reg_reg[32]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.802    core/rounded_reg_reg[32]_i_2_n_0
+    SLICE_X9Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.916 r  core/rounded_reg_reg[36]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.916    core/rounded_reg_reg[36]_i_2_n_0
+    SLICE_X9Y71          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    11.250 r  core/rounded_reg_reg[40]_i_2/O[1]
+                         net (fo=1, routed)           0.997    12.247    core/rounded0[38]
+    SLICE_X12Y71         LUT3 (Prop_lut3_I0_O)        0.327    12.574 r  core/rounded_reg[38]_i_1/O
+                         net (fo=1, routed)           0.000    12.574    core/rounded[38]
+    SLICE_X12Y71         FDRE                                         r  core/rounded_reg_reg[38]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X12Y71         FDRE                                         r  core/rounded_reg_reg[38]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X12Y71         FDRE (Setup_fdre_C_D)        0.118    13.507    core/rounded_reg_reg[38]
+  -------------------------------------------------------------------
+                         required time                         13.507    
+                         arrival time                         -12.574    
+  -------------------------------------------------------------------
+                         slack                                  0.933    
+
+Slack (MET) :             0.947ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[53]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        11.546ns  (logic 6.700ns (58.028%)  route 4.846ns (41.972%))
+  Logic Levels:           26  (CARRY4=20 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.126 r  core/rounded_reg_reg[27]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.126    core/rounded_reg_reg[27]_i_2_n_0
+    SLICE_X8Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.243 r  core/rounded_reg_reg[31]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.243    core/rounded_reg_reg[31]_i_2_n_0
+    SLICE_X8Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.360 r  core/rounded_reg_reg[35]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.360    core/rounded_reg_reg[35]_i_2_n_0
+    SLICE_X8Y71          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.477 r  core/rounded_reg_reg[39]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.477    core/rounded_reg_reg[39]_i_2_n_0
+    SLICE_X8Y72          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.594 r  core/rounded_reg_reg[43]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.594    core/rounded_reg_reg[43]_i_2_n_0
+    SLICE_X8Y73          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.909 f  core/rounded_reg_reg[47]_i_2/O[3]
+                         net (fo=2, routed)           0.660    10.568    core/rounded_mag__0[47]
+    SLICE_X9Y73          LUT1 (Prop_lut1_I0_O)        0.307    10.875 r  core/rounded_reg[48]_i_4/O
+                         net (fo=1, routed)           0.000    10.875    core/rounded_reg[48]_i_4_n_0
+    SLICE_X9Y73          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.273 r  core/rounded_reg_reg[48]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.273    core/rounded_reg_reg[48]_i_2_n_0
+    SLICE_X9Y74          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.387 r  core/rounded_reg_reg[52]_i_2/CO[3]
+                         net (fo=1, routed)           0.009    11.397    core/rounded_reg_reg[52]_i_2_n_0
+    SLICE_X9Y75          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    11.619 r  core/rounded_reg_reg[56]_i_2/O[0]
+                         net (fo=1, routed)           0.602    12.220    core/rounded0[53]
+    SLICE_X10Y75         LUT3 (Prop_lut3_I0_O)        0.299    12.519 r  core/rounded_reg[53]_i_1/O
+                         net (fo=1, routed)           0.000    12.519    core/rounded[53]
+    SLICE_X10Y75         FDRE                                         r  core/rounded_reg_reg[53]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X10Y75         FDRE                                         r  core/rounded_reg_reg[53]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X10Y75         FDRE (Setup_fdre_C_D)        0.077    13.466    core/rounded_reg_reg[53]
+  -------------------------------------------------------------------
+                         required time                         13.466    
+                         arrival time                         -12.519    
+  -------------------------------------------------------------------
+                         slack                                  0.947    
+
+Slack (MET) :             1.049ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[48]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        11.485ns  (logic 6.581ns (57.301%)  route 4.904ns (42.699%))
+  Logic Levels:           24  (CARRY4=18 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.324 f  core/rounded_reg_reg[27]_i_2/O[3]
+                         net (fo=2, routed)           0.660     9.983    core/rounded_mag__0[27]
+    SLICE_X9Y68          LUT1 (Prop_lut1_I0_O)        0.307    10.290 r  core/rounded_reg[28]_i_4/O
+                         net (fo=1, routed)           0.000    10.290    core/rounded_reg[28]_i_4_n_0
+    SLICE_X9Y68          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    10.688 r  core/rounded_reg_reg[28]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.688    core/rounded_reg_reg[28]_i_2_n_0
+    SLICE_X9Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.802 r  core/rounded_reg_reg[32]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.802    core/rounded_reg_reg[32]_i_2_n_0
+    SLICE_X9Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.916 r  core/rounded_reg_reg[36]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.916    core/rounded_reg_reg[36]_i_2_n_0
+    SLICE_X9Y71          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.030 r  core/rounded_reg_reg[40]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.030    core/rounded_reg_reg[40]_i_2_n_0
+    SLICE_X9Y72          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    11.144 r  core/rounded_reg_reg[44]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.144    core/rounded_reg_reg[44]_i_2_n_0
+    SLICE_X9Y73          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    11.457 r  core/rounded_reg_reg[48]_i_2/O[3]
+                         net (fo=1, routed)           0.669    12.126    core/rounded0[48]
+    SLICE_X10Y73         LUT3 (Prop_lut3_I0_O)        0.332    12.458 r  core/rounded_reg[48]_i_1/O
+                         net (fo=1, routed)           0.000    12.458    core/rounded[48]
+    SLICE_X10Y73         FDRE                                         r  core/rounded_reg_reg[48]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X10Y73         FDRE                                         r  core/rounded_reg_reg[48]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X10Y73         FDRE (Setup_fdre_C_D)        0.118    13.507    core/rounded_reg_reg[48]
+  -------------------------------------------------------------------
+                         required time                         13.507    
+                         arrival time                         -12.458    
+  -------------------------------------------------------------------
+                         slack                                  1.049    
+
+Slack (MET) :             1.054ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[51]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        11.443ns  (logic 6.606ns (57.730%)  route 4.837ns (42.270%))
+  Logic Levels:           25  (CARRY4=19 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.126 r  core/rounded_reg_reg[27]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.126    core/rounded_reg_reg[27]_i_2_n_0
+    SLICE_X8Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.243 r  core/rounded_reg_reg[31]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.243    core/rounded_reg_reg[31]_i_2_n_0
+    SLICE_X8Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.360 r  core/rounded_reg_reg[35]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.360    core/rounded_reg_reg[35]_i_2_n_0
+    SLICE_X8Y71          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.477 r  core/rounded_reg_reg[39]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.477    core/rounded_reg_reg[39]_i_2_n_0
+    SLICE_X8Y72          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.594 r  core/rounded_reg_reg[43]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.594    core/rounded_reg_reg[43]_i_2_n_0
+    SLICE_X8Y73          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.909 f  core/rounded_reg_reg[47]_i_2/O[3]
+                         net (fo=2, routed)           0.660    10.568    core/rounded_mag__0[47]
+    SLICE_X9Y73          LUT1 (Prop_lut1_I0_O)        0.307    10.875 r  core/rounded_reg[48]_i_4/O
+                         net (fo=1, routed)           0.000    10.875    core/rounded_reg[48]_i_4_n_0
+    SLICE_X9Y73          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.273 r  core/rounded_reg_reg[48]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.273    core/rounded_reg_reg[48]_i_2_n_0
+    SLICE_X9Y74          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    11.512 r  core/rounded_reg_reg[52]_i_2/O[2]
+                         net (fo=1, routed)           0.601    12.114    core/rounded0[51]
+    SLICE_X10Y74         LUT3 (Prop_lut3_I0_O)        0.302    12.416 r  core/rounded_reg[51]_i_1/O
+                         net (fo=1, routed)           0.000    12.416    core/rounded[51]
+    SLICE_X10Y74         FDRE                                         r  core/rounded_reg_reg[51]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X10Y74         FDRE                                         r  core/rounded_reg_reg[51]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X10Y74         FDRE (Setup_fdre_C_D)        0.081    13.470    core/rounded_reg_reg[51]
+  -------------------------------------------------------------------
+                         required time                         13.470    
+                         arrival time                         -12.416    
+  -------------------------------------------------------------------
+                         slack                                  1.054    
+
+Slack (MET) :             1.070ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[49]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        11.423ns  (logic 6.586ns (57.654%)  route 4.837ns (42.346%))
+  Logic Levels:           25  (CARRY4=19 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.126 r  core/rounded_reg_reg[27]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.126    core/rounded_reg_reg[27]_i_2_n_0
+    SLICE_X8Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.243 r  core/rounded_reg_reg[31]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.243    core/rounded_reg_reg[31]_i_2_n_0
+    SLICE_X8Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.360 r  core/rounded_reg_reg[35]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.360    core/rounded_reg_reg[35]_i_2_n_0
+    SLICE_X8Y71          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.477 r  core/rounded_reg_reg[39]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.477    core/rounded_reg_reg[39]_i_2_n_0
+    SLICE_X8Y72          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.594 r  core/rounded_reg_reg[43]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.594    core/rounded_reg_reg[43]_i_2_n_0
+    SLICE_X8Y73          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.909 f  core/rounded_reg_reg[47]_i_2/O[3]
+                         net (fo=2, routed)           0.660    10.568    core/rounded_mag__0[47]
+    SLICE_X9Y73          LUT1 (Prop_lut1_I0_O)        0.307    10.875 r  core/rounded_reg[48]_i_4/O
+                         net (fo=1, routed)           0.000    10.875    core/rounded_reg[48]_i_4_n_0
+    SLICE_X9Y73          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    11.273 r  core/rounded_reg_reg[48]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    11.273    core/rounded_reg_reg[48]_i_2_n_0
+    SLICE_X9Y74          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    11.495 r  core/rounded_reg_reg[52]_i_2/O[0]
+                         net (fo=1, routed)           0.602    12.097    core/rounded0[49]
+    SLICE_X10Y74         LUT3 (Prop_lut3_I0_O)        0.299    12.396 r  core/rounded_reg[49]_i_1/O
+                         net (fo=1, routed)           0.000    12.396    core/rounded[49]
+    SLICE_X10Y74         FDRE                                         r  core/rounded_reg_reg[49]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X10Y74         FDRE                                         r  core/rounded_reg_reg[49]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X10Y74         FDRE (Setup_fdre_C_D)        0.077    13.466    core/rounded_reg_reg[49]
+  -------------------------------------------------------------------
+                         required time                         13.466    
+                         arrival time                         -12.396    
+  -------------------------------------------------------------------
+                         slack                                  1.070    
+
+Slack (MET) :             1.076ns  (required time - arrival time)
+  Source:                 feature_operand_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/product_reg_reg/A[20]
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        10.747ns  (logic 5.055ns (47.036%)  route 5.692ns (52.964%))
+  Logic Levels:           15  (CARRY4=9 LUT2=2 LUT3=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    clk
+    SLICE_X1Y69          FDRE                                         r  feature_operand_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y69          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  feature_operand_reg[5]/Q
+                         net (fo=19, routed)          0.918     2.347    core/feature_in[5]
+    SLICE_X3Y65          LUT2 (Prop_lut2_I1_O)        0.150     2.497 r  core/overflow_i_86/O
+                         net (fo=1, routed)           0.727     3.224    core/overflow_i_86_n_0
+    SLICE_X2Y64          LUT6 (Prop_lut6_I5_O)        0.332     3.556 r  core/overflow_i_78/O
+                         net (fo=1, routed)           0.000     3.556    core/overflow_i_78_n_0
+    SLICE_X2Y64          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     4.089 r  core/overflow_reg_i_40/CO[3]
+                         net (fo=1, routed)           0.000     4.089    core/overflow_reg_i_40_n_0
+    SLICE_X2Y65          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     4.308 r  core/overflow_reg_i_37/O[0]
+                         net (fo=2, routed)           0.767     5.076    core/overflow_reg_i_37_n_7
+    SLICE_X3Y63          LUT3 (Prop_lut3_I1_O)        0.321     5.397 r  core/overflow_i_19/O
+                         net (fo=2, routed)           0.859     6.255    core/overflow_i_19_n_0
+    SLICE_X3Y63          LUT4 (Prop_lut4_I3_O)        0.326     6.581 r  core/overflow_i_23/O
+                         net (fo=1, routed)           0.000     6.581    core/overflow_i_23_n_0
+    SLICE_X3Y63          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.131 r  core/overflow_reg_i_5/CO[3]
+                         net (fo=1, routed)           0.000     7.131    core/overflow_reg_i_5_n_0
+    SLICE_X3Y64          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     7.465 r  core/overflow_reg_i_3/O[1]
+                         net (fo=1, routed)           0.985     8.450    core/product32[13]
+    SLICE_X12Y64         LUT2 (Prop_lut2_I1_O)        0.303     8.753 r  core/acc[15]_i_5/O
+                         net (fo=1, routed)           0.000     8.753    core/acc[15]_i_5_n_0
+    SLICE_X12Y64         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.286 r  core/acc_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.286    core/acc_reg[15]_i_2_n_0
+    SLICE_X12Y65         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.403 r  core/acc_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.403    core/acc_reg[19]_i_2_n_0
+    SLICE_X12Y66         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.520 r  core/acc_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.520    core/acc_reg[23]_i_2_n_0
+    SLICE_X12Y67         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.637 r  core/acc_reg[27]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.637    core/acc_reg[27]_i_2_n_0
+    SLICE_X12Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.952 r  core/overflow_reg_i_4/O[3]
+                         net (fo=2, routed)           0.618    10.570    core/overflow_reg_i_4_n_4
+    SLICE_X14Y68         LUT4 (Prop_lut4_I3_O)        0.332    10.902 r  core/acc[31]_i_2/O
+                         net (fo=21, routed)          0.818    11.720    core/acc[31]
+    DSP48_X0Y27          DSP48E1                                      r  core/product_reg_reg/A[20]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    DSP48_X0Y27          DSP48E1                                      r  core/product_reg_reg/CLK
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    DSP48_X0Y27          DSP48E1 (Setup_dsp48e1_CLK_A[20])
+                                                     -0.593    12.796    core/product_reg_reg
+  -------------------------------------------------------------------
+                         required time                         12.796    
+                         arrival time                         -11.720    
+  -------------------------------------------------------------------
+                         slack                                  1.076    
+
+Slack (MET) :             1.076ns  (required time - arrival time)
+  Source:                 feature_operand_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/product_reg_reg/A[21]
+                            (rising edge-triggered cell DSP48E1 clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        10.747ns  (logic 5.055ns (47.036%)  route 5.692ns (52.964%))
+  Logic Levels:           15  (CARRY4=9 LUT2=2 LUT3=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    clk
+    SLICE_X1Y69          FDRE                                         r  feature_operand_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y69          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  feature_operand_reg[5]/Q
+                         net (fo=19, routed)          0.918     2.347    core/feature_in[5]
+    SLICE_X3Y65          LUT2 (Prop_lut2_I1_O)        0.150     2.497 r  core/overflow_i_86/O
+                         net (fo=1, routed)           0.727     3.224    core/overflow_i_86_n_0
+    SLICE_X2Y64          LUT6 (Prop_lut6_I5_O)        0.332     3.556 r  core/overflow_i_78/O
+                         net (fo=1, routed)           0.000     3.556    core/overflow_i_78_n_0
+    SLICE_X2Y64          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     4.089 r  core/overflow_reg_i_40/CO[3]
+                         net (fo=1, routed)           0.000     4.089    core/overflow_reg_i_40_n_0
+    SLICE_X2Y65          CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     4.308 r  core/overflow_reg_i_37/O[0]
+                         net (fo=2, routed)           0.767     5.076    core/overflow_reg_i_37_n_7
+    SLICE_X3Y63          LUT3 (Prop_lut3_I1_O)        0.321     5.397 r  core/overflow_i_19/O
+                         net (fo=2, routed)           0.859     6.255    core/overflow_i_19_n_0
+    SLICE_X3Y63          LUT4 (Prop_lut4_I3_O)        0.326     6.581 r  core/overflow_i_23/O
+                         net (fo=1, routed)           0.000     6.581    core/overflow_i_23_n_0
+    SLICE_X3Y63          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     7.131 r  core/overflow_reg_i_5/CO[3]
+                         net (fo=1, routed)           0.000     7.131    core/overflow_reg_i_5_n_0
+    SLICE_X3Y64          CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     7.465 r  core/overflow_reg_i_3/O[1]
+                         net (fo=1, routed)           0.985     8.450    core/product32[13]
+    SLICE_X12Y64         LUT2 (Prop_lut2_I1_O)        0.303     8.753 r  core/acc[15]_i_5/O
+                         net (fo=1, routed)           0.000     8.753    core/acc[15]_i_5_n_0
+    SLICE_X12Y64         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     9.286 r  core/acc_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.286    core/acc_reg[15]_i_2_n_0
+    SLICE_X12Y65         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.403 r  core/acc_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.403    core/acc_reg[19]_i_2_n_0
+    SLICE_X12Y66         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.520 r  core/acc_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.520    core/acc_reg[23]_i_2_n_0
+    SLICE_X12Y67         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.637 r  core/acc_reg[27]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.637    core/acc_reg[27]_i_2_n_0
+    SLICE_X12Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.952 r  core/overflow_reg_i_4/O[3]
+                         net (fo=2, routed)           0.618    10.570    core/overflow_reg_i_4_n_4
+    SLICE_X14Y68         LUT4 (Prop_lut4_I3_O)        0.332    10.902 r  core/acc[31]_i_2/O
+                         net (fo=21, routed)          0.818    11.720    core/acc[31]
+    DSP48_X0Y27          DSP48E1                                      r  core/product_reg_reg/A[21]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    DSP48_X0Y27          DSP48E1                                      r  core/product_reg_reg/CLK
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    DSP48_X0Y27          DSP48E1 (Setup_dsp48e1_CLK_A[21])
+                                                     -0.593    12.796    core/product_reg_reg
+  -------------------------------------------------------------------
+                         required time                         12.796    
+                         arrival time                         -11.720    
+  -------------------------------------------------------------------
+                         slack                                  1.076    
+
+Slack (MET) :             1.092ns  (required time - arrival time)
+  Source:                 core/rounded_reg[19]_i_11_psdsp/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Destination:            core/rounded_reg_reg[40]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@6.250ns period=12.500ns})
+  Path Group:             sys_clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            12.500ns  (sys_clk rise@12.500ns - sys_clk rise@0.000ns)
+  Data Path Delay:        11.442ns  (logic 6.320ns (55.233%)  route 5.122ns (44.767%))
+  Logic Levels:           22  (CARRY4=16 LUT1=2 LUT2=1 LUT3=1 LUT5=1 LUT6=1)
+  Clock Path Skew:        -0.049ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.924ns = ( 13.424 - 12.500 ) 
+    Source Clock Delay      (SCD):    0.973ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=421, unset)          0.973     0.973    core/clk
+    SLICE_X7Y61          FDRE                                         r  core/rounded_reg[19]_i_11_psdsp/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y61          FDRE (Prop_fdre_C_Q)         0.456     1.429 r  core/rounded_reg[19]_i_11_psdsp/Q
+                         net (fo=2, routed)           0.577     2.006    core/product_reg_reg__0_n_105
+    SLICE_X5Y61          LUT2 (Prop_lut2_I0_O)        0.124     2.130 r  core/rounded_reg[19]_i_11/O
+                         net (fo=1, routed)           0.000     2.130    core/rounded_reg[19]_i_11_n_0
+    SLICE_X5Y61          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.680 r  core/rounded_reg_reg[19]_i_7/CO[3]
+                         net (fo=1, routed)           0.000     2.680    core/rounded_reg_reg[19]_i_7_n_0
+    SLICE_X5Y62          CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239     2.919 f  core/rounded_reg_reg[23]_i_7/O[2]
+                         net (fo=5, routed)           0.883     3.802    core/product_reg_reg__1[22]
+    SLICE_X11Y67         LUT1 (Prop_lut1_I0_O)        0.302     4.104 r  core/rounded_reg[27]_i_15/O
+                         net (fo=1, routed)           0.000     4.104    core/p_0_in[22]
+    SLICE_X11Y67         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     4.654 r  core/rounded_reg_reg[27]_i_8/CO[3]
+                         net (fo=1, routed)           0.000     4.654    core/rounded_reg_reg[27]_i_8_n_0
+    SLICE_X11Y68         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313     4.967 r  core/rounded_reg_reg[31]_i_7/O[3]
+                         net (fo=4, routed)           0.935     5.902    core/magnitude0[28]
+    SLICE_X6Y65          LUT6 (Prop_lut6_I4_O)        0.306     6.208 r  core/rounded_reg[0]_i_41/O
+                         net (fo=1, routed)           0.331     6.539    core/rounded_reg[0]_i_41_n_0
+    SLICE_X7Y64          CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398     6.937 r  core/rounded_reg_reg[0]_i_14/CO[3]
+                         net (fo=1, routed)           0.850     7.787    core/increment10_in
+    SLICE_X8Y62          LUT5 (Prop_lut5_I4_O)        0.124     7.911 r  core/rounded_reg[0]_i_6/O
+                         net (fo=1, routed)           0.000     7.911    core/rounded_reg[0]_i_6_n_0
+    SLICE_X8Y62          CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.513     8.424 r  core/rounded_reg_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     8.424    core/rounded_reg_reg[0]_i_1_n_0
+    SLICE_X8Y63          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.541 r  core/rounded_reg_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.541    core/rounded_reg_reg[7]_i_2_n_0
+    SLICE_X8Y64          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.658 r  core/rounded_reg_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.658    core/rounded_reg_reg[11]_i_2_n_0
+    SLICE_X8Y65          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.775 r  core/rounded_reg_reg[15]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.775    core/rounded_reg_reg[15]_i_2_n_0
+    SLICE_X8Y66          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.892 r  core/rounded_reg_reg[19]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     8.892    core/rounded_reg_reg[19]_i_2_n_0
+    SLICE_X8Y67          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     9.009 r  core/rounded_reg_reg[23]_i_2/CO[3]
+                         net (fo=1, routed)           0.000     9.009    core/rounded_reg_reg[23]_i_2_n_0
+    SLICE_X8Y68          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.315     9.324 f  core/rounded_reg_reg[27]_i_2/O[3]
+                         net (fo=2, routed)           0.660     9.983    core/rounded_mag__0[27]
+    SLICE_X9Y68          LUT1 (Prop_lut1_I0_O)        0.307    10.290 r  core/rounded_reg[28]_i_4/O
+                         net (fo=1, routed)           0.000    10.290    core/rounded_reg[28]_i_4_n_0
+    SLICE_X9Y68          CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    10.688 r  core/rounded_reg_reg[28]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.688    core/rounded_reg_reg[28]_i_2_n_0
+    SLICE_X9Y69          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.802 r  core/rounded_reg_reg[32]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.802    core/rounded_reg_reg[32]_i_2_n_0
+    SLICE_X9Y70          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    10.916 r  core/rounded_reg_reg[36]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    10.916    core/rounded_reg_reg[36]_i_2_n_0
+    SLICE_X9Y71          CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    11.229 r  core/rounded_reg_reg[40]_i_2/O[3]
+                         net (fo=1, routed)           0.887    12.116    core/rounded0[40]
+    SLICE_X12Y71         LUT3 (Prop_lut3_I0_O)        0.299    12.415 r  core/rounded_reg[40]_i_1/O
+                         net (fo=1, routed)           0.000    12.415    core/rounded[40]
+    SLICE_X12Y71         FDRE                                         r  core/rounded_reg_reg[40]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)   12.500    12.500 r  
+                                                      0.000    12.500 r  clk (IN)
+                         net (fo=421, unset)          0.924    13.424    core/clk
+    SLICE_X12Y71         FDRE                                         r  core/rounded_reg_reg[40]/C
+                         clock pessimism              0.000    13.424    
+                         clock uncertainty           -0.035    13.389    
+    SLICE_X12Y71         FDRE (Setup_fdre_C_D)        0.118    13.507    core/rounded_reg_reg[40]
+  -------------------------------------------------------------------
+                         required time                         13.507    
+                         arrival time                         -12.415    
+  -------------------------------------------------------------------
+                         slack                                  1.092    
+
+
+
+

@@ -1,0 +1,7 @@
+Experiment: T4_80MHz
+Clock period (ns): 12.500
+Target frequency (MHz): 80.0
+Worst setup path slack (ns): 0.321
+Worst hold path slack (ns): 0.039
+Interface timing: EXCLUDED
+Inference cycles (RTL): 25609

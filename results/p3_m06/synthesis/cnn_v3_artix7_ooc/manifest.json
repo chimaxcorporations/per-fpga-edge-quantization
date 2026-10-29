@@ -1,0 +1,93 @@
+{
+  "device": "xc7a100tcsg324-1",
+  "clock_period_ns": 10.0,
+  "source_rtl": {
+    "hardware/rtl/inference/cnn_int8_pipelined_v3.v": "f6c2ecfc95e1785012279ab15e5f3b2c578c3659cd6f36465414539b1182fce8",
+    "hardware/rtl/inference/neuron_int8_configurable.v": "5db6ec36142b15a154371698296810617650d80c82a53baba30ab24e1ef28359",
+    "hardware/rtl/memory/parameter_rom_sync.v": "b9fd9ce2a662aad124bb9a70649ea4df1b0d18285960fa09da43b43ba2f99e37",
+    "hardware/rtl/memory/activation_ram_sync.v": "4faa9ebe382ffde7b8b6d043b0112dbe55b78f2585c762e6e067f03acade6dad"
+  },
+  "roms": {
+    "conv1_weights.memh": {
+      "entries": 192,
+      "width": 8,
+      "sha256": "8902deea25a545157ac0290d2b7921441818a9d53d098215c8f38d02870972fe"
+    },
+    "conv1_bias.memh": {
+      "entries": 16,
+      "width": 32,
+      "sha256": "05d0ad0109ddd90d5a6ac09e22d5393fb41e742ed1fa3deba6245414ec78fccc"
+    },
+    "conv1_multiplier.memh": {
+      "entries": 16,
+      "width": 32,
+      "sha256": "35849e577690d5fb392af84c11be783e3539b32f64cc7432a6d2313696dfc0d0"
+    },
+    "conv1_shift.memh": {
+      "entries": 16,
+      "width": 8,
+      "sha256": "3dcba36b27c4051956efb4e638e9d21a3cf5f0f8cb50b1875c56d620832ed36e"
+    },
+    "conv2_weights.memh": {
+      "entries": 768,
+      "width": 8,
+      "sha256": "495abf6d9b3850957df73ea353343ca5bc37ba075d3a79acbbd3e475e6a9ae2f"
+    },
+    "conv2_bias.memh": {
+      "entries": 16,
+      "width": 32,
+      "sha256": "b9c2d5caac05c7a2cc583e35536bd511e1266644f8d4be245a524234b3be4b67"
+    },
+    "conv2_multiplier.memh": {
+      "entries": 16,
+      "width": 32,
+      "sha256": "a095c9898f85e98ecf361ba6e4d9c4b6e9333553e33c6b959d3db4f9889c83bc"
+    },
+    "conv2_shift.memh": {
+      "entries": 16,
+      "width": 8,
+      "sha256": "3dcba36b27c4051956efb4e638e9d21a3cf5f0f8cb50b1875c56d620832ed36e"
+    },
+    "fc1_weights.memh": {
+      "entries": 5120,
+      "width": 8,
+      "sha256": "761c28940217ee410dcef0d1532c3ef3772e9f4c3c94df5e4bca18f1dd08052f"
+    },
+    "fc1_bias.memh": {
+      "entries": 32,
+      "width": 32,
+      "sha256": "726d755ed37b0d216e8a8b96251abf74394d26fb6f711da7ebb023655ba594fc"
+    },
+    "fc1_multiplier.memh": {
+      "entries": 32,
+      "width": 32,
+      "sha256": "80a95dc06ab532ed04eee689c6d66304ca2656111aeb385dd58c385815297144"
+    },
+    "fc1_shift.memh": {
+      "entries": 32,
+      "width": 8,
+      "sha256": "2874d27eff3912c64b97cc9e29a5ebdf8275ae2a714fb0dcd8c74b43c1c4bbca"
+    },
+    "output_weights.memh": {
+      "entries": 32,
+      "width": 8,
+      "sha256": "6a8c90f56a323704067ba3687f805b36058742345d3eea782392043fafdd60a6"
+    },
+    "output_bias.memh": {
+      "entries": 1,
+      "width": 32,
+      "sha256": "72cfe6919af1be175666d1f59e2e960428c42d198251e00ce8afd43e9ad1e778"
+    },
+    "output_multiplier.memh": {
+      "entries": 1,
+      "width": 32,
+      "sha256": "a9b24289dc1d10f70036606513a2ee6cffa20c6402f8191729f69e79bb78fbe2"
+    },
+    "output_shift.memh": {
+      "entries": 1,
+      "width": 8,
+      "sha256": "71063fefaab700366bc2f11a5da596c7f3e2f834459ad7acaac0c6f492bf7f49"
+    }
+  },
+  "status": "prepared"
+}

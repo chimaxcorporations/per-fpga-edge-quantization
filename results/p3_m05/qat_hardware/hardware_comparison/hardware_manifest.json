@@ -1,0 +1,22 @@
+{
+  "ptq_summary": {
+    "path": "results/p3_m04/mlp_fold1_pipelined_v2_timing/T4_107p5MHz/experiment_summary.txt",
+    "sha256": "dff9ec97c01d17de93b77d881ddf8959ca514f6485f3475fe0f6184ec1143ea0"
+  },
+  "ptq_utilization": {
+    "path": "results/p3_m04/mlp_fold1_pipelined_v2_timing/T4_107p5MHz/utilization_postroute.rpt",
+    "sha256": "942dcf817dcc002737d7b00720de65a095318921b7a39f1eef7da902d0fd6b4c"
+  },
+  "qat_summary": {
+    "path": "results/p3_m05/qat_hardware/mlp_pipelined_v2_timing/T1_107p5MHz/experiment_summary.txt",
+    "sha256": "f6b6db00fe90d4ab56b12cb3ebf62830142ec2645bdc427d20299529ae7d0b70"
+  },
+  "qat_utilization": {
+    "path": "results/p3_m05/qat_hardware/mlp_pipelined_v2_timing/T1_107p5MHz/utilization_postroute.rpt",
+    "sha256": "708642a95dc829e0f22b4973834beb4c0fe6821b70bc6735724b9e131db11585"
+  },
+  "qat_routed_checkpoint": {
+    "path": "results/p3_m05/qat_hardware/mlp_pipelined_v2_timing/T1_107p5MHz/mlp_int8_pipelined_v2_routed.dcp",
+    "sha256": "ac4cdb26a44db4f7c32acc8fc0c47fe75a9c93b0474582d0086feec03909c70d"
+  }
+}

@@ -1,0 +1,7 @@
+Experiment: T4_CORE_48MHz
+Clock period (ns): 20.833
+Target frequency (MHz): 48.0007680122882
+Worst setup path slack (ns): 0.368
+Worst hold path slack (ns): 0.080
+Interface timing: EXCLUDED
+Inference cycles (RTL): 25415

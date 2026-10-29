@@ -1,0 +1,7 @@
+Experiment: T3_CORE_45MHz
+Clock period (ns): 22.222
+Target frequency (MHz): 45.000450004500046
+Worst setup path slack (ns): 0.449
+Worst hold path slack (ns): 0.052
+Interface timing: EXCLUDED
+Inference cycles (RTL): 25415

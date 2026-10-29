@@ -1,0 +1,25 @@
+{
+  "scope": "Frozen INT8/max QAT checkpoints and held-out reference vectors",
+  "models": [
+    "mlp",
+    "cnn"
+  ],
+  "folds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "weight_aware_bound": "127*sum(abs(qw[channel]))+abs(quantized_bias[channel])",
+  "q31_product_bound": "weight_aware_accumulator_bound*abs(Q31_multiplier)",
+  "integer_backend": "src.integer_ptq",
+  "production_replay_verified": true,
+  "checkpoints_modified": false,
+  "backend_modified": false,
+  "note": "Bounds apply to INT8 operands and frozen quantized weights/biases; not to alternate models or quantization scales."
+}

@@ -1,0 +1,114 @@
+\begin{tabular}{lrllr}
+\toprule
+model & fold & metric & comparison & delta \\
+\midrule
+mlp & 1 & rmse & QAT - INT8 PTQ & -0.000101 \\
+mlp & 2 & rmse & QAT - INT8 PTQ & -0.004074 \\
+mlp & 3 & rmse & QAT - INT8 PTQ & 0.000179 \\
+mlp & 4 & rmse & QAT - INT8 PTQ & -0.000370 \\
+mlp & 5 & rmse & QAT - INT8 PTQ & -0.000832 \\
+mlp & 6 & rmse & QAT - INT8 PTQ & 0.000696 \\
+mlp & 7 & rmse & QAT - INT8 PTQ & -0.000859 \\
+mlp & 8 & rmse & QAT - INT8 PTQ & -0.001248 \\
+mlp & 9 & rmse & QAT - INT8 PTQ & -0.000836 \\
+mlp & 1 & rmse & QAT - FP32 & -0.001023 \\
+mlp & 2 & rmse & QAT - FP32 & -0.004099 \\
+mlp & 3 & rmse & QAT - FP32 & 0.000056 \\
+mlp & 4 & rmse & QAT - FP32 & -0.000415 \\
+mlp & 5 & rmse & QAT - FP32 & -0.000507 \\
+mlp & 6 & rmse & QAT - FP32 & 0.000878 \\
+mlp & 7 & rmse & QAT - FP32 & -0.000855 \\
+mlp & 8 & rmse & QAT - FP32 & -0.001702 \\
+mlp & 9 & rmse & QAT - FP32 & -0.000500 \\
+mlp & 1 & mae & QAT - INT8 PTQ & -0.000032 \\
+mlp & 2 & mae & QAT - INT8 PTQ & -0.005318 \\
+mlp & 3 & mae & QAT - INT8 PTQ & -0.001424 \\
+mlp & 4 & mae & QAT - INT8 PTQ & -0.002611 \\
+mlp & 5 & mae & QAT - INT8 PTQ & 0.000082 \\
+mlp & 6 & mae & QAT - INT8 PTQ & -0.001028 \\
+mlp & 7 & mae & QAT - INT8 PTQ & -0.004231 \\
+mlp & 8 & mae & QAT - INT8 PTQ & -0.006008 \\
+mlp & 9 & mae & QAT - INT8 PTQ & -0.003457 \\
+mlp & 1 & mae & QAT - FP32 & 0.000000 \\
+mlp & 2 & mae & QAT - FP32 & -0.004376 \\
+mlp & 3 & mae & QAT - FP32 & -0.001493 \\
+mlp & 4 & mae & QAT - FP32 & -0.000826 \\
+mlp & 5 & mae & QAT - FP32 & -0.000543 \\
+mlp & 6 & mae & QAT - FP32 & -0.000564 \\
+mlp & 7 & mae & QAT - FP32 & -0.001524 \\
+mlp & 8 & mae & QAT - FP32 & -0.003686 \\
+mlp & 9 & mae & QAT - FP32 & -0.003297 \\
+mlp & 1 & bias & QAT - INT8 PTQ & 0.000809 \\
+mlp & 2 & bias & QAT - INT8 PTQ & 0.003455 \\
+mlp & 3 & bias & QAT - INT8 PTQ & -0.004148 \\
+mlp & 4 & bias & QAT - INT8 PTQ & -0.000509 \\
+mlp & 5 & bias & QAT - INT8 PTQ & 0.002315 \\
+mlp & 6 & bias & QAT - INT8 PTQ & -0.003935 \\
+mlp & 7 & bias & QAT - INT8 PTQ & -0.001169 \\
+mlp & 8 & bias & QAT - INT8 PTQ & -0.005915 \\
+mlp & 9 & bias & QAT - INT8 PTQ & 0.000605 \\
+mlp & 1 & bias & QAT - FP32 & 0.000790 \\
+mlp & 2 & bias & QAT - FP32 & 0.004394 \\
+mlp & 3 & bias & QAT - FP32 & -0.003245 \\
+mlp & 4 & bias & QAT - FP32 & -0.002768 \\
+mlp & 5 & bias & QAT - FP32 & 0.003389 \\
+mlp & 6 & bias & QAT - FP32 & -0.002424 \\
+mlp & 7 & bias & QAT - FP32 & -0.000412 \\
+mlp & 8 & bias & QAT - FP32 & -0.003744 \\
+mlp & 9 & bias & QAT - FP32 & -0.000984 \\
+cnn & 1 & rmse & QAT - INT8 PTQ & -0.001277 \\
+cnn & 2 & rmse & QAT - INT8 PTQ & -0.001508 \\
+cnn & 3 & rmse & QAT - INT8 PTQ & -0.000344 \\
+cnn & 4 & rmse & QAT - INT8 PTQ & 0.000274 \\
+cnn & 5 & rmse & QAT - INT8 PTQ & -0.000973 \\
+cnn & 6 & rmse & QAT - INT8 PTQ & -0.000349 \\
+cnn & 7 & rmse & QAT - INT8 PTQ & -0.000034 \\
+cnn & 8 & rmse & QAT - INT8 PTQ & -0.001235 \\
+cnn & 9 & rmse & QAT - INT8 PTQ & -0.000772 \\
+cnn & 1 & rmse & QAT - FP32 & -0.000418 \\
+cnn & 2 & rmse & QAT - FP32 & -0.000429 \\
+cnn & 3 & rmse & QAT - FP32 & -0.000267 \\
+cnn & 4 & rmse & QAT - FP32 & 0.000694 \\
+cnn & 5 & rmse & QAT - FP32 & -0.001135 \\
+cnn & 6 & rmse & QAT - FP32 & -0.000809 \\
+cnn & 7 & rmse & QAT - FP32 & -0.000317 \\
+cnn & 8 & rmse & QAT - FP32 & -0.001000 \\
+cnn & 9 & rmse & QAT - FP32 & -0.000554 \\
+cnn & 1 & mae & QAT - INT8 PTQ & -0.001962 \\
+cnn & 2 & mae & QAT - INT8 PTQ & -0.001563 \\
+cnn & 3 & mae & QAT - INT8 PTQ & 0.000786 \\
+cnn & 4 & mae & QAT - INT8 PTQ & 0.000929 \\
+cnn & 5 & mae & QAT - INT8 PTQ & -0.002043 \\
+cnn & 6 & mae & QAT - INT8 PTQ & -0.003054 \\
+cnn & 7 & mae & QAT - INT8 PTQ & -0.000380 \\
+cnn & 8 & mae & QAT - INT8 PTQ & -0.005508 \\
+cnn & 9 & mae & QAT - INT8 PTQ & -0.003699 \\
+cnn & 1 & mae & QAT - FP32 & -0.003154 \\
+cnn & 2 & mae & QAT - FP32 & -0.000122 \\
+cnn & 3 & mae & QAT - FP32 & 0.000340 \\
+cnn & 4 & mae & QAT - FP32 & 0.000390 \\
+cnn & 5 & mae & QAT - FP32 & -0.002725 \\
+cnn & 6 & mae & QAT - FP32 & -0.005973 \\
+cnn & 7 & mae & QAT - FP32 & -0.000019 \\
+cnn & 8 & mae & QAT - FP32 & -0.003114 \\
+cnn & 9 & mae & QAT - FP32 & -0.004221 \\
+cnn & 1 & bias & QAT - INT8 PTQ & 0.004560 \\
+cnn & 2 & bias & QAT - INT8 PTQ & -0.007984 \\
+cnn & 3 & bias & QAT - INT8 PTQ & 0.000725 \\
+cnn & 4 & bias & QAT - INT8 PTQ & 0.005613 \\
+cnn & 5 & bias & QAT - INT8 PTQ & -0.003805 \\
+cnn & 6 & bias & QAT - INT8 PTQ & 0.001373 \\
+cnn & 7 & bias & QAT - INT8 PTQ & 0.008631 \\
+cnn & 8 & bias & QAT - INT8 PTQ & 0.002563 \\
+cnn & 9 & bias & QAT - INT8 PTQ & -0.007736 \\
+cnn & 1 & bias & QAT - FP32 & 0.004197 \\
+cnn & 2 & bias & QAT - FP32 & -0.008016 \\
+cnn & 3 & bias & QAT - FP32 & 0.000227 \\
+cnn & 4 & bias & QAT - FP32 & 0.002738 \\
+cnn & 5 & bias & QAT - FP32 & -0.004380 \\
+cnn & 6 & bias & QAT - FP32 & 0.005745 \\
+cnn & 7 & bias & QAT - FP32 & 0.006674 \\
+cnn & 8 & bias & QAT - FP32 & 0.002294 \\
+cnn & 9 & bias & QAT - FP32 & -0.003041 \\
+\bottomrule
+\end{tabular}

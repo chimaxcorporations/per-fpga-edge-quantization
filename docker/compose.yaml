@@ -1,0 +1,12 @@
+services:
+  rtl:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.rtl
+    image: per-fpga-rtl:ubuntu24.04
+    working_dir: /workspace
+    volumes:
+      - ..:/workspace:Z
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    environment:
+      HOME: /tmp

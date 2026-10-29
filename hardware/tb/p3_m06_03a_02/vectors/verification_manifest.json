@@ -1,0 +1,42 @@
+{
+  "milestone": "P3-M06-03A-02",
+  "samples": 32,
+  "cases": 11296,
+  "operands": 472064,
+  "layers": [
+    {
+      "layer": "conv1",
+      "cases": 5120,
+      "padding_operands": 4096
+    },
+    {
+      "layer": "conv2",
+      "cases": 5120,
+      "padding_operands": 16384
+    },
+    {
+      "layer": "fc1",
+      "cases": 1024,
+      "padding_operands": 0
+    },
+    {
+      "layer": "output",
+      "cases": 32,
+      "padding_operands": 0
+    }
+  ],
+  "rom_manifest_sha256": "084c57335cbe2bbbb9fcc668866cedec86549d2698ed904b6cfb01a91c151b61",
+  "vector_files": {
+    "features": "70cefe2923b2402073ce9d1d8587b6760238393f8c7c72bb2fca59f0cb17b446",
+    "weights": "810b63abeee9d3b86e605b4c8a7be2bf0e42ce69767db42b892e48a2ce90be7f",
+    "counts": "73b12abc32c347c8ad19f537f32dd4e42004edb67635ec228ca030a996285abe",
+    "biases": "b97c6d871442ae7e4ba637d200b2428661d61dde4347e946698ccf5bb8387904",
+    "multipliers": "b324715b1c326f90c51533d3928d5fe6321e092927ee96f2ba7dc0dde45687be",
+    "shifts": "77b177fa7c677875969888c391fca15bcd297189cfdb418acc2a6206af8109af",
+    "relus": "2528bb787db57a286e9ebe52ce58b1b3f685e45d488f03cf84b9a5fdf206d0ac",
+    "expected": "126c58c8026e646af30d2abdb57b34e4c35df275f5eff15f2ac2d27621689793",
+    "layer_ids": "b9c2a62a85fa28f9e89766b6dc824ec58d2fff6f57fd12025712b6347bb6472e",
+    "sample_ids": "190525d57659dcaf0c294952297830217af3999a5d255f72d4dc5db6d90897b1",
+    "neuron_ids": "a0fe5be3439704cd13bb4b4df232d77e0dbf1ec743c59397d408c6774cd8adf0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "models": [
+    "mlp",
+    "cnn"
+  ],
+  "folds_per_model": 9,
+  "method_columns": {
+    "FP32": "pred_fp32",
+    "INT8 PTQ": "pred_integer_ptq",
+    "INT8 QAT": "pred_integer_qat"
+  },
+  "reference_rows_total": 18000,
+  "reference_rows_per_model": {
+    "cnn": 9000,
+    "mlp": 9000
+  },
+  "notes": [
+    "All results use held-out reference vectors, not necessarily full held-out datasets.",
+    "Mean fold RMSE is not pooled RMSE.",
+    "Student-t intervals and sign tests are descriptive: folds are not independent replications.",
+    "Stratum-level pooled metrics describe only the sampled reference observations.",
+    "Bias is signed: negative bias is not necessarily an improvement."
+  ],
+  "warnings": []
+}

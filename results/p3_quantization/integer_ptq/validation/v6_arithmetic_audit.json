@@ -1,0 +1,9 @@
+{
+  "independent_weight_elements_checked": 11136,
+  "representative_multiplier_ratios_checked": 19,
+  "representative_multiplier_failures": [],
+  "int64_boundary_failures": [],
+  "actual_multiplier_channels_checked": 5832,
+  "max_relative_multiplier_error": 0.00017178066985029542,
+  "hashed_files": 103
+}

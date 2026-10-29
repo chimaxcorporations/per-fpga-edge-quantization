@@ -1,0 +1,30 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Wed Oct 28 14:13:47 2026
+| Host         : localhost.localdomain running 64-bit Rocky Linux 9.5 (Blue Onyx)
+| Command      : report_utilization -hierarchical -file results/p3_m04/mlp_fold1_pipelined_v2_synthesis/utilization_hierarchical.rpt
+| Design       : mlp_int8_pipelined_v2
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++---------------------------+--------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+|          Instance         |          Module          | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++---------------------------+--------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+| mlp_int8_pipelined_v2     |                    (top) |        640 |        608 |      32 |    0 | 457 |      1 |      3 |          4 |
+|   (mlp_int8_pipelined_v2) |                    (top) |        104 |        104 |       0 |    0 | 105 |      0 |      0 |          0 |
+|   core                    | neuron_int8_pipelined_v2 |        480 |        480 |       0 |    0 | 281 |      0 |      0 |          4 |
++---------------------------+--------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+
+

@@ -31,3 +31,27 @@ results/**/*.csv
 results/**/*.parquet
 results/**/*.npy
 results/**/*.npz
+
+# Temporary files and backups
+backups/
+clockInfo.txt
+*.debug_backup
+*.bak
+*.pre_final_guard
+*.pre_v6_fix
+
+# Vivado and XSim generated files
+xsim.dir/
+xelab.pb
+xvlog.pb
+*.wdb
+*.vcd
+*.vpd
+*.dcp
+*.bit
+*.bin
+*.pb
+
+# Temporary implementation databases
+*.rpx
+*.rdb

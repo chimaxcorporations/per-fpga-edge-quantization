@@ -1,0 +1,7 @@
+Experiment: T2_105MHz
+Clock period (ns): 9.524
+Target frequency (MHz): 104.99790004199917
+Worst setup path slack (ns): 0.397
+Worst hold path slack (ns): 0.028
+Interface timing: EXCLUDED
+Inference cycles (RTL): 25803

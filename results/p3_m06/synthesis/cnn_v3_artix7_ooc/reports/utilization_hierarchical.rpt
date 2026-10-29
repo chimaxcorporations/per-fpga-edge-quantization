@@ -1,0 +1,30 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Thu Oct 29 08:04:25 2026
+| Host         : localhost.localdomain running 64-bit Rocky Linux 9.5 (Blue Onyx)
+| Command      : report_utilization -hierarchical -file /hdd/c.eguzo/per-fpga-edge-quantization/results/p3_m06/synthesis/cnn_v3_artix7_ooc/reports/utilization_hierarchical.rpt
+| Design       : cnn_int8_pipelined_v3
+| Device       : xc7a100tcsg324-1
+| Speed File   : -1
+| Design State : Synthesized
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++---------------------------+--------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+|          Instance         |          Module          | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++---------------------------+--------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+| cnn_int8_pipelined_v3     |                    (top) |        763 |        763 |       0 |    0 | 588 |      2 |      4 |          4 |
+|   (cnn_int8_pipelined_v3) |                    (top) |        208 |        208 |       0 |    0 | 173 |      0 |      0 |          0 |
+|   neuron                  | neuron_int8_configurable |        492 |        492 |       0 |    0 | 290 |      0 |      0 |          4 |
++---------------------------+--------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+
+

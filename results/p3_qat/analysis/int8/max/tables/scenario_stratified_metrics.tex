@@ -1,0 +1,654 @@
+\begin{tabular}{lrlllrrrrr}
+\toprule
+model & fold & method & dimension & group & n & mae & rmse & bias & r2 \\
+\midrule
+mlp & 1 & FP32 & scenario & juelich\_core\_d10\_r2\_log\_distance\_s01\_w1.parquet & 334 & 0.005390 & 0.015424 & 0.005390 & -- \\
+mlp & 1 & FP32 & scenario & juelich\_core\_d30\_r10\_urban\_s01\_w1.parquet & 333 & 0.022333 & 0.080422 & -0.010626 & 0.968589 \\
+mlp & 1 & FP32 & scenario & juelich\_core\_d60\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.162334 & 0.208805 & -0.013488 & 0.414965 \\
+mlp & 1 & FP32 & density & 10 & 334 & 0.005390 & 0.015424 & 0.005390 & -- \\
+mlp & 1 & FP32 & density & 30 & 333 & 0.022333 & 0.080422 & -0.010626 & 0.968589 \\
+mlp & 1 & FP32 & density & 60 & 333 & 0.162334 & 0.208805 & -0.013488 & 0.414965 \\
+mlp & 1 & FP32 & cam\_hz & 10 & 333 & 0.022333 & 0.080422 & -0.010626 & 0.968589 \\
+mlp & 1 & FP32 & cam\_hz & 2 & 334 & 0.005390 & 0.015424 & 0.005390 & -- \\
+mlp & 1 & FP32 & cam\_hz & 5 & 333 & 0.162334 & 0.208805 & -0.013488 & 0.414965 \\
+mlp & 1 & FP32 & channel & log\_distance & 334 & 0.005390 & 0.015424 & 0.005390 & -- \\
+mlp & 1 & FP32 & channel & log\_distance\_nakagami & 333 & 0.162334 & 0.208805 & -0.013488 & 0.414965 \\
+mlp & 1 & FP32 & channel & urban & 333 & 0.022333 & 0.080422 & -0.010626 & 0.968589 \\
+mlp & 1 & INT8 PTQ & scenario & juelich\_core\_d10\_r2\_log\_distance\_s01\_w1.parquet & 334 & 0.005284 & 0.016630 & 0.005284 & -- \\
+mlp & 1 & INT8 PTQ & scenario & juelich\_core\_d30\_r10\_urban\_s01\_w1.parquet & 333 & 0.022557 & 0.076602 & -0.010435 & 0.971503 \\
+mlp & 1 & INT8 PTQ & scenario & juelich\_core\_d60\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.162314 & 0.208438 & -0.013630 & 0.417021 \\
+mlp & 1 & INT8 PTQ & density & 10 & 334 & 0.005284 & 0.016630 & 0.005284 & -- \\
+mlp & 1 & INT8 PTQ & density & 30 & 333 & 0.022557 & 0.076602 & -0.010435 & 0.971503 \\
+mlp & 1 & INT8 PTQ & density & 60 & 333 & 0.162314 & 0.208438 & -0.013630 & 0.417021 \\
+mlp & 1 & INT8 PTQ & cam\_hz & 10 & 333 & 0.022557 & 0.076602 & -0.010435 & 0.971503 \\
+mlp & 1 & INT8 PTQ & cam\_hz & 2 & 334 & 0.005284 & 0.016630 & 0.005284 & -- \\
+mlp & 1 & INT8 PTQ & cam\_hz & 5 & 333 & 0.162314 & 0.208438 & -0.013630 & 0.417021 \\
+mlp & 1 & INT8 PTQ & channel & log\_distance & 334 & 0.005284 & 0.016630 & 0.005284 & -- \\
+mlp & 1 & INT8 PTQ & channel & log\_distance\_nakagami & 333 & 0.162314 & 0.208438 & -0.013630 & 0.417021 \\
+mlp & 1 & INT8 PTQ & channel & urban & 333 & 0.022557 & 0.076602 & -0.010435 & 0.971503 \\
+mlp & 1 & INT8 QAT & scenario & juelich\_core\_d10\_r2\_log\_distance\_s01\_w1.parquet & 334 & 0.006226 & 0.017546 & 0.006226 & -- \\
+mlp & 1 & INT8 QAT & scenario & juelich\_core\_d30\_r10\_urban\_s01\_w1.parquet & 333 & 0.020757 & 0.074124 & -0.008578 & 0.973317 \\
+mlp & 1 & INT8 QAT & scenario & juelich\_core\_d60\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.163072 & 0.209071 & -0.014003 & 0.413474 \\
+mlp & 1 & INT8 QAT & density & 10 & 334 & 0.006226 & 0.017546 & 0.006226 & -- \\
+mlp & 1 & INT8 QAT & density & 30 & 333 & 0.020757 & 0.074124 & -0.008578 & 0.973317 \\
+mlp & 1 & INT8 QAT & density & 60 & 333 & 0.163072 & 0.209071 & -0.014003 & 0.413474 \\
+mlp & 1 & INT8 QAT & cam\_hz & 10 & 333 & 0.020757 & 0.074124 & -0.008578 & 0.973317 \\
+mlp & 1 & INT8 QAT & cam\_hz & 2 & 334 & 0.006226 & 0.017546 & 0.006226 & -- \\
+mlp & 1 & INT8 QAT & cam\_hz & 5 & 333 & 0.163072 & 0.209071 & -0.014003 & 0.413474 \\
+mlp & 1 & INT8 QAT & channel & log\_distance & 334 & 0.006226 & 0.017546 & 0.006226 & -- \\
+mlp & 1 & INT8 QAT & channel & log\_distance\_nakagami & 333 & 0.163072 & 0.209071 & -0.014003 & 0.413474 \\
+mlp & 1 & INT8 QAT & channel & urban & 333 & 0.020757 & 0.074124 & -0.008578 & 0.973317 \\
+mlp & 2 & FP32 & scenario & juelich\_core\_d10\_r5\_log\_distance\_s01\_w1.parquet & 334 & 0.012834 & 0.041186 & 0.011281 & -0.423217 \\
+mlp & 2 & FP32 & scenario & juelich\_core\_d30\_r2\_urban\_s01\_w1.parquet & 333 & 0.023353 & 0.057115 & -0.008058 & 0.985221 \\
+mlp & 2 & FP32 & scenario & juelich\_core\_d60\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.122947 & 0.156813 & -0.052402 & 0.591236 \\
+mlp & 2 & FP32 & density & 10 & 334 & 0.012834 & 0.041186 & 0.011281 & -0.423217 \\
+mlp & 2 & FP32 & density & 30 & 333 & 0.023353 & 0.057115 & -0.008058 & 0.985221 \\
+mlp & 2 & FP32 & density & 60 & 333 & 0.122947 & 0.156813 & -0.052402 & 0.591236 \\
+mlp & 2 & FP32 & cam\_hz & 10 & 333 & 0.122947 & 0.156813 & -0.052402 & 0.591236 \\
+mlp & 2 & FP32 & cam\_hz & 2 & 333 & 0.023353 & 0.057115 & -0.008058 & 0.985221 \\
+mlp & 2 & FP32 & cam\_hz & 5 & 334 & 0.012834 & 0.041186 & 0.011281 & -0.423217 \\
+mlp & 2 & FP32 & channel & log\_distance & 334 & 0.012834 & 0.041186 & 0.011281 & -0.423217 \\
+mlp & 2 & FP32 & channel & log\_distance\_nakagami & 333 & 0.122947 & 0.156813 & -0.052402 & 0.591236 \\
+mlp & 2 & FP32 & channel & urban & 333 & 0.023353 & 0.057115 & -0.008058 & 0.985221 \\
+mlp & 2 & INT8 PTQ & scenario & juelich\_core\_d10\_r5\_log\_distance\_s01\_w1.parquet & 334 & 0.014272 & 0.041819 & 0.012663 & -0.467274 \\
+mlp & 2 & INT8 PTQ & scenario & juelich\_core\_d30\_r2\_urban\_s01\_w1.parquet & 333 & 0.024555 & 0.056388 & -0.005715 & 0.985595 \\
+mlp & 2 & INT8 PTQ & scenario & juelich\_core\_d60\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.123131 & 0.156860 & -0.053312 & 0.590988 \\
+mlp & 2 & INT8 PTQ & density & 10 & 334 & 0.014272 & 0.041819 & 0.012663 & -0.467274 \\
+mlp & 2 & INT8 PTQ & density & 30 & 333 & 0.024555 & 0.056388 & -0.005715 & 0.985595 \\
+mlp & 2 & INT8 PTQ & density & 60 & 333 & 0.123131 & 0.156860 & -0.053312 & 0.590988 \\
+mlp & 2 & INT8 PTQ & cam\_hz & 10 & 333 & 0.123131 & 0.156860 & -0.053312 & 0.590988 \\
+mlp & 2 & INT8 PTQ & cam\_hz & 2 & 333 & 0.024555 & 0.056388 & -0.005715 & 0.985595 \\
+mlp & 2 & INT8 PTQ & cam\_hz & 5 & 334 & 0.014272 & 0.041819 & 0.012663 & -0.467274 \\
+mlp & 2 & INT8 PTQ & channel & log\_distance & 334 & 0.014272 & 0.041819 & 0.012663 & -0.467274 \\
+mlp & 2 & INT8 PTQ & channel & log\_distance\_nakagami & 333 & 0.123131 & 0.156860 & -0.053312 & 0.590988 \\
+mlp & 2 & INT8 PTQ & channel & urban & 333 & 0.024555 & 0.056388 & -0.005715 & 0.985595 \\
+mlp & 2 & INT8 QAT & scenario & juelich\_core\_d10\_r5\_log\_distance\_s01\_w1.parquet & 334 & 0.011145 & 0.040892 & 0.009591 & -0.402976 \\
+mlp & 2 & INT8 QAT & scenario & juelich\_core\_d30\_r2\_urban\_s01\_w1.parquet & 333 & 0.016547 & 0.048249 & -0.004914 & 0.989453 \\
+mlp & 2 & INT8 QAT & scenario & juelich\_core\_d60\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.118306 & 0.152173 & -0.040657 & 0.615065 \\
+mlp & 2 & INT8 QAT & density & 10 & 334 & 0.011145 & 0.040892 & 0.009591 & -0.402976 \\
+mlp & 2 & INT8 QAT & density & 30 & 333 & 0.016547 & 0.048249 & -0.004914 & 0.989453 \\
+mlp & 2 & INT8 QAT & density & 60 & 333 & 0.118306 & 0.152173 & -0.040657 & 0.615065 \\
+mlp & 2 & INT8 QAT & cam\_hz & 10 & 333 & 0.118306 & 0.152173 & -0.040657 & 0.615065 \\
+mlp & 2 & INT8 QAT & cam\_hz & 2 & 333 & 0.016547 & 0.048249 & -0.004914 & 0.989453 \\
+mlp & 2 & INT8 QAT & cam\_hz & 5 & 334 & 0.011145 & 0.040892 & 0.009591 & -0.402976 \\
+mlp & 2 & INT8 QAT & channel & log\_distance & 334 & 0.011145 & 0.040892 & 0.009591 & -0.402976 \\
+mlp & 2 & INT8 QAT & channel & log\_distance\_nakagami & 333 & 0.118306 & 0.152173 & -0.040657 & 0.615065 \\
+mlp & 2 & INT8 QAT & channel & urban & 333 & 0.016547 & 0.048249 & -0.004914 & 0.989453 \\
+mlp & 3 & FP32 & scenario & juelich\_core\_d10\_r10\_log\_distance\_s01\_w1.parquet & 334 & 0.019719 & 0.077349 & 0.006795 & 0.065096 \\
+mlp & 3 & FP32 & scenario & juelich\_core\_d30\_r5\_urban\_s01\_w1.parquet & 333 & 0.016183 & 0.058904 & 0.001498 & 0.983962 \\
+mlp & 3 & FP32 & scenario & juelich\_core\_d60\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.249578 & 0.306222 & 0.022690 & 0.174446 \\
+mlp & 3 & FP32 & density & 10 & 334 & 0.019719 & 0.077349 & 0.006795 & 0.065096 \\
+mlp & 3 & FP32 & density & 30 & 333 & 0.016183 & 0.058904 & 0.001498 & 0.983962 \\
+mlp & 3 & FP32 & density & 60 & 333 & 0.249578 & 0.306222 & 0.022690 & 0.174446 \\
+mlp & 3 & FP32 & cam\_hz & 10 & 334 & 0.019719 & 0.077349 & 0.006795 & 0.065096 \\
+mlp & 3 & FP32 & cam\_hz & 2 & 333 & 0.249578 & 0.306222 & 0.022690 & 0.174446 \\
+mlp & 3 & FP32 & cam\_hz & 5 & 333 & 0.016183 & 0.058904 & 0.001498 & 0.983962 \\
+mlp & 3 & FP32 & channel & log\_distance & 334 & 0.019719 & 0.077349 & 0.006795 & 0.065096 \\
+mlp & 3 & FP32 & channel & log\_distance\_nakagami & 333 & 0.249578 & 0.306222 & 0.022690 & 0.174446 \\
+mlp & 3 & FP32 & channel & urban & 333 & 0.016183 & 0.058904 & 0.001498 & 0.983962 \\
+mlp & 3 & INT8 PTQ & scenario & juelich\_core\_d10\_r10\_log\_distance\_s01\_w1.parquet & 334 & 0.020721 & 0.078398 & 0.007861 & 0.039564 \\
+mlp & 3 & INT8 PTQ & scenario & juelich\_core\_d30\_r5\_urban\_s01\_w1.parquet & 333 & 0.015081 & 0.056573 & 0.001863 & 0.985206 \\
+mlp & 3 & INT8 PTQ & scenario & juelich\_core\_d60\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.249466 & 0.306170 & 0.023967 & 0.174727 \\
+mlp & 3 & INT8 PTQ & density & 10 & 334 & 0.020721 & 0.078398 & 0.007861 & 0.039564 \\
+mlp & 3 & INT8 PTQ & density & 30 & 333 & 0.015081 & 0.056573 & 0.001863 & 0.985206 \\
+mlp & 3 & INT8 PTQ & density & 60 & 333 & 0.249466 & 0.306170 & 0.023967 & 0.174727 \\
+mlp & 3 & INT8 PTQ & cam\_hz & 10 & 334 & 0.020721 & 0.078398 & 0.007861 & 0.039564 \\
+mlp & 3 & INT8 PTQ & cam\_hz & 2 & 333 & 0.249466 & 0.306170 & 0.023967 & 0.174727 \\
+mlp & 3 & INT8 PTQ & cam\_hz & 5 & 333 & 0.015081 & 0.056573 & 0.001863 & 0.985206 \\
+mlp & 3 & INT8 PTQ & channel & log\_distance & 334 & 0.020721 & 0.078398 & 0.007861 & 0.039564 \\
+mlp & 3 & INT8 PTQ & channel & log\_distance\_nakagami & 333 & 0.249466 & 0.306170 & 0.023967 & 0.174727 \\
+mlp & 3 & INT8 PTQ & channel & urban & 333 & 0.015081 & 0.056573 & 0.001863 & 0.985206 \\
+mlp & 3 & INT8 QAT & scenario & juelich\_core\_d10\_r10\_log\_distance\_s01\_w1.parquet & 334 & 0.014301 & 0.078789 & 0.000952 & 0.029943 \\
+mlp & 3 & INT8 QAT & scenario & juelich\_core\_d30\_r5\_urban\_s01\_w1.parquet & 333 & 0.018750 & 0.061033 & -0.001474 & 0.982782 \\
+mlp & 3 & INT8 QAT & scenario & juelich\_core\_d60\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.247961 & 0.305537 & 0.021777 & 0.178134 \\
+mlp & 3 & INT8 QAT & density & 10 & 334 & 0.014301 & 0.078789 & 0.000952 & 0.029943 \\
+mlp & 3 & INT8 QAT & density & 30 & 333 & 0.018750 & 0.061033 & -0.001474 & 0.982782 \\
+mlp & 3 & INT8 QAT & density & 60 & 333 & 0.247961 & 0.305537 & 0.021777 & 0.178134 \\
+mlp & 3 & INT8 QAT & cam\_hz & 10 & 334 & 0.014301 & 0.078789 & 0.000952 & 0.029943 \\
+mlp & 3 & INT8 QAT & cam\_hz & 2 & 333 & 0.247961 & 0.305537 & 0.021777 & 0.178134 \\
+mlp & 3 & INT8 QAT & cam\_hz & 5 & 333 & 0.018750 & 0.061033 & -0.001474 & 0.982782 \\
+mlp & 3 & INT8 QAT & channel & log\_distance & 334 & 0.014301 & 0.078789 & 0.000952 & 0.029943 \\
+mlp & 3 & INT8 QAT & channel & log\_distance\_nakagami & 333 & 0.247961 & 0.305537 & 0.021777 & 0.178134 \\
+mlp & 3 & INT8 QAT & channel & urban & 333 & 0.018750 & 0.061033 & -0.001474 & 0.982782 \\
+mlp & 4 & FP32 & scenario & juelich\_core\_d10\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.258031 & 0.329865 & -0.023244 & 0.138334 \\
+mlp & 4 & FP32 & scenario & juelich\_core\_d30\_r10\_log\_distance\_s01\_w1.parquet & 333 & 0.035449 & 0.067205 & 0.014707 & 0.252331 \\
+mlp & 4 & FP32 & scenario & juelich\_core\_d60\_r5\_urban\_s01\_w1.parquet & 333 & 0.018434 & 0.054217 & -0.001325 & 0.986926 \\
+mlp & 4 & FP32 & density & 10 & 334 & 0.258031 & 0.329865 & -0.023244 & 0.138334 \\
+mlp & 4 & FP32 & density & 30 & 333 & 0.035449 & 0.067205 & 0.014707 & 0.252331 \\
+mlp & 4 & FP32 & density & 60 & 333 & 0.018434 & 0.054217 & -0.001325 & 0.986926 \\
+mlp & 4 & FP32 & cam\_hz & 10 & 333 & 0.035449 & 0.067205 & 0.014707 & 0.252331 \\
+mlp & 4 & FP32 & cam\_hz & 2 & 334 & 0.258031 & 0.329865 & -0.023244 & 0.138334 \\
+mlp & 4 & FP32 & cam\_hz & 5 & 333 & 0.018434 & 0.054217 & -0.001325 & 0.986926 \\
+mlp & 4 & FP32 & channel & log\_distance & 333 & 0.035449 & 0.067205 & 0.014707 & 0.252331 \\
+mlp & 4 & FP32 & channel & log\_distance\_nakagami & 334 & 0.258031 & 0.329865 & -0.023244 & 0.138334 \\
+mlp & 4 & FP32 & channel & urban & 333 & 0.018434 & 0.054217 & -0.001325 & 0.986926 \\
+mlp & 4 & INT8 PTQ & scenario & juelich\_core\_d10\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.258098 & 0.329545 & -0.024626 & 0.140006 \\
+mlp & 4 & INT8 PTQ & scenario & juelich\_core\_d30\_r10\_log\_distance\_s01\_w1.parquet & 333 & 0.035847 & 0.066896 & 0.014694 & 0.259185 \\
+mlp & 4 & INT8 PTQ & scenario & juelich\_core\_d60\_r5\_urban\_s01\_w1.parquet & 333 & 0.023328 & 0.056026 & -0.006708 & 0.986039 \\
+mlp & 4 & INT8 PTQ & density & 10 & 334 & 0.258098 & 0.329545 & -0.024626 & 0.140006 \\
+mlp & 4 & INT8 PTQ & density & 30 & 333 & 0.035847 & 0.066896 & 0.014694 & 0.259185 \\
+mlp & 4 & INT8 PTQ & density & 60 & 333 & 0.023328 & 0.056026 & -0.006708 & 0.986039 \\
+mlp & 4 & INT8 PTQ & cam\_hz & 10 & 333 & 0.035847 & 0.066896 & 0.014694 & 0.259185 \\
+mlp & 4 & INT8 PTQ & cam\_hz & 2 & 334 & 0.258098 & 0.329545 & -0.024626 & 0.140006 \\
+mlp & 4 & INT8 PTQ & cam\_hz & 5 & 333 & 0.023328 & 0.056026 & -0.006708 & 0.986039 \\
+mlp & 4 & INT8 PTQ & channel & log\_distance & 333 & 0.035847 & 0.066896 & 0.014694 & 0.259185 \\
+mlp & 4 & INT8 PTQ & channel & log\_distance\_nakagami & 334 & 0.258098 & 0.329545 & -0.024626 & 0.140006 \\
+mlp & 4 & INT8 PTQ & channel & urban & 333 & 0.023328 & 0.056026 & -0.006708 & 0.986039 \\
+mlp & 4 & INT8 QAT & scenario & juelich\_core\_d10\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.258020 & 0.329506 & -0.028573 & 0.140209 \\
+mlp & 4 & INT8 QAT & scenario & juelich\_core\_d30\_r10\_log\_distance\_s01\_w1.parquet & 333 & 0.034559 & 0.067341 & 0.013345 & 0.249295 \\
+mlp & 4 & INT8 QAT & scenario & juelich\_core\_d60\_r5\_urban\_s01\_w1.parquet & 333 & 0.016853 & 0.051652 & -0.002930 & 0.988134 \\
+mlp & 4 & INT8 QAT & density & 10 & 334 & 0.258020 & 0.329506 & -0.028573 & 0.140209 \\
+mlp & 4 & INT8 QAT & density & 30 & 333 & 0.034559 & 0.067341 & 0.013345 & 0.249295 \\
+mlp & 4 & INT8 QAT & density & 60 & 333 & 0.016853 & 0.051652 & -0.002930 & 0.988134 \\
+mlp & 4 & INT8 QAT & cam\_hz & 10 & 333 & 0.034559 & 0.067341 & 0.013345 & 0.249295 \\
+mlp & 4 & INT8 QAT & cam\_hz & 2 & 334 & 0.258020 & 0.329506 & -0.028573 & 0.140209 \\
+mlp & 4 & INT8 QAT & cam\_hz & 5 & 333 & 0.016853 & 0.051652 & -0.002930 & 0.988134 \\
+mlp & 4 & INT8 QAT & channel & log\_distance & 333 & 0.034559 & 0.067341 & 0.013345 & 0.249295 \\
+mlp & 4 & INT8 QAT & channel & log\_distance\_nakagami & 334 & 0.258020 & 0.329506 & -0.028573 & 0.140209 \\
+mlp & 4 & INT8 QAT & channel & urban & 333 & 0.016853 & 0.051652 & -0.002930 & 0.988134 \\
+mlp & 5 & FP32 & scenario & juelich\_core\_d10\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.143458 & 0.188212 & 0.002131 & 0.380999 \\
+mlp & 5 & FP32 & scenario & juelich\_core\_d30\_r2\_log\_distance\_s01\_w1.parquet & 333 & 0.007282 & 0.031672 & 0.004032 & 0.728689 \\
+mlp & 5 & FP32 & scenario & juelich\_core\_d60\_r10\_urban\_s01\_w1.parquet & 333 & 0.032600 & 0.104310 & -0.011068 & 0.947961 \\
+mlp & 5 & FP32 & density & 10 & 334 & 0.143458 & 0.188212 & 0.002131 & 0.380999 \\
+mlp & 5 & FP32 & density & 30 & 333 & 0.007282 & 0.031672 & 0.004032 & 0.728689 \\
+mlp & 5 & FP32 & density & 60 & 333 & 0.032600 & 0.104310 & -0.011068 & 0.947961 \\
+mlp & 5 & FP32 & cam\_hz & 10 & 333 & 0.032600 & 0.104310 & -0.011068 & 0.947961 \\
+mlp & 5 & FP32 & cam\_hz & 2 & 333 & 0.007282 & 0.031672 & 0.004032 & 0.728689 \\
+mlp & 5 & FP32 & cam\_hz & 5 & 334 & 0.143458 & 0.188212 & 0.002131 & 0.380999 \\
+mlp & 5 & FP32 & channel & log\_distance & 333 & 0.007282 & 0.031672 & 0.004032 & 0.728689 \\
+mlp & 5 & FP32 & channel & log\_distance\_nakagami & 334 & 0.143458 & 0.188212 & 0.002131 & 0.380999 \\
+mlp & 5 & FP32 & channel & urban & 333 & 0.032600 & 0.104310 & -0.011068 & 0.947961 \\
+mlp & 5 & INT8 PTQ & scenario & juelich\_core\_d10\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.143003 & 0.187651 & 0.001775 & 0.384683 \\
+mlp & 5 & INT8 PTQ & scenario & juelich\_core\_d30\_r2\_log\_distance\_s01\_w1.parquet & 333 & 0.007389 & 0.032059 & 0.004206 & 0.722019 \\
+mlp & 5 & INT8 PTQ & scenario & juelich\_core\_d60\_r10\_urban\_s01\_w1.parquet & 333 & 0.031071 & 0.106363 & -0.007658 & 0.945892 \\
+mlp & 5 & INT8 PTQ & density & 10 & 334 & 0.143003 & 0.187651 & 0.001775 & 0.384683 \\
+mlp & 5 & INT8 PTQ & density & 30 & 333 & 0.007389 & 0.032059 & 0.004206 & 0.722019 \\
+mlp & 5 & INT8 PTQ & density & 60 & 333 & 0.031071 & 0.106363 & -0.007658 & 0.945892 \\
+mlp & 5 & INT8 PTQ & cam\_hz & 10 & 333 & 0.031071 & 0.106363 & -0.007658 & 0.945892 \\
+mlp & 5 & INT8 PTQ & cam\_hz & 2 & 333 & 0.007389 & 0.032059 & 0.004206 & 0.722019 \\
+mlp & 5 & INT8 PTQ & cam\_hz & 5 & 334 & 0.143003 & 0.187651 & 0.001775 & 0.384683 \\
+mlp & 5 & INT8 PTQ & channel & log\_distance & 333 & 0.007389 & 0.032059 & 0.004206 & 0.722019 \\
+mlp & 5 & INT8 PTQ & channel & log\_distance\_nakagami & 334 & 0.143003 & 0.187651 & 0.001775 & 0.384683 \\
+mlp & 5 & INT8 PTQ & channel & urban & 333 & 0.031071 & 0.106363 & -0.007658 & 0.945892 \\
+mlp & 5 & INT8 QAT & scenario & juelich\_core\_d10\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.144715 & 0.188758 & 0.007336 & 0.377402 \\
+mlp & 5 & INT8 QAT & scenario & juelich\_core\_d30\_r2\_log\_distance\_s01\_w1.parquet & 333 & 0.006767 & 0.030072 & 0.003431 & 0.755408 \\
+mlp & 5 & INT8 QAT & scenario & juelich\_core\_d60\_r10\_urban\_s01\_w1.parquet & 333 & 0.030224 & 0.101935 & -0.005509 & 0.950303 \\
+mlp & 5 & INT8 QAT & density & 10 & 334 & 0.144715 & 0.188758 & 0.007336 & 0.377402 \\
+mlp & 5 & INT8 QAT & density & 30 & 333 & 0.006767 & 0.030072 & 0.003431 & 0.755408 \\
+mlp & 5 & INT8 QAT & density & 60 & 333 & 0.030224 & 0.101935 & -0.005509 & 0.950303 \\
+mlp & 5 & INT8 QAT & cam\_hz & 10 & 333 & 0.030224 & 0.101935 & -0.005509 & 0.950303 \\
+mlp & 5 & INT8 QAT & cam\_hz & 2 & 333 & 0.006767 & 0.030072 & 0.003431 & 0.755408 \\
+mlp & 5 & INT8 QAT & cam\_hz & 5 & 334 & 0.144715 & 0.188758 & 0.007336 & 0.377402 \\
+mlp & 5 & INT8 QAT & channel & log\_distance & 333 & 0.006767 & 0.030072 & 0.003431 & 0.755408 \\
+mlp & 5 & INT8 QAT & channel & log\_distance\_nakagami & 334 & 0.144715 & 0.188758 & 0.007336 & 0.377402 \\
+mlp & 5 & INT8 QAT & channel & urban & 333 & 0.030224 & 0.101935 & -0.005509 & 0.950303 \\
+mlp & 6 & FP32 & scenario & juelich\_core\_d10\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.114997 & 0.147995 & 0.022175 & 0.506092 \\
+mlp & 6 & FP32 & scenario & juelich\_core\_d30\_r5\_log\_distance\_s01\_w1.parquet & 333 & 0.012641 & 0.040746 & 0.007198 & 0.895077 \\
+mlp & 6 & FP32 & scenario & juelich\_core\_d60\_r2\_urban\_s01\_w1.parquet & 333 & 0.028315 & 0.116242 & -0.008132 & 0.937783 \\
+mlp & 6 & FP32 & density & 10 & 334 & 0.114997 & 0.147995 & 0.022175 & 0.506092 \\
+mlp & 6 & FP32 & density & 30 & 333 & 0.012641 & 0.040746 & 0.007198 & 0.895077 \\
+mlp & 6 & FP32 & density & 60 & 333 & 0.028315 & 0.116242 & -0.008132 & 0.937783 \\
+mlp & 6 & FP32 & cam\_hz & 10 & 334 & 0.114997 & 0.147995 & 0.022175 & 0.506092 \\
+mlp & 6 & FP32 & cam\_hz & 2 & 333 & 0.028315 & 0.116242 & -0.008132 & 0.937783 \\
+mlp & 6 & FP32 & cam\_hz & 5 & 333 & 0.012641 & 0.040746 & 0.007198 & 0.895077 \\
+mlp & 6 & FP32 & channel & log\_distance & 333 & 0.012641 & 0.040746 & 0.007198 & 0.895077 \\
+mlp & 6 & FP32 & channel & log\_distance\_nakagami & 334 & 0.114997 & 0.147995 & 0.022175 & 0.506092 \\
+mlp & 6 & FP32 & channel & urban & 333 & 0.028315 & 0.116242 & -0.008132 & 0.937783 \\
+mlp & 6 & INT8 PTQ & scenario & juelich\_core\_d10\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.116387 & 0.149214 & 0.026477 & 0.497921 \\
+mlp & 6 & INT8 PTQ & scenario & juelich\_core\_d30\_r5\_log\_distance\_s01\_w1.parquet & 333 & 0.012601 & 0.040171 & 0.007527 & 0.898019 \\
+mlp & 6 & INT8 PTQ & scenario & juelich\_core\_d60\_r2\_urban\_s01\_w1.parquet & 333 & 0.028355 & 0.115401 & -0.008238 & 0.938681 \\
+mlp & 6 & INT8 PTQ & density & 10 & 334 & 0.116387 & 0.149214 & 0.026477 & 0.497921 \\
+mlp & 6 & INT8 PTQ & density & 30 & 333 & 0.012601 & 0.040171 & 0.007527 & 0.898019 \\
+mlp & 6 & INT8 PTQ & density & 60 & 333 & 0.028355 & 0.115401 & -0.008238 & 0.938681 \\
+mlp & 6 & INT8 PTQ & cam\_hz & 10 & 334 & 0.116387 & 0.149214 & 0.026477 & 0.497921 \\
+mlp & 6 & INT8 PTQ & cam\_hz & 2 & 333 & 0.028355 & 0.115401 & -0.008238 & 0.938681 \\
+mlp & 6 & INT8 PTQ & cam\_hz & 5 & 333 & 0.012601 & 0.040171 & 0.007527 & 0.898019 \\
+mlp & 6 & INT8 PTQ & channel & log\_distance & 333 & 0.012601 & 0.040171 & 0.007527 & 0.898019 \\
+mlp & 6 & INT8 PTQ & channel & log\_distance\_nakagami & 334 & 0.116387 & 0.149214 & 0.026477 & 0.497921 \\
+mlp & 6 & INT8 PTQ & channel & urban & 333 & 0.028355 & 0.115401 & -0.008238 & 0.938681 \\
+mlp & 6 & INT8 QAT & scenario & juelich\_core\_d10\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.114182 & 0.148043 & 0.021956 & 0.505771 \\
+mlp & 6 & INT8 QAT & scenario & juelich\_core\_d30\_r5\_log\_distance\_s01\_w1.parquet & 333 & 0.010650 & 0.035470 & 0.005257 & 0.920491 \\
+mlp & 6 & INT8 QAT & scenario & juelich\_core\_d60\_r2\_urban\_s01\_w1.parquet & 333 & 0.029431 & 0.120370 & -0.013250 & 0.933287 \\
+mlp & 6 & INT8 QAT & density & 10 & 334 & 0.114182 & 0.148043 & 0.021956 & 0.505771 \\
+mlp & 6 & INT8 QAT & density & 30 & 333 & 0.010650 & 0.035470 & 0.005257 & 0.920491 \\
+mlp & 6 & INT8 QAT & density & 60 & 333 & 0.029431 & 0.120370 & -0.013250 & 0.933287 \\
+mlp & 6 & INT8 QAT & cam\_hz & 10 & 334 & 0.114182 & 0.148043 & 0.021956 & 0.505771 \\
+mlp & 6 & INT8 QAT & cam\_hz & 2 & 333 & 0.029431 & 0.120370 & -0.013250 & 0.933287 \\
+mlp & 6 & INT8 QAT & cam\_hz & 5 & 333 & 0.010650 & 0.035470 & 0.005257 & 0.920491 \\
+mlp & 6 & INT8 QAT & channel & log\_distance & 333 & 0.010650 & 0.035470 & 0.005257 & 0.920491 \\
+mlp & 6 & INT8 QAT & channel & log\_distance\_nakagami & 334 & 0.114182 & 0.148043 & 0.021956 & 0.505771 \\
+mlp & 6 & INT8 QAT & channel & urban & 333 & 0.029431 & 0.120370 & -0.013250 & 0.933287 \\
+mlp & 7 & FP32 & scenario & juelich\_core\_d10\_r2\_urban\_s01\_w1.parquet & 334 & 0.024786 & 0.102803 & -0.010884 & 0.954188 \\
+mlp & 7 & FP32 & scenario & juelich\_core\_d30\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.118969 & 0.154272 & -0.011841 & 0.541593 \\
+mlp & 7 & FP32 & scenario & juelich\_core\_d60\_r5\_log\_distance\_s01\_w1.parquet & 333 & 0.037316 & 0.077839 & 0.013846 & 0.470103 \\
+mlp & 7 & FP32 & density & 10 & 334 & 0.024786 & 0.102803 & -0.010884 & 0.954188 \\
+mlp & 7 & FP32 & density & 30 & 333 & 0.118969 & 0.154272 & -0.011841 & 0.541593 \\
+mlp & 7 & FP32 & density & 60 & 333 & 0.037316 & 0.077839 & 0.013846 & 0.470103 \\
+mlp & 7 & FP32 & cam\_hz & 10 & 333 & 0.118969 & 0.154272 & -0.011841 & 0.541593 \\
+mlp & 7 & FP32 & cam\_hz & 2 & 334 & 0.024786 & 0.102803 & -0.010884 & 0.954188 \\
+mlp & 7 & FP32 & cam\_hz & 5 & 333 & 0.037316 & 0.077839 & 0.013846 & 0.470103 \\
+mlp & 7 & FP32 & channel & log\_distance & 333 & 0.037316 & 0.077839 & 0.013846 & 0.470103 \\
+mlp & 7 & FP32 & channel & log\_distance\_nakagami & 333 & 0.118969 & 0.154272 & -0.011841 & 0.541593 \\
+mlp & 7 & FP32 & channel & urban & 334 & 0.024786 & 0.102803 & -0.010884 & 0.954188 \\
+mlp & 7 & INT8 PTQ & scenario & juelich\_core\_d10\_r2\_urban\_s01\_w1.parquet & 334 & 0.029306 & 0.102571 & -0.012196 & 0.954394 \\
+mlp & 7 & INT8 PTQ & scenario & juelich\_core\_d30\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.119032 & 0.154443 & -0.012173 & 0.540577 \\
+mlp & 7 & INT8 PTQ & scenario & juelich\_core\_d60\_r5\_log\_distance\_s01\_w1.parquet & 333 & 0.040849 & 0.077823 & 0.017767 & 0.470322 \\
+mlp & 7 & INT8 PTQ & density & 10 & 334 & 0.029306 & 0.102571 & -0.012196 & 0.954394 \\
+mlp & 7 & INT8 PTQ & density & 30 & 333 & 0.119032 & 0.154443 & -0.012173 & 0.540577 \\
+mlp & 7 & INT8 PTQ & density & 60 & 333 & 0.040849 & 0.077823 & 0.017767 & 0.470322 \\
+mlp & 7 & INT8 PTQ & cam\_hz & 10 & 333 & 0.119032 & 0.154443 & -0.012173 & 0.540577 \\
+mlp & 7 & INT8 PTQ & cam\_hz & 2 & 334 & 0.029306 & 0.102571 & -0.012196 & 0.954394 \\
+mlp & 7 & INT8 PTQ & cam\_hz & 5 & 333 & 0.040849 & 0.077823 & 0.017767 & 0.470322 \\
+mlp & 7 & INT8 PTQ & channel & log\_distance & 333 & 0.040849 & 0.077823 & 0.017767 & 0.470322 \\
+mlp & 7 & INT8 PTQ & channel & log\_distance\_nakagami & 333 & 0.119032 & 0.154443 & -0.012173 & 0.540577 \\
+mlp & 7 & INT8 PTQ & channel & urban & 334 & 0.029306 & 0.102571 & -0.012196 & 0.954394 \\
+mlp & 7 & INT8 QAT & scenario & juelich\_core\_d10\_r2\_urban\_s01\_w1.parquet & 334 & 0.023488 & 0.098007 & -0.010613 & 0.958363 \\
+mlp & 7 & INT8 QAT & scenario & juelich\_core\_d30\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.119613 & 0.155360 & -0.008973 & 0.535108 \\
+mlp & 7 & INT8 QAT & scenario & juelich\_core\_d60\_r5\_log\_distance\_s01\_w1.parquet & 333 & 0.033399 & 0.078067 & 0.009469 & 0.466994 \\
+mlp & 7 & INT8 QAT & density & 10 & 334 & 0.023488 & 0.098007 & -0.010613 & 0.958363 \\
+mlp & 7 & INT8 QAT & density & 30 & 333 & 0.119613 & 0.155360 & -0.008973 & 0.535108 \\
+mlp & 7 & INT8 QAT & density & 60 & 333 & 0.033399 & 0.078067 & 0.009469 & 0.466994 \\
+mlp & 7 & INT8 QAT & cam\_hz & 10 & 333 & 0.119613 & 0.155360 & -0.008973 & 0.535108 \\
+mlp & 7 & INT8 QAT & cam\_hz & 2 & 334 & 0.023488 & 0.098007 & -0.010613 & 0.958363 \\
+mlp & 7 & INT8 QAT & cam\_hz & 5 & 333 & 0.033399 & 0.078067 & 0.009469 & 0.466994 \\
+mlp & 7 & INT8 QAT & channel & log\_distance & 333 & 0.033399 & 0.078067 & 0.009469 & 0.466994 \\
+mlp & 7 & INT8 QAT & channel & log\_distance\_nakagami & 333 & 0.119613 & 0.155360 & -0.008973 & 0.535108 \\
+mlp & 7 & INT8 QAT & channel & urban & 334 & 0.023488 & 0.098007 & -0.010613 & 0.958363 \\
+mlp & 8 & FP32 & scenario & juelich\_core\_d10\_r5\_urban\_s01\_w1.parquet & 334 & 0.027194 & 0.089384 & 0.003218 & 0.966170 \\
+mlp & 8 & FP32 & scenario & juelich\_core\_d30\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.257842 & 0.317072 & -0.019340 & 0.198003 \\
+mlp & 8 & FP32 & scenario & juelich\_core\_d60\_r10\_log\_distance\_s01\_w1.parquet & 333 & 0.076058 & 0.107258 & 0.039134 & 0.640590 \\
+mlp & 8 & FP32 & density & 10 & 334 & 0.027194 & 0.089384 & 0.003218 & 0.966170 \\
+mlp & 8 & FP32 & density & 30 & 333 & 0.257842 & 0.317072 & -0.019340 & 0.198003 \\
+mlp & 8 & FP32 & density & 60 & 333 & 0.076058 & 0.107258 & 0.039134 & 0.640590 \\
+mlp & 8 & FP32 & cam\_hz & 10 & 333 & 0.076058 & 0.107258 & 0.039134 & 0.640590 \\
+mlp & 8 & FP32 & cam\_hz & 2 & 333 & 0.257842 & 0.317072 & -0.019340 & 0.198003 \\
+mlp & 8 & FP32 & cam\_hz & 5 & 334 & 0.027194 & 0.089384 & 0.003218 & 0.966170 \\
+mlp & 8 & FP32 & channel & log\_distance & 333 & 0.076058 & 0.107258 & 0.039134 & 0.640590 \\
+mlp & 8 & FP32 & channel & log\_distance\_nakagami & 333 & 0.257842 & 0.317072 & -0.019340 & 0.198003 \\
+mlp & 8 & FP32 & channel & urban & 334 & 0.027194 & 0.089384 & 0.003218 & 0.966170 \\
+mlp & 8 & INT8 PTQ & scenario & juelich\_core\_d10\_r5\_urban\_s01\_w1.parquet & 334 & 0.032047 & 0.089636 & 0.004293 & 0.965979 \\
+mlp & 8 & INT8 PTQ & scenario & juelich\_core\_d30\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.258084 & 0.315943 & -0.016768 & 0.203703 \\
+mlp & 8 & INT8 PTQ & scenario & juelich\_core\_d60\_r10\_log\_distance\_s01\_w1.parquet & 333 & 0.077922 & 0.107837 & 0.042003 & 0.636698 \\
+mlp & 8 & INT8 PTQ & density & 10 & 334 & 0.032047 & 0.089636 & 0.004293 & 0.965979 \\
+mlp & 8 & INT8 PTQ & density & 30 & 333 & 0.258084 & 0.315943 & -0.016768 & 0.203703 \\
+mlp & 8 & INT8 PTQ & density & 60 & 333 & 0.077922 & 0.107837 & 0.042003 & 0.636698 \\
+mlp & 8 & INT8 PTQ & cam\_hz & 10 & 333 & 0.077922 & 0.107837 & 0.042003 & 0.636698 \\
+mlp & 8 & INT8 PTQ & cam\_hz & 2 & 333 & 0.258084 & 0.315943 & -0.016768 & 0.203703 \\
+mlp & 8 & INT8 PTQ & cam\_hz & 5 & 334 & 0.032047 & 0.089636 & 0.004293 & 0.965979 \\
+mlp & 8 & INT8 PTQ & channel & log\_distance & 333 & 0.077922 & 0.107837 & 0.042003 & 0.636698 \\
+mlp & 8 & INT8 PTQ & channel & log\_distance\_nakagami & 333 & 0.258084 & 0.315943 & -0.016768 & 0.203703 \\
+mlp & 8 & INT8 PTQ & channel & urban & 334 & 0.032047 & 0.089636 & 0.004293 & 0.965979 \\
+mlp & 8 & INT8 QAT & scenario & juelich\_core\_d10\_r5\_urban\_s01\_w1.parquet & 334 & 0.022077 & 0.082352 & -0.001743 & 0.971284 \\
+mlp & 8 & INT8 QAT & scenario & juelich\_core\_d30\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.256189 & 0.316975 & -0.018927 & 0.198492 \\
+mlp & 8 & INT8 QAT & scenario & juelich\_core\_d60\_r10\_log\_distance\_s01\_w1.parquet & 333 & 0.071775 & 0.103640 & 0.032454 & 0.664428 \\
+mlp & 8 & INT8 QAT & density & 10 & 334 & 0.022077 & 0.082352 & -0.001743 & 0.971284 \\
+mlp & 8 & INT8 QAT & density & 30 & 333 & 0.256189 & 0.316975 & -0.018927 & 0.198492 \\
+mlp & 8 & INT8 QAT & density & 60 & 333 & 0.071775 & 0.103640 & 0.032454 & 0.664428 \\
+mlp & 8 & INT8 QAT & cam\_hz & 10 & 333 & 0.071775 & 0.103640 & 0.032454 & 0.664428 \\
+mlp & 8 & INT8 QAT & cam\_hz & 2 & 333 & 0.256189 & 0.316975 & -0.018927 & 0.198492 \\
+mlp & 8 & INT8 QAT & cam\_hz & 5 & 334 & 0.022077 & 0.082352 & -0.001743 & 0.971284 \\
+mlp & 8 & INT8 QAT & channel & log\_distance & 333 & 0.071775 & 0.103640 & 0.032454 & 0.664428 \\
+mlp & 8 & INT8 QAT & channel & log\_distance\_nakagami & 333 & 0.256189 & 0.316975 & -0.018927 & 0.198492 \\
+mlp & 8 & INT8 QAT & channel & urban & 334 & 0.022077 & 0.082352 & -0.001743 & 0.971284 \\
+mlp & 9 & FP32 & scenario & juelich\_core\_d10\_r10\_urban\_s01\_w1.parquet & 334 & 0.025562 & 0.073039 & -0.002553 & 0.976672 \\
+mlp & 9 & FP32 & scenario & juelich\_core\_d30\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.156144 & 0.202173 & -0.007500 & 0.391433 \\
+mlp & 9 & FP32 & scenario & juelich\_core\_d60\_r2\_log\_distance\_s01\_w1.parquet & 333 & 0.022643 & 0.078309 & 0.011681 & 0.364480 \\
+mlp & 9 & FP32 & density & 10 & 334 & 0.025562 & 0.073039 & -0.002553 & 0.976672 \\
+mlp & 9 & FP32 & density & 30 & 333 & 0.156144 & 0.202173 & -0.007500 & 0.391433 \\
+mlp & 9 & FP32 & density & 60 & 333 & 0.022643 & 0.078309 & 0.011681 & 0.364480 \\
+mlp & 9 & FP32 & cam\_hz & 10 & 334 & 0.025562 & 0.073039 & -0.002553 & 0.976672 \\
+mlp & 9 & FP32 & cam\_hz & 2 & 333 & 0.022643 & 0.078309 & 0.011681 & 0.364480 \\
+mlp & 9 & FP32 & cam\_hz & 5 & 333 & 0.156144 & 0.202173 & -0.007500 & 0.391433 \\
+mlp & 9 & FP32 & channel & log\_distance & 333 & 0.022643 & 0.078309 & 0.011681 & 0.364480 \\
+mlp & 9 & FP32 & channel & log\_distance\_nakagami & 333 & 0.156144 & 0.202173 & -0.007500 & 0.391433 \\
+mlp & 9 & FP32 & channel & urban & 334 & 0.025562 & 0.073039 & -0.002553 & 0.976672 \\
+mlp & 9 & INT8 PTQ & scenario & juelich\_core\_d10\_r10\_urban\_s01\_w1.parquet & 334 & 0.027279 & 0.074423 & -0.005824 & 0.975779 \\
+mlp & 9 & INT8 PTQ & scenario & juelich\_core\_d30\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.156160 & 0.202455 & -0.007766 & 0.389734 \\
+mlp & 9 & INT8 PTQ & scenario & juelich\_core\_d60\_r2\_log\_distance\_s01\_w1.parquet & 333 & 0.021386 & 0.077976 & 0.010456 & 0.369873 \\
+mlp & 9 & INT8 PTQ & density & 10 & 334 & 0.027279 & 0.074423 & -0.005824 & 0.975779 \\
+mlp & 9 & INT8 PTQ & density & 30 & 333 & 0.156160 & 0.202455 & -0.007766 & 0.389734 \\
+mlp & 9 & INT8 PTQ & density & 60 & 333 & 0.021386 & 0.077976 & 0.010456 & 0.369873 \\
+mlp & 9 & INT8 PTQ & cam\_hz & 10 & 334 & 0.027279 & 0.074423 & -0.005824 & 0.975779 \\
+mlp & 9 & INT8 PTQ & cam\_hz & 2 & 333 & 0.021386 & 0.077976 & 0.010456 & 0.369873 \\
+mlp & 9 & INT8 PTQ & cam\_hz & 5 & 333 & 0.156160 & 0.202455 & -0.007766 & 0.389734 \\
+mlp & 9 & INT8 PTQ & channel & log\_distance & 333 & 0.021386 & 0.077976 & 0.010456 & 0.369873 \\
+mlp & 9 & INT8 PTQ & channel & log\_distance\_nakagami & 333 & 0.156160 & 0.202455 & -0.007766 & 0.389734 \\
+mlp & 9 & INT8 PTQ & channel & urban & 334 & 0.027279 & 0.074423 & -0.005824 & 0.975779 \\
+mlp & 9 & INT8 QAT & scenario & juelich\_core\_d10\_r10\_urban\_s01\_w1.parquet & 334 & 0.020722 & 0.074466 & -0.004428 & 0.975751 \\
+mlp & 9 & INT8 QAT & scenario & juelich\_core\_d30\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.154286 & 0.202063 & -0.005727 & 0.392093 \\
+mlp & 9 & INT8 QAT & scenario & juelich\_core\_d60\_r2\_log\_distance\_s01\_w1.parquet & 333 & 0.019455 & 0.074629 & 0.008832 & 0.422812 \\
+mlp & 9 & INT8 QAT & density & 10 & 334 & 0.020722 & 0.074466 & -0.004428 & 0.975751 \\
+mlp & 9 & INT8 QAT & density & 30 & 333 & 0.154286 & 0.202063 & -0.005727 & 0.392093 \\
+mlp & 9 & INT8 QAT & density & 60 & 333 & 0.019455 & 0.074629 & 0.008832 & 0.422812 \\
+mlp & 9 & INT8 QAT & cam\_hz & 10 & 334 & 0.020722 & 0.074466 & -0.004428 & 0.975751 \\
+mlp & 9 & INT8 QAT & cam\_hz & 2 & 333 & 0.019455 & 0.074629 & 0.008832 & 0.422812 \\
+mlp & 9 & INT8 QAT & cam\_hz & 5 & 333 & 0.154286 & 0.202063 & -0.005727 & 0.392093 \\
+mlp & 9 & INT8 QAT & channel & log\_distance & 333 & 0.019455 & 0.074629 & 0.008832 & 0.422812 \\
+mlp & 9 & INT8 QAT & channel & log\_distance\_nakagami & 333 & 0.154286 & 0.202063 & -0.005727 & 0.392093 \\
+mlp & 9 & INT8 QAT & channel & urban & 334 & 0.020722 & 0.074466 & -0.004428 & 0.975751 \\
+cnn & 1 & FP32 & scenario & juelich\_core\_d10\_r2\_log\_distance\_s01\_w1.parquet & 334 & 0.004626 & 0.017468 & 0.004626 & -- \\
+cnn & 1 & FP32 & scenario & juelich\_core\_d30\_r10\_urban\_s01\_w1.parquet & 333 & 0.027841 & 0.073069 & -0.019956 & 0.974070 \\
+cnn & 1 & FP32 & scenario & juelich\_core\_d60\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.161778 & 0.208619 & -0.012977 & 0.416008 \\
+cnn & 1 & FP32 & density & 10 & 334 & 0.004626 & 0.017468 & 0.004626 & -- \\
+cnn & 1 & FP32 & density & 30 & 333 & 0.027841 & 0.073069 & -0.019956 & 0.974070 \\
+cnn & 1 & FP32 & density & 60 & 333 & 0.161778 & 0.208619 & -0.012977 & 0.416008 \\
+cnn & 1 & FP32 & cam\_hz & 10 & 333 & 0.027841 & 0.073069 & -0.019956 & 0.974070 \\
+cnn & 1 & FP32 & cam\_hz & 2 & 334 & 0.004626 & 0.017468 & 0.004626 & -- \\
+cnn & 1 & FP32 & cam\_hz & 5 & 333 & 0.161778 & 0.208619 & -0.012977 & 0.416008 \\
+cnn & 1 & FP32 & channel & log\_distance & 334 & 0.004626 & 0.017468 & 0.004626 & -- \\
+cnn & 1 & FP32 & channel & log\_distance\_nakagami & 333 & 0.161778 & 0.208619 & -0.012977 & 0.416008 \\
+cnn & 1 & FP32 & channel & urban & 333 & 0.027841 & 0.073069 & -0.019956 & 0.974070 \\
+cnn & 1 & INT8 PTQ & scenario & juelich\_core\_d10\_r2\_log\_distance\_s01\_w1.parquet & 334 & 0.003746 & 0.016769 & 0.003746 & -- \\
+cnn & 1 & INT8 PTQ & scenario & juelich\_core\_d30\_r10\_urban\_s01\_w1.parquet & 333 & 0.024702 & 0.075228 & -0.016782 & 0.972516 \\
+cnn & 1 & INT8 PTQ & scenario & juelich\_core\_d60\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.162221 & 0.209494 & -0.016355 & 0.411097 \\
+cnn & 1 & INT8 PTQ & density & 10 & 334 & 0.003746 & 0.016769 & 0.003746 & -- \\
+cnn & 1 & INT8 PTQ & density & 30 & 333 & 0.024702 & 0.075228 & -0.016782 & 0.972516 \\
+cnn & 1 & INT8 PTQ & density & 60 & 333 & 0.162221 & 0.209494 & -0.016355 & 0.411097 \\
+cnn & 1 & INT8 PTQ & cam\_hz & 10 & 333 & 0.024702 & 0.075228 & -0.016782 & 0.972516 \\
+cnn & 1 & INT8 PTQ & cam\_hz & 2 & 334 & 0.003746 & 0.016769 & 0.003746 & -- \\
+cnn & 1 & INT8 PTQ & cam\_hz & 5 & 333 & 0.162221 & 0.209494 & -0.016355 & 0.411097 \\
+cnn & 1 & INT8 PTQ & channel & log\_distance & 334 & 0.003746 & 0.016769 & 0.003746 & -- \\
+cnn & 1 & INT8 PTQ & channel & log\_distance\_nakagami & 333 & 0.162221 & 0.209494 & -0.016355 & 0.411097 \\
+cnn & 1 & INT8 PTQ & channel & urban & 333 & 0.024702 & 0.075228 & -0.016782 & 0.972516 \\
+cnn & 1 & INT8 QAT & scenario & juelich\_core\_d10\_r2\_log\_distance\_s01\_w1.parquet & 334 & 0.003988 & 0.017230 & 0.003988 & -- \\
+cnn & 1 & INT8 QAT & scenario & juelich\_core\_d30\_r10\_urban\_s01\_w1.parquet & 333 & 0.018662 & 0.070727 & -0.007612 & 0.975706 \\
+cnn & 1 & INT8 QAT & scenario & juelich\_core\_d60\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.162127 & 0.208677 & -0.012076 & 0.415681 \\
+cnn & 1 & INT8 QAT & density & 10 & 334 & 0.003988 & 0.017230 & 0.003988 & -- \\
+cnn & 1 & INT8 QAT & density & 30 & 333 & 0.018662 & 0.070727 & -0.007612 & 0.975706 \\
+cnn & 1 & INT8 QAT & density & 60 & 333 & 0.162127 & 0.208677 & -0.012076 & 0.415681 \\
+cnn & 1 & INT8 QAT & cam\_hz & 10 & 333 & 0.018662 & 0.070727 & -0.007612 & 0.975706 \\
+cnn & 1 & INT8 QAT & cam\_hz & 2 & 334 & 0.003988 & 0.017230 & 0.003988 & -- \\
+cnn & 1 & INT8 QAT & cam\_hz & 5 & 333 & 0.162127 & 0.208677 & -0.012076 & 0.415681 \\
+cnn & 1 & INT8 QAT & channel & log\_distance & 334 & 0.003988 & 0.017230 & 0.003988 & -- \\
+cnn & 1 & INT8 QAT & channel & log\_distance\_nakagami & 333 & 0.162127 & 0.208677 & -0.012076 & 0.415681 \\
+cnn & 1 & INT8 QAT & channel & urban & 333 & 0.018662 & 0.070727 & -0.007612 & 0.975706 \\
+cnn & 2 & FP32 & scenario & juelich\_core\_d10\_r5\_log\_distance\_s01\_w1.parquet & 334 & 0.017545 & 0.049396 & 0.016040 & -1.047167 \\
+cnn & 2 & FP32 & scenario & juelich\_core\_d30\_r2\_urban\_s01\_w1.parquet & 333 & 0.014298 & 0.050145 & -0.001494 & 0.988608 \\
+cnn & 2 & FP32 & scenario & juelich\_core\_d60\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.116339 & 0.152280 & -0.037881 & 0.614528 \\
+cnn & 2 & FP32 & density & 10 & 334 & 0.017545 & 0.049396 & 0.016040 & -1.047167 \\
+cnn & 2 & FP32 & density & 30 & 333 & 0.014298 & 0.050145 & -0.001494 & 0.988608 \\
+cnn & 2 & FP32 & density & 60 & 333 & 0.116339 & 0.152280 & -0.037881 & 0.614528 \\
+cnn & 2 & FP32 & cam\_hz & 10 & 333 & 0.116339 & 0.152280 & -0.037881 & 0.614528 \\
+cnn & 2 & FP32 & cam\_hz & 2 & 333 & 0.014298 & 0.050145 & -0.001494 & 0.988608 \\
+cnn & 2 & FP32 & cam\_hz & 5 & 334 & 0.017545 & 0.049396 & 0.016040 & -1.047167 \\
+cnn & 2 & FP32 & channel & log\_distance & 334 & 0.017545 & 0.049396 & 0.016040 & -1.047167 \\
+cnn & 2 & FP32 & channel & log\_distance\_nakagami & 333 & 0.116339 & 0.152280 & -0.037881 & 0.614528 \\
+cnn & 2 & FP32 & channel & urban & 333 & 0.014298 & 0.050145 & -0.001494 & 0.988608 \\
+cnn & 2 & INT8 PTQ & scenario & juelich\_core\_d10\_r5\_log\_distance\_s01\_w1.parquet & 334 & 0.018440 & 0.050344 & 0.016985 & -1.126526 \\
+cnn & 2 & INT8 PTQ & scenario & juelich\_core\_d30\_r2\_urban\_s01\_w1.parquet & 333 & 0.017222 & 0.053950 & -0.001690 & 0.986813 \\
+cnn & 2 & INT8 PTQ & scenario & juelich\_core\_d60\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.116845 & 0.152738 & -0.038728 & 0.612205 \\
+cnn & 2 & INT8 PTQ & density & 10 & 334 & 0.018440 & 0.050344 & 0.016985 & -1.126526 \\
+cnn & 2 & INT8 PTQ & density & 30 & 333 & 0.017222 & 0.053950 & -0.001690 & 0.986813 \\
+cnn & 2 & INT8 PTQ & density & 60 & 333 & 0.116845 & 0.152738 & -0.038728 & 0.612205 \\
+cnn & 2 & INT8 PTQ & cam\_hz & 10 & 333 & 0.116845 & 0.152738 & -0.038728 & 0.612205 \\
+cnn & 2 & INT8 PTQ & cam\_hz & 2 & 333 & 0.017222 & 0.053950 & -0.001690 & 0.986813 \\
+cnn & 2 & INT8 PTQ & cam\_hz & 5 & 334 & 0.018440 & 0.050344 & 0.016985 & -1.126526 \\
+cnn & 2 & INT8 PTQ & channel & log\_distance & 334 & 0.018440 & 0.050344 & 0.016985 & -1.126526 \\
+cnn & 2 & INT8 PTQ & channel & log\_distance\_nakagami & 333 & 0.116845 & 0.152738 & -0.038728 & 0.612205 \\
+cnn & 2 & INT8 PTQ & channel & urban & 333 & 0.017222 & 0.053950 & -0.001690 & 0.986813 \\
+cnn & 2 & INT8 QAT & scenario & juelich\_core\_d10\_r5\_log\_distance\_s01\_w1.parquet & 334 & 0.009467 & 0.044199 & 0.007879 & -0.639043 \\
+cnn & 2 & INT8 QAT & scenario & juelich\_core\_d30\_r2\_urban\_s01\_w1.parquet & 333 & 0.020756 & 0.052267 & -0.010978 & 0.987623 \\
+cnn & 2 & INT8 QAT & scenario & juelich\_core\_d60\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.117617 & 0.152351 & -0.044282 & 0.614168 \\
+cnn & 2 & INT8 QAT & density & 10 & 334 & 0.009467 & 0.044199 & 0.007879 & -0.639043 \\
+cnn & 2 & INT8 QAT & density & 30 & 333 & 0.020756 & 0.052267 & -0.010978 & 0.987623 \\
+cnn & 2 & INT8 QAT & density & 60 & 333 & 0.117617 & 0.152351 & -0.044282 & 0.614168 \\
+cnn & 2 & INT8 QAT & cam\_hz & 10 & 333 & 0.117617 & 0.152351 & -0.044282 & 0.614168 \\
+cnn & 2 & INT8 QAT & cam\_hz & 2 & 333 & 0.020756 & 0.052267 & -0.010978 & 0.987623 \\
+cnn & 2 & INT8 QAT & cam\_hz & 5 & 334 & 0.009467 & 0.044199 & 0.007879 & -0.639043 \\
+cnn & 2 & INT8 QAT & channel & log\_distance & 334 & 0.009467 & 0.044199 & 0.007879 & -0.639043 \\
+cnn & 2 & INT8 QAT & channel & log\_distance\_nakagami & 333 & 0.117617 & 0.152351 & -0.044282 & 0.614168 \\
+cnn & 2 & INT8 QAT & channel & urban & 333 & 0.020756 & 0.052267 & -0.010978 & 0.987623 \\
+cnn & 3 & FP32 & scenario & juelich\_core\_d10\_r10\_log\_distance\_s01\_w1.parquet & 334 & 0.016708 & 0.078445 & 0.003059 & 0.038395 \\
+cnn & 3 & FP32 & scenario & juelich\_core\_d30\_r5\_urban\_s01\_w1.parquet & 333 & 0.012556 & 0.057866 & 0.001433 & 0.984522 \\
+cnn & 3 & FP32 & scenario & juelich\_core\_d60\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.246412 & 0.305135 & 0.013602 & 0.180297 \\
+cnn & 3 & FP32 & density & 10 & 334 & 0.016708 & 0.078445 & 0.003059 & 0.038395 \\
+cnn & 3 & FP32 & density & 30 & 333 & 0.012556 & 0.057866 & 0.001433 & 0.984522 \\
+cnn & 3 & FP32 & density & 60 & 333 & 0.246412 & 0.305135 & 0.013602 & 0.180297 \\
+cnn & 3 & FP32 & cam\_hz & 10 & 334 & 0.016708 & 0.078445 & 0.003059 & 0.038395 \\
+cnn & 3 & FP32 & cam\_hz & 2 & 333 & 0.246412 & 0.305135 & 0.013602 & 0.180297 \\
+cnn & 3 & FP32 & cam\_hz & 5 & 333 & 0.012556 & 0.057866 & 0.001433 & 0.984522 \\
+cnn & 3 & FP32 & channel & log\_distance & 334 & 0.016708 & 0.078445 & 0.003059 & 0.038395 \\
+cnn & 3 & FP32 & channel & log\_distance\_nakagami & 333 & 0.246412 & 0.305135 & 0.013602 & 0.180297 \\
+cnn & 3 & FP32 & channel & urban & 333 & 0.012556 & 0.057866 & 0.001433 & 0.984522 \\
+cnn & 3 & INT8 PTQ & scenario & juelich\_core\_d10\_r10\_log\_distance\_s01\_w1.parquet & 334 & 0.016367 & 0.078910 & 0.002727 & 0.026980 \\
+cnn & 3 & INT8 PTQ & scenario & juelich\_core\_d30\_r5\_urban\_s01\_w1.parquet & 333 & 0.012128 & 0.058792 & 0.001151 & 0.984023 \\
+cnn & 3 & INT8 PTQ & scenario & juelich\_core\_d60\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.245845 & 0.304978 & 0.012723 & 0.181140 \\
+cnn & 3 & INT8 PTQ & density & 10 & 334 & 0.016367 & 0.078910 & 0.002727 & 0.026980 \\
+cnn & 3 & INT8 PTQ & density & 30 & 333 & 0.012128 & 0.058792 & 0.001151 & 0.984023 \\
+cnn & 3 & INT8 PTQ & density & 60 & 333 & 0.245845 & 0.304978 & 0.012723 & 0.181140 \\
+cnn & 3 & INT8 PTQ & cam\_hz & 10 & 334 & 0.016367 & 0.078910 & 0.002727 & 0.026980 \\
+cnn & 3 & INT8 PTQ & cam\_hz & 2 & 333 & 0.245845 & 0.304978 & 0.012723 & 0.181140 \\
+cnn & 3 & INT8 PTQ & cam\_hz & 5 & 333 & 0.012128 & 0.058792 & 0.001151 & 0.984023 \\
+cnn & 3 & INT8 PTQ & channel & log\_distance & 334 & 0.016367 & 0.078910 & 0.002727 & 0.026980 \\
+cnn & 3 & INT8 PTQ & channel & log\_distance\_nakagami & 333 & 0.245845 & 0.304978 & 0.012723 & 0.181140 \\
+cnn & 3 & INT8 PTQ & channel & urban & 333 & 0.012128 & 0.058792 & 0.001151 & 0.984023 \\
+cnn & 3 & INT8 QAT & scenario & juelich\_core\_d10\_r10\_log\_distance\_s01\_w1.parquet & 334 & 0.014936 & 0.078258 & 0.001163 & 0.042977 \\
+cnn & 3 & INT8 QAT & scenario & juelich\_core\_d30\_r5\_urban\_s01\_w1.parquet & 333 & 0.015990 & 0.056275 & -0.001844 & 0.985362 \\
+cnn & 3 & INT8 QAT & scenario & juelich\_core\_d60\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.245778 & 0.304995 & 0.019462 & 0.181046 \\
+cnn & 3 & INT8 QAT & density & 10 & 334 & 0.014936 & 0.078258 & 0.001163 & 0.042977 \\
+cnn & 3 & INT8 QAT & density & 30 & 333 & 0.015990 & 0.056275 & -0.001844 & 0.985362 \\
+cnn & 3 & INT8 QAT & density & 60 & 333 & 0.245778 & 0.304995 & 0.019462 & 0.181046 \\
+cnn & 3 & INT8 QAT & cam\_hz & 10 & 334 & 0.014936 & 0.078258 & 0.001163 & 0.042977 \\
+cnn & 3 & INT8 QAT & cam\_hz & 2 & 333 & 0.245778 & 0.304995 & 0.019462 & 0.181046 \\
+cnn & 3 & INT8 QAT & cam\_hz & 5 & 333 & 0.015990 & 0.056275 & -0.001844 & 0.985362 \\
+cnn & 3 & INT8 QAT & channel & log\_distance & 334 & 0.014936 & 0.078258 & 0.001163 & 0.042977 \\
+cnn & 3 & INT8 QAT & channel & log\_distance\_nakagami & 333 & 0.245778 & 0.304995 & 0.019462 & 0.181046 \\
+cnn & 3 & INT8 QAT & channel & urban & 333 & 0.015990 & 0.056275 & -0.001844 & 0.985362 \\
+cnn & 4 & FP32 & scenario & juelich\_core\_d10\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.258426 & 0.328157 & -0.024828 & 0.147232 \\
+cnn & 4 & FP32 & scenario & juelich\_core\_d30\_r10\_log\_distance\_s01\_w1.parquet & 333 & 0.032405 & 0.064027 & 0.010443 & 0.321378 \\
+cnn & 4 & FP32 & scenario & juelich\_core\_d60\_r5\_urban\_s01\_w1.parquet & 333 & 0.015581 & 0.048141 & -0.001851 & 0.989692 \\
+cnn & 4 & FP32 & density & 10 & 334 & 0.258426 & 0.328157 & -0.024828 & 0.147232 \\
+cnn & 4 & FP32 & density & 30 & 333 & 0.032405 & 0.064027 & 0.010443 & 0.321378 \\
+cnn & 4 & FP32 & density & 60 & 333 & 0.015581 & 0.048141 & -0.001851 & 0.989692 \\
+cnn & 4 & FP32 & cam\_hz & 10 & 333 & 0.032405 & 0.064027 & 0.010443 & 0.321378 \\
+cnn & 4 & FP32 & cam\_hz & 2 & 334 & 0.258426 & 0.328157 & -0.024828 & 0.147232 \\
+cnn & 4 & FP32 & cam\_hz & 5 & 333 & 0.015581 & 0.048141 & -0.001851 & 0.989692 \\
+cnn & 4 & FP32 & channel & log\_distance & 333 & 0.032405 & 0.064027 & 0.010443 & 0.321378 \\
+cnn & 4 & FP32 & channel & log\_distance\_nakagami & 334 & 0.258426 & 0.328157 & -0.024828 & 0.147232 \\
+cnn & 4 & FP32 & channel & urban & 333 & 0.015581 & 0.048141 & -0.001851 & 0.989692 \\
+cnn & 4 & INT8 PTQ & scenario & juelich\_core\_d10\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.257821 & 0.328762 & -0.029870 & 0.144085 \\
+cnn & 4 & INT8 PTQ & scenario & juelich\_core\_d30\_r10\_log\_distance\_s01\_w1.parquet & 333 & 0.032046 & 0.064399 & 0.009591 & 0.313460 \\
+cnn & 4 & INT8 PTQ & scenario & juelich\_core\_d60\_r5\_urban\_s01\_w1.parquet & 333 & 0.014926 & 0.048623 & -0.004576 & 0.989484 \\
+cnn & 4 & INT8 PTQ & density & 10 & 334 & 0.257821 & 0.328762 & -0.029870 & 0.144085 \\
+cnn & 4 & INT8 PTQ & density & 30 & 333 & 0.032046 & 0.064399 & 0.009591 & 0.313460 \\
+cnn & 4 & INT8 PTQ & density & 60 & 333 & 0.014926 & 0.048623 & -0.004576 & 0.989484 \\
+cnn & 4 & INT8 PTQ & cam\_hz & 10 & 333 & 0.032046 & 0.064399 & 0.009591 & 0.313460 \\
+cnn & 4 & INT8 PTQ & cam\_hz & 2 & 334 & 0.257821 & 0.328762 & -0.029870 & 0.144085 \\
+cnn & 4 & INT8 PTQ & cam\_hz & 5 & 333 & 0.014926 & 0.048623 & -0.004576 & 0.989484 \\
+cnn & 4 & INT8 PTQ & channel & log\_distance & 333 & 0.032046 & 0.064399 & 0.009591 & 0.313460 \\
+cnn & 4 & INT8 PTQ & channel & log\_distance\_nakagami & 334 & 0.257821 & 0.328762 & -0.029870 & 0.144085 \\
+cnn & 4 & INT8 PTQ & channel & urban & 333 & 0.014926 & 0.048623 & -0.004576 & 0.989484 \\
+cnn & 4 & INT8 QAT & scenario & juelich\_core\_d10\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.259037 & 0.329529 & -0.020688 & 0.140086 \\
+cnn & 4 & INT8 QAT & scenario & juelich\_core\_d30\_r10\_log\_distance\_s01\_w1.parquet & 333 & 0.035231 & 0.066418 & 0.013558 & 0.269752 \\
+cnn & 4 & INT8 QAT & scenario & juelich\_core\_d60\_r5\_urban\_s01\_w1.parquet & 333 & 0.013311 & 0.043771 & -0.000897 & 0.991478 \\
+cnn & 4 & INT8 QAT & density & 10 & 334 & 0.259037 & 0.329529 & -0.020688 & 0.140086 \\
+cnn & 4 & INT8 QAT & density & 30 & 333 & 0.035231 & 0.066418 & 0.013558 & 0.269752 \\
+cnn & 4 & INT8 QAT & density & 60 & 333 & 0.013311 & 0.043771 & -0.000897 & 0.991478 \\
+cnn & 4 & INT8 QAT & cam\_hz & 10 & 333 & 0.035231 & 0.066418 & 0.013558 & 0.269752 \\
+cnn & 4 & INT8 QAT & cam\_hz & 2 & 334 & 0.259037 & 0.329529 & -0.020688 & 0.140086 \\
+cnn & 4 & INT8 QAT & cam\_hz & 5 & 333 & 0.013311 & 0.043771 & -0.000897 & 0.991478 \\
+cnn & 4 & INT8 QAT & channel & log\_distance & 333 & 0.035231 & 0.066418 & 0.013558 & 0.269752 \\
+cnn & 4 & INT8 QAT & channel & log\_distance\_nakagami & 334 & 0.259037 & 0.329529 & -0.020688 & 0.140086 \\
+cnn & 4 & INT8 QAT & channel & urban & 333 & 0.013311 & 0.043771 & -0.000897 & 0.991478 \\
+cnn & 5 & FP32 & scenario & juelich\_core\_d10\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.147153 & 0.190603 & 0.014596 & 0.365170 \\
+cnn & 5 & FP32 & scenario & juelich\_core\_d30\_r2\_log\_distance\_s01\_w1.parquet & 333 & 0.012765 & 0.034027 & 0.010353 & 0.686847 \\
+cnn & 5 & FP32 & scenario & juelich\_core\_d60\_r10\_urban\_s01\_w1.parquet & 333 & 0.028164 & 0.094441 & -0.006025 & 0.957342 \\
+cnn & 5 & FP32 & density & 10 & 334 & 0.147153 & 0.190603 & 0.014596 & 0.365170 \\
+cnn & 5 & FP32 & density & 30 & 333 & 0.012765 & 0.034027 & 0.010353 & 0.686847 \\
+cnn & 5 & FP32 & density & 60 & 333 & 0.028164 & 0.094441 & -0.006025 & 0.957342 \\
+cnn & 5 & FP32 & cam\_hz & 10 & 333 & 0.028164 & 0.094441 & -0.006025 & 0.957342 \\
+cnn & 5 & FP32 & cam\_hz & 2 & 333 & 0.012765 & 0.034027 & 0.010353 & 0.686847 \\
+cnn & 5 & FP32 & cam\_hz & 5 & 334 & 0.147153 & 0.190603 & 0.014596 & 0.365170 \\
+cnn & 5 & FP32 & channel & log\_distance & 333 & 0.012765 & 0.034027 & 0.010353 & 0.686847 \\
+cnn & 5 & FP32 & channel & log\_distance\_nakagami & 334 & 0.147153 & 0.190603 & 0.014596 & 0.365170 \\
+cnn & 5 & FP32 & channel & urban & 333 & 0.028164 & 0.094441 & -0.006025 & 0.957342 \\
+cnn & 5 & INT8 PTQ & scenario & juelich\_core\_d10\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.146622 & 0.190149 & 0.012171 & 0.368196 \\
+cnn & 5 & INT8 PTQ & scenario & juelich\_core\_d30\_r2\_log\_distance\_s01\_w1.parquet & 333 & 0.011889 & 0.034070 & 0.009446 & 0.686052 \\
+cnn & 5 & INT8 PTQ & scenario & juelich\_core\_d60\_r10\_urban\_s01\_w1.parquet & 333 & 0.027525 & 0.094704 & -0.004412 & 0.957104 \\
+cnn & 5 & INT8 PTQ & density & 10 & 334 & 0.146622 & 0.190149 & 0.012171 & 0.368196 \\
+cnn & 5 & INT8 PTQ & density & 30 & 333 & 0.011889 & 0.034070 & 0.009446 & 0.686052 \\
+cnn & 5 & INT8 PTQ & density & 60 & 333 & 0.027525 & 0.094704 & -0.004412 & 0.957104 \\
+cnn & 5 & INT8 PTQ & cam\_hz & 10 & 333 & 0.027525 & 0.094704 & -0.004412 & 0.957104 \\
+cnn & 5 & INT8 PTQ & cam\_hz & 2 & 333 & 0.011889 & 0.034070 & 0.009446 & 0.686052 \\
+cnn & 5 & INT8 PTQ & cam\_hz & 5 & 334 & 0.146622 & 0.190149 & 0.012171 & 0.368196 \\
+cnn & 5 & INT8 PTQ & channel & log\_distance & 333 & 0.011889 & 0.034070 & 0.009446 & 0.686052 \\
+cnn & 5 & INT8 PTQ & channel & log\_distance\_nakagami & 334 & 0.146622 & 0.190149 & 0.012171 & 0.368196 \\
+cnn & 5 & INT8 PTQ & channel & urban & 333 & 0.027525 & 0.094704 & -0.004412 & 0.957104 \\
+cnn & 5 & INT8 QAT & scenario & juelich\_core\_d10\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.145571 & 0.189710 & 0.006259 & 0.371104 \\
+cnn & 5 & INT8 QAT & scenario & juelich\_core\_d30\_r2\_log\_distance\_s01\_w1.parquet & 333 & 0.007852 & 0.033852 & 0.005243 & 0.690058 \\
+cnn & 5 & INT8 QAT & scenario & juelich\_core\_d60\_r10\_urban\_s01\_w1.parquet & 333 & 0.026480 & 0.091798 & -0.005705 & 0.959696 \\
+cnn & 5 & INT8 QAT & density & 10 & 334 & 0.145571 & 0.189710 & 0.006259 & 0.371104 \\
+cnn & 5 & INT8 QAT & density & 30 & 333 & 0.007852 & 0.033852 & 0.005243 & 0.690058 \\
+cnn & 5 & INT8 QAT & density & 60 & 333 & 0.026480 & 0.091798 & -0.005705 & 0.959696 \\
+cnn & 5 & INT8 QAT & cam\_hz & 10 & 333 & 0.026480 & 0.091798 & -0.005705 & 0.959696 \\
+cnn & 5 & INT8 QAT & cam\_hz & 2 & 333 & 0.007852 & 0.033852 & 0.005243 & 0.690058 \\
+cnn & 5 & INT8 QAT & cam\_hz & 5 & 334 & 0.145571 & 0.189710 & 0.006259 & 0.371104 \\
+cnn & 5 & INT8 QAT & channel & log\_distance & 333 & 0.007852 & 0.033852 & 0.005243 & 0.690058 \\
+cnn & 5 & INT8 QAT & channel & log\_distance\_nakagami & 334 & 0.145571 & 0.189710 & 0.006259 & 0.371104 \\
+cnn & 5 & INT8 QAT & channel & urban & 333 & 0.026480 & 0.091798 & -0.005705 & 0.959696 \\
+cnn & 6 & FP32 & scenario & juelich\_core\_d10\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.116921 & 0.150629 & 0.027925 & 0.488354 \\
+cnn & 6 & FP32 & scenario & juelich\_core\_d30\_r5\_log\_distance\_s01\_w1.parquet & 333 & 0.012359 & 0.041336 & 0.006250 & 0.892014 \\
+cnn & 6 & FP32 & scenario & juelich\_core\_d60\_r2\_urban\_s01\_w1.parquet & 333 & 0.041485 & 0.104683 & -0.027482 & 0.949542 \\
+cnn & 6 & FP32 & density & 10 & 334 & 0.116921 & 0.150629 & 0.027925 & 0.488354 \\
+cnn & 6 & FP32 & density & 30 & 333 & 0.012359 & 0.041336 & 0.006250 & 0.892014 \\
+cnn & 6 & FP32 & density & 60 & 333 & 0.041485 & 0.104683 & -0.027482 & 0.949542 \\
+cnn & 6 & FP32 & cam\_hz & 10 & 334 & 0.116921 & 0.150629 & 0.027925 & 0.488354 \\
+cnn & 6 & FP32 & cam\_hz & 2 & 333 & 0.041485 & 0.104683 & -0.027482 & 0.949542 \\
+cnn & 6 & FP32 & cam\_hz & 5 & 333 & 0.012359 & 0.041336 & 0.006250 & 0.892014 \\
+cnn & 6 & FP32 & channel & log\_distance & 333 & 0.012359 & 0.041336 & 0.006250 & 0.892014 \\
+cnn & 6 & FP32 & channel & log\_distance\_nakagami & 334 & 0.116921 & 0.150629 & 0.027925 & 0.488354 \\
+cnn & 6 & FP32 & channel & urban & 333 & 0.041485 & 0.104683 & -0.027482 & 0.949542 \\
+cnn & 6 & INT8 PTQ & scenario & juelich\_core\_d10\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.117471 & 0.151237 & 0.030863 & 0.484212 \\
+cnn & 6 & INT8 PTQ & scenario & juelich\_core\_d30\_r5\_log\_distance\_s01\_w1.parquet & 333 & 0.012529 & 0.040480 & 0.006880 & 0.896444 \\
+cnn & 6 & INT8 PTQ & scenario & juelich\_core\_d60\_r2\_urban\_s01\_w1.parquet & 333 & 0.031997 & 0.102688 & -0.017929 & 0.951447 \\
+cnn & 6 & INT8 PTQ & density & 10 & 334 & 0.117471 & 0.151237 & 0.030863 & 0.484212 \\
+cnn & 6 & INT8 PTQ & density & 30 & 333 & 0.012529 & 0.040480 & 0.006880 & 0.896444 \\
+cnn & 6 & INT8 PTQ & density & 60 & 333 & 0.031997 & 0.102688 & -0.017929 & 0.951447 \\
+cnn & 6 & INT8 PTQ & cam\_hz & 10 & 334 & 0.117471 & 0.151237 & 0.030863 & 0.484212 \\
+cnn & 6 & INT8 PTQ & cam\_hz & 2 & 333 & 0.031997 & 0.102688 & -0.017929 & 0.951447 \\
+cnn & 6 & INT8 PTQ & cam\_hz & 5 & 333 & 0.012529 & 0.040480 & 0.006880 & 0.896444 \\
+cnn & 6 & INT8 PTQ & channel & log\_distance & 333 & 0.012529 & 0.040480 & 0.006880 & 0.896444 \\
+cnn & 6 & INT8 PTQ & channel & log\_distance\_nakagami & 334 & 0.117471 & 0.151237 & 0.030863 & 0.484212 \\
+cnn & 6 & INT8 PTQ & channel & urban & 333 & 0.031997 & 0.102688 & -0.017929 & 0.951447 \\
+cnn & 6 & INT8 QAT & scenario & juelich\_core\_d10\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 334 & 0.114867 & 0.149037 & 0.023103 & 0.499111 \\
+cnn & 6 & INT8 QAT & scenario & juelich\_core\_d30\_r5\_log\_distance\_s01\_w1.parquet & 333 & 0.014769 & 0.041868 & 0.009880 & 0.889221 \\
+cnn & 6 & INT8 QAT & scenario & juelich\_core\_d60\_r2\_urban\_s01\_w1.parquet & 333 & 0.023200 & 0.104245 & -0.009024 & 0.949964 \\
+cnn & 6 & INT8 QAT & density & 10 & 334 & 0.114867 & 0.149037 & 0.023103 & 0.499111 \\
+cnn & 6 & INT8 QAT & density & 30 & 333 & 0.014769 & 0.041868 & 0.009880 & 0.889221 \\
+cnn & 6 & INT8 QAT & density & 60 & 333 & 0.023200 & 0.104245 & -0.009024 & 0.949964 \\
+cnn & 6 & INT8 QAT & cam\_hz & 10 & 334 & 0.114867 & 0.149037 & 0.023103 & 0.499111 \\
+cnn & 6 & INT8 QAT & cam\_hz & 2 & 333 & 0.023200 & 0.104245 & -0.009024 & 0.949964 \\
+cnn & 6 & INT8 QAT & cam\_hz & 5 & 333 & 0.014769 & 0.041868 & 0.009880 & 0.889221 \\
+cnn & 6 & INT8 QAT & channel & log\_distance & 333 & 0.014769 & 0.041868 & 0.009880 & 0.889221 \\
+cnn & 6 & INT8 QAT & channel & log\_distance\_nakagami & 334 & 0.114867 & 0.149037 & 0.023103 & 0.499111 \\
+cnn & 6 & INT8 QAT & channel & urban & 333 & 0.023200 & 0.104245 & -0.009024 & 0.949964 \\
+cnn & 7 & FP32 & scenario & juelich\_core\_d10\_r2\_urban\_s01\_w1.parquet & 334 & 0.021368 & 0.091409 & -0.010433 & 0.963780 \\
+cnn & 7 & FP32 & scenario & juelich\_core\_d30\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.119673 & 0.154915 & -0.024997 & 0.537766 \\
+cnn & 7 & FP32 & scenario & juelich\_core\_d60\_r5\_log\_distance\_s01\_w1.parquet & 333 & 0.035092 & 0.082224 & 0.010220 & 0.408717 \\
+cnn & 7 & FP32 & density & 10 & 334 & 0.021368 & 0.091409 & -0.010433 & 0.963780 \\
+cnn & 7 & FP32 & density & 30 & 333 & 0.119673 & 0.154915 & -0.024997 & 0.537766 \\
+cnn & 7 & FP32 & density & 60 & 333 & 0.035092 & 0.082224 & 0.010220 & 0.408717 \\
+cnn & 7 & FP32 & cam\_hz & 10 & 333 & 0.119673 & 0.154915 & -0.024997 & 0.537766 \\
+cnn & 7 & FP32 & cam\_hz & 2 & 334 & 0.021368 & 0.091409 & -0.010433 & 0.963780 \\
+cnn & 7 & FP32 & cam\_hz & 5 & 333 & 0.035092 & 0.082224 & 0.010220 & 0.408717 \\
+cnn & 7 & FP32 & channel & log\_distance & 333 & 0.035092 & 0.082224 & 0.010220 & 0.408717 \\
+cnn & 7 & FP32 & channel & log\_distance\_nakagami & 333 & 0.119673 & 0.154915 & -0.024997 & 0.537766 \\
+cnn & 7 & FP32 & channel & urban & 334 & 0.021368 & 0.091409 & -0.010433 & 0.963780 \\
+cnn & 7 & INT8 PTQ & scenario & juelich\_core\_d10\_r2\_urban\_s01\_w1.parquet & 334 & 0.023181 & 0.091352 & -0.013443 & 0.963826 \\
+cnn & 7 & INT8 PTQ & scenario & juelich\_core\_d30\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.119423 & 0.154842 & -0.027116 & 0.538201 \\
+cnn & 7 & INT8 PTQ & scenario & juelich\_core\_d60\_r5\_log\_distance\_s01\_w1.parquet & 333 & 0.034610 & 0.081245 & 0.009480 & 0.422714 \\
+cnn & 7 & INT8 PTQ & density & 10 & 334 & 0.023181 & 0.091352 & -0.013443 & 0.963826 \\
+cnn & 7 & INT8 PTQ & density & 30 & 333 & 0.119423 & 0.154842 & -0.027116 & 0.538201 \\
+cnn & 7 & INT8 PTQ & density & 60 & 333 & 0.034610 & 0.081245 & 0.009480 & 0.422714 \\
+cnn & 7 & INT8 PTQ & cam\_hz & 10 & 333 & 0.119423 & 0.154842 & -0.027116 & 0.538201 \\
+cnn & 7 & INT8 PTQ & cam\_hz & 2 & 334 & 0.023181 & 0.091352 & -0.013443 & 0.963826 \\
+cnn & 7 & INT8 PTQ & cam\_hz & 5 & 333 & 0.034610 & 0.081245 & 0.009480 & 0.422714 \\
+cnn & 7 & INT8 PTQ & channel & log\_distance & 333 & 0.034610 & 0.081245 & 0.009480 & 0.422714 \\
+cnn & 7 & INT8 PTQ & channel & log\_distance\_nakagami & 333 & 0.119423 & 0.154842 & -0.027116 & 0.538201 \\
+cnn & 7 & INT8 PTQ & channel & urban & 334 & 0.023181 & 0.091352 & -0.013443 & 0.963826 \\
+cnn & 7 & INT8 QAT & scenario & juelich\_core\_d10\_r2\_urban\_s01\_w1.parquet & 334 & 0.020890 & 0.094074 & -0.009001 & 0.961637 \\
+cnn & 7 & INT8 QAT & scenario & juelich\_core\_d30\_r10\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.118421 & 0.153026 & -0.009400 & 0.548966 \\
+cnn & 7 & INT8 QAT & scenario & juelich\_core\_d60\_r5\_log\_distance\_s01\_w1.parquet & 333 & 0.036767 & 0.081423 & 0.013228 & 0.420179 \\
+cnn & 7 & INT8 QAT & density & 10 & 334 & 0.020890 & 0.094074 & -0.009001 & 0.961637 \\
+cnn & 7 & INT8 QAT & density & 30 & 333 & 0.118421 & 0.153026 & -0.009400 & 0.548966 \\
+cnn & 7 & INT8 QAT & density & 60 & 333 & 0.036767 & 0.081423 & 0.013228 & 0.420179 \\
+cnn & 7 & INT8 QAT & cam\_hz & 10 & 333 & 0.118421 & 0.153026 & -0.009400 & 0.548966 \\
+cnn & 7 & INT8 QAT & cam\_hz & 2 & 334 & 0.020890 & 0.094074 & -0.009001 & 0.961637 \\
+cnn & 7 & INT8 QAT & cam\_hz & 5 & 333 & 0.036767 & 0.081423 & 0.013228 & 0.420179 \\
+cnn & 7 & INT8 QAT & channel & log\_distance & 333 & 0.036767 & 0.081423 & 0.013228 & 0.420179 \\
+cnn & 7 & INT8 QAT & channel & log\_distance\_nakagami & 333 & 0.118421 & 0.153026 & -0.009400 & 0.548966 \\
+cnn & 7 & INT8 QAT & channel & urban & 334 & 0.020890 & 0.094074 & -0.009001 & 0.961637 \\
+cnn & 8 & FP32 & scenario & juelich\_core\_d10\_r5\_urban\_s01\_w1.parquet & 334 & 0.029954 & 0.092205 & -0.007097 & 0.964001 \\
+cnn & 8 & FP32 & scenario & juelich\_core\_d30\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.260113 & 0.322210 & -0.022796 & 0.171800 \\
+cnn & 8 & FP32 & scenario & juelich\_core\_d60\_r10\_log\_distance\_s01\_w1.parquet & 333 & 0.074769 & 0.106904 & 0.029647 & 0.642962 \\
+cnn & 8 & FP32 & density & 10 & 334 & 0.029954 & 0.092205 & -0.007097 & 0.964001 \\
+cnn & 8 & FP32 & density & 30 & 333 & 0.260113 & 0.322210 & -0.022796 & 0.171800 \\
+cnn & 8 & FP32 & density & 60 & 333 & 0.074769 & 0.106904 & 0.029647 & 0.642962 \\
+cnn & 8 & FP32 & cam\_hz & 10 & 333 & 0.074769 & 0.106904 & 0.029647 & 0.642962 \\
+cnn & 8 & FP32 & cam\_hz & 2 & 333 & 0.260113 & 0.322210 & -0.022796 & 0.171800 \\
+cnn & 8 & FP32 & cam\_hz & 5 & 334 & 0.029954 & 0.092205 & -0.007097 & 0.964001 \\
+cnn & 8 & FP32 & channel & log\_distance & 333 & 0.074769 & 0.106904 & 0.029647 & 0.642962 \\
+cnn & 8 & FP32 & channel & log\_distance\_nakagami & 333 & 0.260113 & 0.322210 & -0.022796 & 0.171800 \\
+cnn & 8 & FP32 & channel & urban & 334 & 0.029954 & 0.092205 & -0.007097 & 0.964001 \\
+cnn & 8 & INT8 PTQ & scenario & juelich\_core\_d10\_r5\_urban\_s01\_w1.parquet & 334 & 0.035518 & 0.093105 & -0.010725 & 0.963295 \\
+cnn & 8 & INT8 PTQ & scenario & juelich\_core\_d30\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.260321 & 0.322157 & -0.021517 & 0.172070 \\
+cnn & 8 & INT8 PTQ & scenario & juelich\_core\_d60\_r10\_log\_distance\_s01\_w1.parquet & 333 & 0.076169 & 0.107613 & 0.031198 & 0.638206 \\
+cnn & 8 & INT8 PTQ & density & 10 & 334 & 0.035518 & 0.093105 & -0.010725 & 0.963295 \\
+cnn & 8 & INT8 PTQ & density & 30 & 333 & 0.260321 & 0.322157 & -0.021517 & 0.172070 \\
+cnn & 8 & INT8 PTQ & density & 60 & 333 & 0.076169 & 0.107613 & 0.031198 & 0.638206 \\
+cnn & 8 & INT8 PTQ & cam\_hz & 10 & 333 & 0.076169 & 0.107613 & 0.031198 & 0.638206 \\
+cnn & 8 & INT8 PTQ & cam\_hz & 2 & 333 & 0.260321 & 0.322157 & -0.021517 & 0.172070 \\
+cnn & 8 & INT8 PTQ & cam\_hz & 5 & 334 & 0.035518 & 0.093105 & -0.010725 & 0.963295 \\
+cnn & 8 & INT8 PTQ & channel & log\_distance & 333 & 0.076169 & 0.107613 & 0.031198 & 0.638206 \\
+cnn & 8 & INT8 PTQ & channel & log\_distance\_nakagami & 333 & 0.260321 & 0.322157 & -0.021517 & 0.172070 \\
+cnn & 8 & INT8 PTQ & channel & urban & 334 & 0.035518 & 0.093105 & -0.010725 & 0.963295 \\
+cnn & 8 & INT8 QAT & scenario & juelich\_core\_d10\_r5\_urban\_s01\_w1.parquet & 334 & 0.024520 & 0.091698 & -0.002342 & 0.964396 \\
+cnn & 8 & INT8 QAT & scenario & juelich\_core\_d30\_r2\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.257463 & 0.320853 & -0.019741 & 0.178761 \\
+cnn & 8 & INT8 QAT & scenario & juelich\_core\_d60\_r10\_log\_distance\_s01\_w1.parquet & 333 & 0.073518 & 0.105724 & 0.028712 & 0.650796 \\
+cnn & 8 & INT8 QAT & density & 10 & 334 & 0.024520 & 0.091698 & -0.002342 & 0.964396 \\
+cnn & 8 & INT8 QAT & density & 30 & 333 & 0.257463 & 0.320853 & -0.019741 & 0.178761 \\
+cnn & 8 & INT8 QAT & density & 60 & 333 & 0.073518 & 0.105724 & 0.028712 & 0.650796 \\
+cnn & 8 & INT8 QAT & cam\_hz & 10 & 333 & 0.073518 & 0.105724 & 0.028712 & 0.650796 \\
+cnn & 8 & INT8 QAT & cam\_hz & 2 & 333 & 0.257463 & 0.320853 & -0.019741 & 0.178761 \\
+cnn & 8 & INT8 QAT & cam\_hz & 5 & 334 & 0.024520 & 0.091698 & -0.002342 & 0.964396 \\
+cnn & 8 & INT8 QAT & channel & log\_distance & 333 & 0.073518 & 0.105724 & 0.028712 & 0.650796 \\
+cnn & 8 & INT8 QAT & channel & log\_distance\_nakagami & 333 & 0.257463 & 0.320853 & -0.019741 & 0.178761 \\
+cnn & 8 & INT8 QAT & channel & urban & 334 & 0.024520 & 0.091698 & -0.002342 & 0.964396 \\
+cnn & 9 & FP32 & scenario & juelich\_core\_d10\_r10\_urban\_s01\_w1.parquet & 334 & 0.026857 & 0.073615 & -0.013712 & 0.976302 \\
+cnn & 9 & FP32 & scenario & juelich\_core\_d30\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.152421 & 0.198708 & -0.000202 & 0.412115 \\
+cnn & 9 & FP32 & scenario & juelich\_core\_d60\_r2\_log\_distance\_s01\_w1.parquet & 333 & 0.027432 & 0.084436 & 0.016197 & 0.261141 \\
+cnn & 9 & FP32 & density & 10 & 334 & 0.026857 & 0.073615 & -0.013712 & 0.976302 \\
+cnn & 9 & FP32 & density & 30 & 333 & 0.152421 & 0.198708 & -0.000202 & 0.412115 \\
+cnn & 9 & FP32 & density & 60 & 333 & 0.027432 & 0.084436 & 0.016197 & 0.261141 \\
+cnn & 9 & FP32 & cam\_hz & 10 & 334 & 0.026857 & 0.073615 & -0.013712 & 0.976302 \\
+cnn & 9 & FP32 & cam\_hz & 2 & 333 & 0.027432 & 0.084436 & 0.016197 & 0.261141 \\
+cnn & 9 & FP32 & cam\_hz & 5 & 333 & 0.152421 & 0.198708 & -0.000202 & 0.412115 \\
+cnn & 9 & FP32 & channel & log\_distance & 333 & 0.027432 & 0.084436 & 0.016197 & 0.261141 \\
+cnn & 9 & FP32 & channel & log\_distance\_nakagami & 333 & 0.152421 & 0.198708 & -0.000202 & 0.412115 \\
+cnn & 9 & FP32 & channel & urban & 334 & 0.026857 & 0.073615 & -0.013712 & 0.976302 \\
+cnn & 9 & INT8 PTQ & scenario & juelich\_core\_d10\_r10\_urban\_s01\_w1.parquet & 334 & 0.019667 & 0.071180 & -0.005107 & 0.977843 \\
+cnn & 9 & INT8 PTQ & scenario & juelich\_core\_d30\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.152627 & 0.198909 & -0.000246 & 0.410921 \\
+cnn & 9 & INT8 PTQ & scenario & juelich\_core\_d60\_r2\_log\_distance\_s01\_w1.parquet & 333 & 0.032868 & 0.087035 & 0.021710 & 0.214966 \\
+cnn & 9 & INT8 PTQ & density & 10 & 334 & 0.019667 & 0.071180 & -0.005107 & 0.977843 \\
+cnn & 9 & INT8 PTQ & density & 30 & 333 & 0.152627 & 0.198909 & -0.000246 & 0.410921 \\
+cnn & 9 & INT8 PTQ & density & 60 & 333 & 0.032868 & 0.087035 & 0.021710 & 0.214966 \\
+cnn & 9 & INT8 PTQ & cam\_hz & 10 & 334 & 0.019667 & 0.071180 & -0.005107 & 0.977843 \\
+cnn & 9 & INT8 PTQ & cam\_hz & 2 & 333 & 0.032868 & 0.087035 & 0.021710 & 0.214966 \\
+cnn & 9 & INT8 PTQ & cam\_hz & 5 & 333 & 0.152627 & 0.198909 & -0.000246 & 0.410921 \\
+cnn & 9 & INT8 PTQ & channel & log\_distance & 333 & 0.032868 & 0.087035 & 0.021710 & 0.214966 \\
+cnn & 9 & INT8 PTQ & channel & log\_distance\_nakagami & 333 & 0.152627 & 0.198909 & -0.000246 & 0.410921 \\
+cnn & 9 & INT8 PTQ & channel & urban & 334 & 0.019667 & 0.071180 & -0.005107 & 0.977843 \\
+cnn & 9 & INT8 QAT & scenario & juelich\_core\_d10\_r10\_urban\_s01\_w1.parquet & 334 & 0.019515 & 0.072444 & -0.008834 & 0.977050 \\
+cnn & 9 & INT8 QAT & scenario & juelich\_core\_d30\_r5\_log\_distance\_nakagami\_s01\_w1.parquet & 333 & 0.152721 & 0.199181 & -0.008585 & 0.409313 \\
+cnn & 9 & INT8 QAT & scenario & juelich\_core\_d60\_r2\_log\_distance\_s01\_w1.parquet & 333 & 0.021819 & 0.081704 & 0.010557 & 0.308189 \\
+cnn & 9 & INT8 QAT & density & 10 & 334 & 0.019515 & 0.072444 & -0.008834 & 0.977050 \\
+cnn & 9 & INT8 QAT & density & 30 & 333 & 0.152721 & 0.199181 & -0.008585 & 0.409313 \\
+cnn & 9 & INT8 QAT & density & 60 & 333 & 0.021819 & 0.081704 & 0.010557 & 0.308189 \\
+cnn & 9 & INT8 QAT & cam\_hz & 10 & 334 & 0.019515 & 0.072444 & -0.008834 & 0.977050 \\
+cnn & 9 & INT8 QAT & cam\_hz & 2 & 333 & 0.021819 & 0.081704 & 0.010557 & 0.308189 \\
+cnn & 9 & INT8 QAT & cam\_hz & 5 & 333 & 0.152721 & 0.199181 & -0.008585 & 0.409313 \\
+cnn & 9 & INT8 QAT & channel & log\_distance & 333 & 0.021819 & 0.081704 & 0.010557 & 0.308189 \\
+cnn & 9 & INT8 QAT & channel & log\_distance\_nakagami & 333 & 0.152721 & 0.199181 & -0.008585 & 0.409313 \\
+cnn & 9 & INT8 QAT & channel & urban & 334 & 0.019515 & 0.072444 & -0.008834 & 0.977050 \\
+\bottomrule
+\end{tabular}

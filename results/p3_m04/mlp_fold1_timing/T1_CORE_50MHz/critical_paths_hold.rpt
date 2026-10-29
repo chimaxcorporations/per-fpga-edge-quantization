@@ -1,0 +1,820 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Wed Oct 28 12:16:56 2026
+| Host         : localhost.localdomain running 64-bit Rocky Linux 9.5 (Blue Onyx)
+| Command      : report_timing -delay_type min -max_paths 20 -file /hdd/c.eguzo/per-fpga-edge-quantization/results/p3_m04/mlp_fold1_timing/T1_CORE_50MHz/critical_paths_hold.rpt
+| Design       : mlp_int8_sequential
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.081ns  (arrival time - required time)
+  Source:                 input_index_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ram_input/mem_reg_0_63_3_5/RAMA/WADR0
+                            (rising edge-triggered cell RAMD64E clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.413ns  (logic 0.141ns (34.161%)  route 0.272ns (65.839%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    clk
+    SLICE_X1Y83          FDRE                                         r  input_index_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y83          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  input_index_reg[0]/Q
+                         net (fo=21, routed)          0.272     0.823    ram_input/mem_reg_0_63_3_5/ADDRD0
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMA/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    ram_input/mem_reg_0_63_3_5/WCLK
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMA/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X2Y82          RAMD64E (Hold_ramd64e_CLK_WADR0)
+                                                      0.310     0.742    ram_input/mem_reg_0_63_3_5/RAMA
+  -------------------------------------------------------------------
+                         required time                         -0.742    
+                         arrival time                           0.823    
+  -------------------------------------------------------------------
+                         slack                                  0.081    
+
+Slack (MET) :             0.081ns  (arrival time - required time)
+  Source:                 input_index_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ram_input/mem_reg_0_63_3_5/RAMB/WADR0
+                            (rising edge-triggered cell RAMD64E clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.413ns  (logic 0.141ns (34.161%)  route 0.272ns (65.839%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    clk
+    SLICE_X1Y83          FDRE                                         r  input_index_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y83          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  input_index_reg[0]/Q
+                         net (fo=21, routed)          0.272     0.823    ram_input/mem_reg_0_63_3_5/ADDRD0
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMB/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    ram_input/mem_reg_0_63_3_5/WCLK
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMB/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X2Y82          RAMD64E (Hold_ramd64e_CLK_WADR0)
+                                                      0.310     0.742    ram_input/mem_reg_0_63_3_5/RAMB
+  -------------------------------------------------------------------
+                         required time                         -0.742    
+                         arrival time                           0.823    
+  -------------------------------------------------------------------
+                         slack                                  0.081    
+
+Slack (MET) :             0.081ns  (arrival time - required time)
+  Source:                 input_index_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ram_input/mem_reg_0_63_3_5/RAMC/WADR0
+                            (rising edge-triggered cell RAMD64E clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.413ns  (logic 0.141ns (34.161%)  route 0.272ns (65.839%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    clk
+    SLICE_X1Y83          FDRE                                         r  input_index_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y83          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  input_index_reg[0]/Q
+                         net (fo=21, routed)          0.272     0.823    ram_input/mem_reg_0_63_3_5/ADDRD0
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMC/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    ram_input/mem_reg_0_63_3_5/WCLK
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMC/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X2Y82          RAMD64E (Hold_ramd64e_CLK_WADR0)
+                                                      0.310     0.742    ram_input/mem_reg_0_63_3_5/RAMC
+  -------------------------------------------------------------------
+                         required time                         -0.742    
+                         arrival time                           0.823    
+  -------------------------------------------------------------------
+                         slack                                  0.081    
+
+Slack (MET) :             0.081ns  (arrival time - required time)
+  Source:                 input_index_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ram_input/mem_reg_0_63_3_5/RAMD/WADR0
+                            (rising edge-triggered cell RAMD64E clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.413ns  (logic 0.141ns (34.161%)  route 0.272ns (65.839%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    clk
+    SLICE_X1Y83          FDRE                                         r  input_index_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y83          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  input_index_reg[0]/Q
+                         net (fo=21, routed)          0.272     0.823    ram_input/mem_reg_0_63_3_5/ADDRD0
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMD/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    ram_input/mem_reg_0_63_3_5/WCLK
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMD/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X2Y82          RAMD64E (Hold_ramd64e_CLK_WADR0)
+                                                      0.310     0.742    ram_input/mem_reg_0_63_3_5/RAMD
+  -------------------------------------------------------------------
+                         required time                         -0.742    
+                         arrival time                           0.823    
+  -------------------------------------------------------------------
+                         slack                                  0.081    
+
+Slack (MET) :             0.098ns  (arrival time - required time)
+  Source:                 rom_fc2_multiplier/data_reg[13]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            multiplier_hold_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.240ns  (logic 0.186ns (77.466%)  route 0.054ns (22.534%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    rom_fc2_multiplier/clk
+    SLICE_X13Y72         FDRE                                         r  rom_fc2_multiplier/data_reg[13]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X13Y72         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  rom_fc2_multiplier/data_reg[13]/Q
+                         net (fo=1, routed)           0.054     0.605    m2[13]
+    SLICE_X12Y72         LUT4 (Prop_lut4_I3_O)        0.045     0.650 r  multiplier_hold[13]_i_1/O
+                         net (fo=1, routed)           0.000     0.650    multiplier_hold[13]_i_1_n_0
+    SLICE_X12Y72         FDRE                                         r  multiplier_hold_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    clk
+    SLICE_X12Y72         FDRE                                         r  multiplier_hold_reg[13]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X12Y72         FDRE (Hold_fdre_C_D)         0.121     0.553    multiplier_hold_reg[13]
+  -------------------------------------------------------------------
+                         required time                         -0.553    
+                         arrival time                           0.650    
+  -------------------------------------------------------------------
+                         slack                                  0.098    
+
+Slack (MET) :             0.107ns  (arrival time - required time)
+  Source:                 input_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ram_input/mem_reg_0_63_3_5/RAMA/WADR1
+                            (rising edge-triggered cell RAMD64E clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.437ns  (logic 0.141ns (32.236%)  route 0.296ns (67.764%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    clk
+    SLICE_X0Y83          FDRE                                         r  input_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y83          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  input_index_reg[1]/Q
+                         net (fo=20, routed)          0.296     0.848    ram_input/mem_reg_0_63_3_5/ADDRD1
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMA/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    ram_input/mem_reg_0_63_3_5/WCLK
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMA/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X2Y82          RAMD64E (Hold_ramd64e_CLK_WADR1)
+                                                      0.309     0.741    ram_input/mem_reg_0_63_3_5/RAMA
+  -------------------------------------------------------------------
+                         required time                         -0.741    
+                         arrival time                           0.848    
+  -------------------------------------------------------------------
+                         slack                                  0.107    
+
+Slack (MET) :             0.107ns  (arrival time - required time)
+  Source:                 input_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ram_input/mem_reg_0_63_3_5/RAMB/WADR1
+                            (rising edge-triggered cell RAMD64E clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.437ns  (logic 0.141ns (32.236%)  route 0.296ns (67.764%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    clk
+    SLICE_X0Y83          FDRE                                         r  input_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y83          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  input_index_reg[1]/Q
+                         net (fo=20, routed)          0.296     0.848    ram_input/mem_reg_0_63_3_5/ADDRD1
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMB/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    ram_input/mem_reg_0_63_3_5/WCLK
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMB/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X2Y82          RAMD64E (Hold_ramd64e_CLK_WADR1)
+                                                      0.309     0.741    ram_input/mem_reg_0_63_3_5/RAMB
+  -------------------------------------------------------------------
+                         required time                         -0.741    
+                         arrival time                           0.848    
+  -------------------------------------------------------------------
+                         slack                                  0.107    
+
+Slack (MET) :             0.107ns  (arrival time - required time)
+  Source:                 input_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ram_input/mem_reg_0_63_3_5/RAMC/WADR1
+                            (rising edge-triggered cell RAMD64E clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.437ns  (logic 0.141ns (32.236%)  route 0.296ns (67.764%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    clk
+    SLICE_X0Y83          FDRE                                         r  input_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y83          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  input_index_reg[1]/Q
+                         net (fo=20, routed)          0.296     0.848    ram_input/mem_reg_0_63_3_5/ADDRD1
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMC/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    ram_input/mem_reg_0_63_3_5/WCLK
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMC/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X2Y82          RAMD64E (Hold_ramd64e_CLK_WADR1)
+                                                      0.309     0.741    ram_input/mem_reg_0_63_3_5/RAMC
+  -------------------------------------------------------------------
+                         required time                         -0.741    
+                         arrival time                           0.848    
+  -------------------------------------------------------------------
+                         slack                                  0.107    
+
+Slack (MET) :             0.107ns  (arrival time - required time)
+  Source:                 input_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ram_input/mem_reg_0_63_3_5/RAMD/WADR1
+                            (rising edge-triggered cell RAMD64E clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.437ns  (logic 0.141ns (32.236%)  route 0.296ns (67.764%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    clk
+    SLICE_X0Y83          FDRE                                         r  input_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y83          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  input_index_reg[1]/Q
+                         net (fo=20, routed)          0.296     0.848    ram_input/mem_reg_0_63_3_5/ADDRD1
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMD/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    ram_input/mem_reg_0_63_3_5/WCLK
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMD/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X2Y82          RAMD64E (Hold_ramd64e_CLK_WADR1)
+                                                      0.309     0.741    ram_input/mem_reg_0_63_3_5/RAMD
+  -------------------------------------------------------------------
+                         required time                         -0.741    
+                         arrival time                           0.848    
+  -------------------------------------------------------------------
+                         slack                                  0.107    
+
+Slack (MET) :             0.131ns  (arrival time - required time)
+  Source:                 neuron_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ram_fc2/mem_reg_0_31_6_7/DP/WADR1
+                            (rising edge-triggered cell RAMD32 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.462ns  (logic 0.141ns (30.521%)  route 0.321ns (69.479%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    clk
+    SLICE_X3Y85          FDRE                                         r  neuron_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y85          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  neuron_index_reg[1]/Q
+                         net (fo=79, routed)          0.321     0.872    ram_fc2/mem_reg_0_31_6_7/A1
+    SLICE_X2Y85          RAMD32                                       r  ram_fc2/mem_reg_0_31_6_7/DP/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    ram_fc2/mem_reg_0_31_6_7/WCLK
+    SLICE_X2Y85          RAMD32                                       r  ram_fc2/mem_reg_0_31_6_7/DP/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X2Y85          RAMD32 (Hold_ramd32_CLK_WADR1)
+                                                      0.309     0.741    ram_fc2/mem_reg_0_31_6_7/DP
+  -------------------------------------------------------------------
+                         required time                         -0.741    
+                         arrival time                           0.872    
+  -------------------------------------------------------------------
+                         slack                                  0.131    
+
+Slack (MET) :             0.131ns  (arrival time - required time)
+  Source:                 neuron_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ram_fc2/mem_reg_0_31_6_7/SP/WADR1
+                            (rising edge-triggered cell RAMD32 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.462ns  (logic 0.141ns (30.521%)  route 0.321ns (69.479%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    clk
+    SLICE_X3Y85          FDRE                                         r  neuron_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y85          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  neuron_index_reg[1]/Q
+                         net (fo=79, routed)          0.321     0.872    ram_fc2/mem_reg_0_31_6_7/A1
+    SLICE_X2Y85          RAMD32                                       r  ram_fc2/mem_reg_0_31_6_7/SP/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    ram_fc2/mem_reg_0_31_6_7/WCLK
+    SLICE_X2Y85          RAMD32                                       r  ram_fc2/mem_reg_0_31_6_7/SP/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X2Y85          RAMD32 (Hold_ramd32_CLK_WADR1)
+                                                      0.309     0.741    ram_fc2/mem_reg_0_31_6_7/SP
+  -------------------------------------------------------------------
+                         required time                         -0.741    
+                         arrival time                           0.872    
+  -------------------------------------------------------------------
+                         slack                                  0.131    
+
+Slack (MET) :             0.131ns  (arrival time - required time)
+  Source:                 neuron_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ram_fc2/mem_reg_0_31_6_7__0/DP/WADR1
+                            (rising edge-triggered cell RAMD32 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.462ns  (logic 0.141ns (30.521%)  route 0.321ns (69.479%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    clk
+    SLICE_X3Y85          FDRE                                         r  neuron_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y85          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  neuron_index_reg[1]/Q
+                         net (fo=79, routed)          0.321     0.872    ram_fc2/mem_reg_0_31_6_7__0/A1
+    SLICE_X2Y85          RAMD32                                       r  ram_fc2/mem_reg_0_31_6_7__0/DP/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    ram_fc2/mem_reg_0_31_6_7__0/WCLK
+    SLICE_X2Y85          RAMD32                                       r  ram_fc2/mem_reg_0_31_6_7__0/DP/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X2Y85          RAMD32 (Hold_ramd32_CLK_WADR1)
+                                                      0.309     0.741    ram_fc2/mem_reg_0_31_6_7__0/DP
+  -------------------------------------------------------------------
+                         required time                         -0.741    
+                         arrival time                           0.872    
+  -------------------------------------------------------------------
+                         slack                                  0.131    
+
+Slack (MET) :             0.131ns  (arrival time - required time)
+  Source:                 neuron_index_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ram_fc2/mem_reg_0_31_6_7__0/SP/WADR1
+                            (rising edge-triggered cell RAMD32 clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.462ns  (logic 0.141ns (30.521%)  route 0.321ns (69.479%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    clk
+    SLICE_X3Y85          FDRE                                         r  neuron_index_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X3Y85          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  neuron_index_reg[1]/Q
+                         net (fo=79, routed)          0.321     0.872    ram_fc2/mem_reg_0_31_6_7__0/A1
+    SLICE_X2Y85          RAMD32                                       r  ram_fc2/mem_reg_0_31_6_7__0/SP/WADR1
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    ram_fc2/mem_reg_0_31_6_7__0/WCLK
+    SLICE_X2Y85          RAMD32                                       r  ram_fc2/mem_reg_0_31_6_7__0/SP/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X2Y85          RAMD32 (Hold_ramd32_CLK_WADR1)
+                                                      0.309     0.741    ram_fc2/mem_reg_0_31_6_7__0/SP
+  -------------------------------------------------------------------
+                         required time                         -0.741    
+                         arrival time                           0.872    
+  -------------------------------------------------------------------
+                         slack                                  0.131    
+
+Slack (MET) :             0.132ns  (arrival time - required time)
+  Source:                 rom_fc2_bias/data_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            bias_hold_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.273ns  (logic 0.186ns (68.106%)  route 0.087ns (31.894%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    rom_fc2_bias/clk
+    SLICE_X11Y74         FDRE                                         r  rom_fc2_bias/data_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y74         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  rom_fc2_bias/data_reg[0]/Q
+                         net (fo=1, routed)           0.087     0.638    b2[0]
+    SLICE_X10Y74         LUT4 (Prop_lut4_I2_O)        0.045     0.683 r  bias_hold[0]_i_1/O
+                         net (fo=1, routed)           0.000     0.683    bias_hold[0]_i_1_n_0
+    SLICE_X10Y74         FDRE                                         r  bias_hold_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    clk
+    SLICE_X10Y74         FDRE                                         r  bias_hold_reg[0]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X10Y74         FDRE (Hold_fdre_C_D)         0.120     0.552    bias_hold_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -0.552    
+                         arrival time                           0.683    
+  -------------------------------------------------------------------
+                         slack                                  0.132    
+
+Slack (MET) :             0.132ns  (arrival time - required time)
+  Source:                 rom_fc2_multiplier/data_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            multiplier_hold_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.273ns  (logic 0.186ns (68.106%)  route 0.087ns (31.894%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    rom_fc2_multiplier/clk
+    SLICE_X13Y72         FDRE                                         r  rom_fc2_multiplier/data_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X13Y72         FDRE (Prop_fdre_C_Q)         0.141     0.551 r  rom_fc2_multiplier/data_reg[10]/Q
+                         net (fo=1, routed)           0.087     0.638    m2[10]
+    SLICE_X12Y72         LUT4 (Prop_lut4_I3_O)        0.045     0.683 r  multiplier_hold[10]_i_1/O
+                         net (fo=1, routed)           0.000     0.683    multiplier_hold[10]_i_1_n_0
+    SLICE_X12Y72         FDRE                                         r  multiplier_hold_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    clk
+    SLICE_X12Y72         FDRE                                         r  multiplier_hold_reg[10]/C
+                         clock pessimism              0.000     0.432    
+    SLICE_X12Y72         FDRE (Hold_fdre_C_D)         0.120     0.552    multiplier_hold_reg[10]
+  -------------------------------------------------------------------
+                         required time                         -0.552    
+                         arrival time                           0.683    
+  -------------------------------------------------------------------
+                         slack                                  0.132    
+
+Slack (MET) :             0.132ns  (arrival time - required time)
+  Source:                 input_index_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ram_input/mem_reg_0_63_3_5/RAMA/WADR4
+                            (rising edge-triggered cell RAMD64E clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.353ns  (logic 0.141ns (39.928%)  route 0.212ns (60.072%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    clk
+    SLICE_X1Y83          FDRE                                         r  input_index_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y83          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  input_index_reg[4]/Q
+                         net (fo=19, routed)          0.212     0.763    ram_input/mem_reg_0_63_3_5/ADDRD4
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMA/WADR4
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    ram_input/mem_reg_0_63_3_5/WCLK
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMA/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X2Y82          RAMD64E (Hold_ramd64e_CLK_WADR4)
+                                                      0.200     0.632    ram_input/mem_reg_0_63_3_5/RAMA
+  -------------------------------------------------------------------
+                         required time                         -0.632    
+                         arrival time                           0.763    
+  -------------------------------------------------------------------
+                         slack                                  0.132    
+
+Slack (MET) :             0.132ns  (arrival time - required time)
+  Source:                 input_index_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ram_input/mem_reg_0_63_3_5/RAMB/WADR4
+                            (rising edge-triggered cell RAMD64E clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.353ns  (logic 0.141ns (39.928%)  route 0.212ns (60.072%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    clk
+    SLICE_X1Y83          FDRE                                         r  input_index_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y83          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  input_index_reg[4]/Q
+                         net (fo=19, routed)          0.212     0.763    ram_input/mem_reg_0_63_3_5/ADDRD4
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMB/WADR4
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    ram_input/mem_reg_0_63_3_5/WCLK
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMB/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X2Y82          RAMD64E (Hold_ramd64e_CLK_WADR4)
+                                                      0.200     0.632    ram_input/mem_reg_0_63_3_5/RAMB
+  -------------------------------------------------------------------
+                         required time                         -0.632    
+                         arrival time                           0.763    
+  -------------------------------------------------------------------
+                         slack                                  0.132    
+
+Slack (MET) :             0.132ns  (arrival time - required time)
+  Source:                 input_index_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ram_input/mem_reg_0_63_3_5/RAMC/WADR4
+                            (rising edge-triggered cell RAMD64E clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.353ns  (logic 0.141ns (39.928%)  route 0.212ns (60.072%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    clk
+    SLICE_X1Y83          FDRE                                         r  input_index_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y83          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  input_index_reg[4]/Q
+                         net (fo=19, routed)          0.212     0.763    ram_input/mem_reg_0_63_3_5/ADDRD4
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMC/WADR4
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    ram_input/mem_reg_0_63_3_5/WCLK
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMC/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X2Y82          RAMD64E (Hold_ramd64e_CLK_WADR4)
+                                                      0.200     0.632    ram_input/mem_reg_0_63_3_5/RAMC
+  -------------------------------------------------------------------
+                         required time                         -0.632    
+                         arrival time                           0.763    
+  -------------------------------------------------------------------
+                         slack                                  0.132    
+
+Slack (MET) :             0.132ns  (arrival time - required time)
+  Source:                 input_index_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ram_input/mem_reg_0_63_3_5/RAMD/WADR4
+                            (rising edge-triggered cell RAMD64E clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.353ns  (logic 0.141ns (39.928%)  route 0.212ns (60.072%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    clk
+    SLICE_X1Y83          FDRE                                         r  input_index_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y83          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  input_index_reg[4]/Q
+                         net (fo=19, routed)          0.212     0.763    ram_input/mem_reg_0_63_3_5/ADDRD4
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMD/WADR4
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    ram_input/mem_reg_0_63_3_5/WCLK
+    SLICE_X2Y82          RAMD64E                                      r  ram_input/mem_reg_0_63_3_5/RAMD/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X2Y82          RAMD64E (Hold_ramd64e_CLK_WADR4)
+                                                      0.200     0.632    ram_input/mem_reg_0_63_3_5/RAMD
+  -------------------------------------------------------------------
+                         required time                         -0.632    
+                         arrival time                           0.763    
+  -------------------------------------------------------------------
+                         slack                                  0.132    
+
+Slack (MET) :             0.134ns  (arrival time - required time)
+  Source:                 input_index_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            ram_input/mem_reg_0_63_0_2/RAMA/WADR0
+                            (rising edge-triggered cell RAMD64E clocked by sys_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             sys_clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk rise@0.000ns - sys_clk rise@0.000ns)
+  Data Path Delay:        0.466ns  (logic 0.141ns (30.271%)  route 0.325ns (69.729%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.022ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.432ns
+    Source Clock Delay      (SCD):    0.410ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.410     0.410    clk
+    SLICE_X1Y83          FDRE                                         r  input_index_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X1Y83          FDRE (Prop_fdre_C_Q)         0.141     0.551 r  input_index_reg[0]/Q
+                         net (fo=21, routed)          0.325     0.876    ram_input/mem_reg_0_63_0_2/ADDRD0
+    SLICE_X2Y81          RAMD64E                                      r  ram_input/mem_reg_0_63_0_2/RAMA/WADR0
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk rise edge)    0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=275, unset)          0.432     0.432    ram_input/mem_reg_0_63_0_2/WCLK
+    SLICE_X2Y81          RAMD64E                                      r  ram_input/mem_reg_0_63_0_2/RAMA/CLK
+                         clock pessimism              0.000     0.432    
+    SLICE_X2Y81          RAMD64E (Hold_ramd64e_CLK_WADR0)
+                                                      0.310     0.742    ram_input/mem_reg_0_63_0_2/RAMA
+  -------------------------------------------------------------------
+                         required time                         -0.742    
+                         arrival time                           0.876    
+  -------------------------------------------------------------------
+                         slack                                  0.134    
+
+
+
+

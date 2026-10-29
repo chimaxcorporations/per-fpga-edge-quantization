@@ -1,0 +1,14 @@
+{
+  "samples": 1000,
+  "mean_abs_difference": 0.00020784907409642357,
+  "max_abs_difference": 0.009097272955526425,
+  "rmse_difference": 0.001370802339024128,
+  "mean_difference_lsb": 0.02284748218811982,
+  "max_difference_lsb": 1.0000034049486806,
+  "output_scale": 0.00909724197988435,
+  "model": "cnn",
+  "fold": 8,
+  "bits": 8,
+  "calibration": "max",
+  "checkpoint": "results/p3_qat/training/cnn/fold8/cnn_fold8_qat_int8.pt"
+}
