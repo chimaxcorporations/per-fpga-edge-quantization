@@ -1,0 +1,4 @@
+model,method,label,luts,ffs,dsps,bram36eq,slices,cycles,clock_mhz,latency_us
+mlp,INT8 PTQ,MLP PTQ,631,524,4,2.5,201,25803,107.5,240.0279069767442
+mlp,INT8 QAT,MLP QAT,633,524,4,2.5,215,25803,107.5,240.0279069767442
+cnn,INT8 QAT,CNN QAT,741,652,4,4.0,277,62581,100.0,625.81

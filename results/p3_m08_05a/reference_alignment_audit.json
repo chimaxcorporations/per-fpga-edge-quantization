@@ -1,0 +1,225 @@
+{
+  "status": "PASS",
+  "folds": {
+    "1": {
+      "n": 1000,
+      "scenarios": {
+        "juelich_core_d10_r2_log_distance_s01_w1.parquet": 334,
+        "juelich_core_d30_r10_urban_s01_w1.parquet": 333,
+        "juelich_core_d60_r5_log_distance_nakagami_s01_w1.parquet": 333
+      },
+      "target_match": true,
+      "mlp_cnn_keys_match": true
+    },
+    "2": {
+      "n": 1000,
+      "scenarios": {
+        "juelich_core_d10_r5_log_distance_s01_w1.parquet": 334,
+        "juelich_core_d30_r2_urban_s01_w1.parquet": 333,
+        "juelich_core_d60_r10_log_distance_nakagami_s01_w1.parquet": 333
+      },
+      "target_match": true,
+      "mlp_cnn_keys_match": true
+    },
+    "3": {
+      "n": 1000,
+      "scenarios": {
+        "juelich_core_d10_r10_log_distance_s01_w1.parquet": 334,
+        "juelich_core_d30_r5_urban_s01_w1.parquet": 333,
+        "juelich_core_d60_r2_log_distance_nakagami_s01_w1.parquet": 333
+      },
+      "target_match": true,
+      "mlp_cnn_keys_match": true
+    },
+    "4": {
+      "n": 1000,
+      "scenarios": {
+        "juelich_core_d10_r2_log_distance_nakagami_s01_w1.parquet": 334,
+        "juelich_core_d30_r10_log_distance_s01_w1.parquet": 333,
+        "juelich_core_d60_r5_urban_s01_w1.parquet": 333
+      },
+      "target_match": true,
+      "mlp_cnn_keys_match": true
+    },
+    "5": {
+      "n": 1000,
+      "scenarios": {
+        "juelich_core_d10_r5_log_distance_nakagami_s01_w1.parquet": 334,
+        "juelich_core_d30_r2_log_distance_s01_w1.parquet": 333,
+        "juelich_core_d60_r10_urban_s01_w1.parquet": 333
+      },
+      "target_match": true,
+      "mlp_cnn_keys_match": true
+    },
+    "6": {
+      "n": 1000,
+      "scenarios": {
+        "juelich_core_d10_r10_log_distance_nakagami_s01_w1.parquet": 334,
+        "juelich_core_d30_r5_log_distance_s01_w1.parquet": 333,
+        "juelich_core_d60_r2_urban_s01_w1.parquet": 333
+      },
+      "target_match": true,
+      "mlp_cnn_keys_match": true
+    },
+    "7": {
+      "n": 1000,
+      "scenarios": {
+        "juelich_core_d10_r2_urban_s01_w1.parquet": 334,
+        "juelich_core_d30_r10_log_distance_nakagami_s01_w1.parquet": 333,
+        "juelich_core_d60_r5_log_distance_s01_w1.parquet": 333
+      },
+      "target_match": true,
+      "mlp_cnn_keys_match": true
+    },
+    "8": {
+      "n": 1000,
+      "scenarios": {
+        "juelich_core_d10_r5_urban_s01_w1.parquet": 334,
+        "juelich_core_d30_r2_log_distance_nakagami_s01_w1.parquet": 333,
+        "juelich_core_d60_r10_log_distance_s01_w1.parquet": 333
+      },
+      "target_match": true,
+      "mlp_cnn_keys_match": true
+    },
+    "9": {
+      "n": 1000,
+      "scenarios": {
+        "juelich_core_d10_r10_urban_s01_w1.parquet": 334,
+        "juelich_core_d30_r5_log_distance_nakagami_s01_w1.parquet": 333,
+        "juelich_core_d60_r2_log_distance_s01_w1.parquet": 333
+      },
+      "target_match": true,
+      "mlp_cnn_keys_match": true
+    }
+  },
+  "source_files": {
+    "/workspace/p2/data/temporal_h10/juelich_core_d10_r2_log_distance_s01_w1.parquet": {
+      "sha256": "ad133ab64890a20a138286615a02e2659d9145df9b0bbb7101c4386240672254",
+      "rows": 81183
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d30_r10_urban_s01_w1.parquet": {
+      "sha256": "ed3e5ec360e15c27adb8dfaa3db8dd45a7bf94639e917531622f5b98bb49d37d",
+      "rows": 677332
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d60_r5_log_distance_nakagami_s01_w1.parquet": {
+      "sha256": "b41b4ee31da907714e185d3c2dd3a8538dd0f75f8e70e1404d9f1d3b611ac06a",
+      "rows": 2513351
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d10_r5_log_distance_s01_w1.parquet": {
+      "sha256": "2d4b3689c5b43f2d2e7f999b1c567c0c44c974993d893fceea4a2e7e25de3625",
+      "rows": 81143
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d30_r2_urban_s01_w1.parquet": {
+      "sha256": "a5cb1899eee8c1086cb20ec7290d9c27101db4533723ccfb523c43dca1202f49",
+      "rows": 677269
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d60_r10_log_distance_nakagami_s01_w1.parquet": {
+      "sha256": "fe79b207f63ab44b3c989d6b6f934999d43581929519df6d63c2f58b41184f12",
+      "rows": 2512926
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d10_r10_log_distance_s01_w1.parquet": {
+      "sha256": "6f29b81c298cdfda9c732ff7513d7b953b05b224ac9be788ae5fa4bf06bb5c8b",
+      "rows": 81160
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d30_r5_urban_s01_w1.parquet": {
+      "sha256": "67cc4aaa7b51ea818b0d2bd74a4cba9bc6c167031628a59411410de871363247",
+      "rows": 677500
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d60_r2_log_distance_nakagami_s01_w1.parquet": {
+      "sha256": "d7b462f8594ab9db2f8ae4b4f278e6863ff5fd93d9d895c5a494fe38a5e2a03a",
+      "rows": 2513166
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d10_r2_log_distance_nakagami_s01_w1.parquet": {
+      "sha256": "c260ac60f174685cfb101b949c7be542979f25503de6dcb4f19e4997e560f063",
+      "rows": 81183
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d30_r10_log_distance_s01_w1.parquet": {
+      "sha256": "f49336f9251f54389060c2c72e9dcb0c5ea760a5e9c308f5554aa2c72cd82c32",
+      "rows": 677332
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d60_r5_urban_s01_w1.parquet": {
+      "sha256": "68761007c38e93c655aa6e8ee1632db2afb536c28c6ac07241e75e6e6a0e38ba",
+      "rows": 2513351
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d10_r5_log_distance_nakagami_s01_w1.parquet": {
+      "sha256": "ea2ae308735c3399fb52a6a115cb3e7291781c4234c58d8ce7d8cd0b781fd633",
+      "rows": 81143
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d30_r2_log_distance_s01_w1.parquet": {
+      "sha256": "2ecf76ca65d2b37972cddfe90aedef73ca0a2cebe648ea6a4db44ce0846c1bec",
+      "rows": 677269
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d60_r10_urban_s01_w1.parquet": {
+      "sha256": "b67f2095c31d847809c97eced586e5bb086262e62d50b73c9b93076387ee8e88",
+      "rows": 2512926
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d10_r10_log_distance_nakagami_s01_w1.parquet": {
+      "sha256": "c117d1482cabc60d22a54a659d63c78e21b976944e6263d4de58dc3645012ab5",
+      "rows": 81160
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d30_r5_log_distance_s01_w1.parquet": {
+      "sha256": "3f31ef0f2235fae4518847fbf9cf3dddb4fd8d2d044dad427dbd978a50cefe4e",
+      "rows": 677500
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d60_r2_urban_s01_w1.parquet": {
+      "sha256": "5b6ebcedb91aedcdef87d70c4d16dfa5fa4bfd9b7029936a2905ed61e38d2c58",
+      "rows": 2513166
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d10_r2_urban_s01_w1.parquet": {
+      "sha256": "0802aa65c323bae0ff7cdb586fe85b6a464b0591800142b6ddafa0330bbe45cd",
+      "rows": 81183
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d30_r10_log_distance_nakagami_s01_w1.parquet": {
+      "sha256": "a22eb42a22d0c381dc63f67459a139505121e6b6d61bc56bc03db363b32f6882",
+      "rows": 677332
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d60_r5_log_distance_s01_w1.parquet": {
+      "sha256": "9c28241029bf57b3d05d271a0f8c78de3178c8c0f71ae4aada0976533730a4dc",
+      "rows": 2513351
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d10_r5_urban_s01_w1.parquet": {
+      "sha256": "b2d56141ab92e6a6d809e834c9b6a2b0e47ec3620c14c2b4aff78f8051e78ed8",
+      "rows": 81143
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d30_r2_log_distance_nakagami_s01_w1.parquet": {
+      "sha256": "c77e1d31ed3a974cc3dd2a48c429684590783919fdf0438f8b365bbd6c33a5ed",
+      "rows": 677269
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d60_r10_log_distance_s01_w1.parquet": {
+      "sha256": "9d604018c2db2d7be60775c812a38856a35127609466c78afda77b2eb45efb32",
+      "rows": 2512926
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d10_r10_urban_s01_w1.parquet": {
+      "sha256": "c430e157c779d6e4e32011a4fb4e2e1d65400f8045f6a23395f5ce5e83428d90",
+      "rows": 81160
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d30_r5_log_distance_nakagami_s01_w1.parquet": {
+      "sha256": "10327ce2ee8a0c7a4d63c1a900840d9d57b084160633e44e9cb449763a6c5704",
+      "rows": 677500
+    },
+    "/workspace/p2/data/temporal_h10/juelich_core_d60_r2_log_distance_s01_w1.parquet": {
+      "sha256": "9104712f8b339ad5f142ea148c1c3003a1ea49d6de17ab69f9000aaf0c840550",
+      "rows": 2513166
+    }
+  },
+  "checkpoints": {
+    "/workspace/p3/artifacts/p3_m01/reference_models/ridge/ridge_fold1.joblib": "29f245128b7ab403d8d8ca982bd59f9611faae39dac3cd4331fe66281c52f65b",
+    "/workspace/p3/artifacts/p3_m01/reference_models/histgb/hist_gb_fold1.joblib": "c4c790c83698cbc761920143067a870e4cdfca396d019237782a017f67795c57",
+    "/workspace/p3/artifacts/p3_m01/reference_models/ridge/ridge_fold2.joblib": "d7463014c1e1ed487d7875f3fb6e85207190446ce7b05f4dcb91f0a4f5f4cf26",
+    "/workspace/p3/artifacts/p3_m01/reference_models/histgb/hist_gb_fold2.joblib": "cfe9e93b422f14fb0da47964d5e19798d658e6b34b733d45806c0090e798b30c",
+    "/workspace/p3/artifacts/p3_m01/reference_models/ridge/ridge_fold3.joblib": "9c622ed30e0498ee8e1c846ccb50eb65435a07a52d0b24bcd17080f76bdebaed",
+    "/workspace/p3/artifacts/p3_m01/reference_models/histgb/hist_gb_fold3.joblib": "abc7ef3e7d824c18cccf9f513ed14454afe9bc1df8ad887f652ac14b8f02faea",
+    "/workspace/p3/artifacts/p3_m01/reference_models/ridge/ridge_fold4.joblib": "1c33f13d977cc8d8dba70d6bca085991b9cc732e052075e9b5412506c1e790ce",
+    "/workspace/p3/artifacts/p3_m01/reference_models/histgb/hist_gb_fold4.joblib": "c17c99114a2d7ec754c27075b394e691edea81e0d26ddcf0edde24b6c6029687",
+    "/workspace/p3/artifacts/p3_m01/reference_models/ridge/ridge_fold5.joblib": "34e1b66db8e6748d5482a0b8a835b08d70b44485fd1ca4e33de7afbe06eff5b0",
+    "/workspace/p3/artifacts/p3_m01/reference_models/histgb/hist_gb_fold5.joblib": "2a888dc676530f96b26fd9f872c44c3ebc7b55fb2e29cb2b26c7da990023826b",
+    "/workspace/p3/artifacts/p3_m01/reference_models/ridge/ridge_fold6.joblib": "7862e70460dfff32bbeccc4dd01146cbd7f344951b5c7bce24c07c9fe48fc8ed",
+    "/workspace/p3/artifacts/p3_m01/reference_models/histgb/hist_gb_fold6.joblib": "c89e0f1e9353e6212dfe3ed1157ccf8d388f4ccc4818c61748136c41f19e0036",
+    "/workspace/p3/artifacts/p3_m01/reference_models/ridge/ridge_fold7.joblib": "b105d7fb2fa5c3ff36c275a26d40b0069b6145a639440c34ebda03afabd98925",
+    "/workspace/p3/artifacts/p3_m01/reference_models/histgb/hist_gb_fold7.joblib": "bfe92eb051592bf46462cfbe6240dec71c115510b67fd540dd5c39f2e62a0d5e",
+    "/workspace/p3/artifacts/p3_m01/reference_models/ridge/ridge_fold8.joblib": "3c47a3f7c0b0716ee9a6a7cd34782976761602047f42436580a4f71046ddc1a2",
+    "/workspace/p3/artifacts/p3_m01/reference_models/histgb/hist_gb_fold8.joblib": "0c62b257628469c27d96723f2e7662be0715aa12b53a1487b51197aed4cb8494",
+    "/workspace/p3/artifacts/p3_m01/reference_models/ridge/ridge_fold9.joblib": "95234d6779ede1d6060919467c43286a45a4724d1cafc016ae3a192770053b44",
+    "/workspace/p3/artifacts/p3_m01/reference_models/histgb/hist_gb_fold9.joblib": "755cbaf72aad5dafc60db5d0c29e500ee8691f1fa1aca6071e5ba745a5c61876"
+  }
+}

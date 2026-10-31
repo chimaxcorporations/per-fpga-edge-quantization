@@ -1,0 +1,44 @@
+{
+  "audit_id": "P3-M08-09J-02Q",
+  "project": "Hardware-Aware Quantization of Packet Error Rate Prediction Models for FPGA-Based Edge Computing",
+  "environment": {
+    "docker_image": "ml-per-prediction-per-ml:latest",
+    "execution": "CPU",
+    "workspace": "isolated reproduction directory"
+  },
+  "fp32": {
+    "checkpoints_verified": 36,
+    "checkpoints_passed": 36,
+    "verification": "reference equivalence"
+  },
+  "ptq": {
+    "fake_quantized_prediction_files": 72,
+    "integer_prediction_files": 72,
+    "prediction_files_compared": 144,
+    "prediction_files_identical": 144,
+    "maximum_finite_difference": 0.0,
+    "summary_csv_comparison": "identical",
+    "status": "PASS"
+  },
+  "qat": {
+    "precision": "INT8",
+    "calibration": "max",
+    "models": ["mlp", "cnn"],
+    "folds_per_model": 9,
+    "checkpoints_evaluated": 18,
+    "prediction_files_compared": 18,
+    "prediction_files_identical": 18,
+    "metrics_files_compared": 18,
+    "metrics_files_identical": 18,
+    "maximum_finite_difference": 0.0,
+    "status": "PASS"
+  },
+  "limitations": [
+    "FP32 checkpoint equivalence does not establish independent FP32 training reproducibility.",
+    "PTQ calibration generation has not been independently reproduced.",
+    "QAT training has not been independently reproduced.",
+    "FPGA synthesis and simulation evidence are audited separately.",
+    "No physical FPGA hardware validation was performed."
+  ],
+  "overall_status": "PASS_WITH_DEFINED_SCOPE"
+}

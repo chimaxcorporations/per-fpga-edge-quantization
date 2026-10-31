@@ -55,3 +55,14 @@ xvlog.pb
 # Temporary implementation databases
 *.rpx
 *.rdb
+
+# Local backup files
+*.backup
+*.bak
+
+# Local release archives
+pass_p3_m02_sources.zip
+p3_m08_05_figures_review.zip
+
+# Vivado generated working directories
+.Xil/
